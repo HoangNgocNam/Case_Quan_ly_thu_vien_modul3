@@ -24,7 +24,7 @@
                 @endif
             </td>
             <td>{{$user->email}}</td>
-            <td>{{$user->birhtday}}</td>
+            <td>{{$user->birthday}}</td>
             <td>{{$user->phone}}</td>
             <td>
                 @if(count($user->roles) > 0)
@@ -34,6 +34,9 @@
                 @else
                     <p>Chua phan quyen</p>
                 @endif
+            </td>
+            <td>
+                <a href="{{route('users.update',$user->id)}}">Update</a>
             </td>
         </tr>
     @endforeach
