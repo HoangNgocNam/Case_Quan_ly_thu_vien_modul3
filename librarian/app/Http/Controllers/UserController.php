@@ -36,7 +36,7 @@ class UserController extends Controller
             "email"=>"required|email",
             "password"=>"required|min:6",
             "birthday"=>"required|date",
-            "phone"=>"required|munber",
+            "phone"=>"required|number",
         ]);
         $user = new User();
         $user->name = $request->name;
