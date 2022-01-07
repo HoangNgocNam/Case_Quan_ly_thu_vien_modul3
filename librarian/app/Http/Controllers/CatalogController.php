@@ -13,7 +13,7 @@ class CatalogController extends Controller
         return view('catalogs.list', compact('catalogs'));
     }
 
-    public function creare()
+    public function create()
     {
         return view('catalogs.create');
     }
@@ -26,8 +26,8 @@ class CatalogController extends Controller
         ]);
 
        $catalog = new Catalog();
-       $catalog -> code = $request ->code;
-       $catalog -> name = $request ->name;
+       $catalog->code = $request->code;
+       $catalog->name = $request->name;
        $catalog->save();
 
        return redirect()->route('catalogs.index');
@@ -39,11 +39,11 @@ class CatalogController extends Controller
         return view('catalogs.update', compact('catalog'));
     }
 
-    public function update(Request $request, $id)
+    public function update(Request $request,$id)
     {
         $catalog = Catalog::findOrFail($id);
-        $catalog -> code = $request ->code;
-        $catalog -> name = $request ->name;
+        $catalog->code = $request->code;
+        $catalog->name = $request->name;
         $catalog->save();
         return redirect()->route('catalogs.index');
     }

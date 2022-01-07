@@ -31,9 +31,9 @@ Route::prefix('auth')->group(function () {
 });
 
 Route::prefix('users')->group(function (){
-    Route::get('', [UserController::class, "index"])->name("users.index");
-    Route::get('create', [UserController::class, 'create'])->name('users.create');
-    Route::post('create', [UserController::class, 'store'])->name('users.store');
+    Route::get('/', [UserController::class, "index"])->name("users.index");
+    Route::get('/create', [UserController::class, 'create'])->name('users.create');
+    Route::post('/create', [UserController::class, 'store'])->name('users.store');
     Route::get('/{id}/delete', [UserController::class, 'delete'])->name('users.delete');
     Route::get('/{id}/update', [UserController::class, 'edit'])->name('users.edit');
     Route::post('/{id}/update', [UserController::class, 'update'])->name('users.update');
@@ -41,7 +41,7 @@ Route::prefix('users')->group(function (){
 
 Route::prefix('catalogs')->group(function (){
     Route::get('',[CatalogController::class,'index'])->name('catalogs.index');
-    Route::get('create',[CatalogController::class,'creare'])->name('catalogs.creare');
+    Route::get('create',[CatalogController::class,'create'])->name('catalogs.create');
     Route::post('create',[CatalogController::class,'store'])->name('catalogs.store');
     Route::get('/{id}/update',[CatalogController::class,'edit'])->name('catalogs.edit');
     Route::post('/{id}/update',[CatalogController::class,'update'])->name('catalogs.update');
