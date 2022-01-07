@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
+use phpDocumentor\Reflection\Types\True_;
 
 class User extends Authenticatable
 {
@@ -47,6 +48,16 @@ class User extends Authenticatable
 
     public function roles()
     {
-        return $this->belongsToMany(Role::class,'role_user');
+        return $this->belongsToMany(Role::class, 'role_user');
+    }
+
+    public function checkRole($roleId)
+    {
+        foreach ($this->roles as $roleUser){
+            if ($roleUser->id == $roleId ){
+                return True;
+            }
+        }
+        return false;
     }
 }
