@@ -58,24 +58,24 @@
                 <th>Action</th>
             </tr>
         </thead>
-                <tbody>
-                @if(isset($catalogs))
-                    @foreach($catalogs as $catalog)
-                        <tr>
-                            <th>{{$catalog->id}}</th>
-                            <td>{{$catalog->code}}</td>
-                            <td>{{$catalog->name}}</td>
-                            <td>
-                                <a href="{{route('catalogs.update',$catalog->id)}}">Update</a>
-                            </td>
-                            <td>
-                                <a onclick="return confirm('Bạn chắc muốn xóa?')" href="{{route('catalogs.delete',$catalog->id)}}">Delete</a>
-                            </td>
-                        </tr>
-                    @endforeach
+        <tbody>
+        @if(isset($catalogs))
+            @foreach($catalogs as $catalog)
+                <tr>
+                    <th>{{$catalog->id}}</th>
+                    <td>{{$catalog->code}}</td>
+                    <td>{{$catalog->name}}</td>
+                    <td>
+                        <a href="{{route('catalogs.update',$catalog->id)}}">Update</a>
+                    </td>
+                    <td>
+                        <a onclick="return confirm('Bạn chắc muốn xóa?')" href="{{route('catalogs.delete',$catalog->id)}}">Delete</a>
+                    </td>
+                </tr>
+            @endforeach
                 @else
                     <p>Không có dữ liệu</p>
                 @endif
                 </tbody>
-    </table>
+        </table>
 @endsection
