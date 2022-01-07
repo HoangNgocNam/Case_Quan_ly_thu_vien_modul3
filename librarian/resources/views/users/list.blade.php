@@ -17,8 +17,8 @@
             <td>{{$user->name}}</td>
             <td>
                 @if($user->img)
-                <img style="width: 100px; height: 100px" src="{{asset('storage/').$user->img}}"
-                     alt="{{asset('storage/').$user->img}}">
+                <img style="width: 100px; height: 100px" src="{{asset('storage/'.$user->img)}}"
+                     alt="{{asset('storage/'.$user->img)}}">
                 @else
                 <p>Chua co anh</p>
                 @endif
@@ -32,7 +32,7 @@
                         <p>{{ $role->name }}</p>
                     @endforeach
                 @else
-                    <p>Chua phan quyen</p>
+                    <p>Chưa phân quyền</p>
                 @endif
             </td>
             <td>
