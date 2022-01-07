@@ -49,8 +49,14 @@ class AuthController extends Controller
             session()->flash('error-login', 'Tai khoan khong dung');
             return redirect()->route('auth.showFormLogin');
         } else {
-
+            return view('home.home');
         }
+    }
+
+    public function logout()
+    {
+        Auth::logout();
+        return redirect()->route('auth.login');
     }
 
 }
