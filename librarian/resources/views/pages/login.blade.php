@@ -139,7 +139,8 @@
                         <div class="text-center text-muted mb-4">
                             <small>Or sign in with credentials</small>
                         </div>
-                        <form role="form">
+                        <form role="form" method="post">
+                            @csrf
                             <div class="form-group mb-3">
                                 <div class="input-group input-group-merge input-group-alternative">
                                     <div class="input-group-prepend">
@@ -164,7 +165,7 @@
                             </div>
                             <div class="text-center">
                                 <button type="button" class="btn btn-primary my-4">
-                                    <a href="{{route('auth.register')}}">Sign in</a>
+                                    <a href="{{route('users.index')}}">Login</a>
                                 </button>
                             </div>
                         </form>
@@ -210,15 +211,12 @@
         </div>
     </div>
 </footer>
-<!-- Argon Scripts -->
-<!-- Core -->
-<script src="../../../../public/assets/vendor/jquery/dist/jquery.min.js"></script>
-<script src="../../../../public/assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-<script src="../../../../public/assets/vendor/js-cookie/js.cookie.js"></script>
-<script src="../../../../public/assets/vendor/jquery.scrollbar/jquery.scrollbar.min.js"></script>
-<script src="../../../../public/assets/vendor/jquery-scroll-lock/dist/jquery-scrollLock.min.js"></script>
-<!-- Argon JS -->
-<script src="../../../../public/assets/js/argon.js?v=1.2.0"></script>
+<script src="{{asset('assets/vendor/jquery/dist/jquery.min.js')}}"></script>
+<script src="{{asset('assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js')}}"></script>
+<script src="{{asset('assets/vendor/js-cookie/js.cookie.js')}}"></script>
+<script src="{{asset('assets/vendor/jquery.scrollbar/jquery.scrollbar.min.js')}}"></script>
+<script src="{{asset('assets/vendor/jquery-scroll-lock/dist/jquery-scrollLock.min.js')}}"></script>
+<script src="{{asset('public/assets/js/argon.js?v=1.2.0')}}"></script>
 </body>
 
 </html>
