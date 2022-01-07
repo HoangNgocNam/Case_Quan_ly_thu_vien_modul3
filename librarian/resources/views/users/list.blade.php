@@ -8,7 +8,7 @@
     <th>Birthday</th>
     <th>Phone</th>
     <th>Role</th>
-    <th>Action</th>
+    <th colspan="2">Action</th>
     </thead>
     <tbody>
     @foreach($users as $user)
