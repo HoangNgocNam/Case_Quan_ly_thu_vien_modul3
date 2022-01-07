@@ -31,7 +31,7 @@
             width: 350px;
             margin-top: auto;
             margin-bottom: auto;
-            background: #a29d9dba;
+            background: #f8f9fa;
             position: relative;
             display: flex;
             justify-content: center;
@@ -130,7 +130,7 @@
 
             <div class="mt-4">
                 <div class="d-flex justify-content-center links">
-                    Don't have an account? <a href="" class="ml-2">Sign Up</a>
+                    Don't have an account? <a href="{{route('auth.showFormRegister')}}" class="ml-2">Sign Up</a>
                 </div>
                 <div class="d-flex justify-content-center links">
                     <a href="#">Forgot your password?</a>
