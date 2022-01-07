@@ -29,7 +29,8 @@ Route::prefix('auth')->group(function () {
     Route::get('logout', [AuthController::class, 'logout'])->name('auth.logout');
 });
 
-Route::prefix('users')->group(function () {
+Route::prefix('users')->group(function (){
+    Route::get('', [UserController::class, "index"])->name("users.index");
     Route::get('create', [UserController::class, 'create'])->name('users.create');
     Route::post('create', [UserController::class, 'store'])->name('users.store');
 });
