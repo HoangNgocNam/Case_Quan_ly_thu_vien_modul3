@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Start your development with a Dashboard for Bootstrap 4.">
     <meta name="author" content="Creative Tim">
-    <title>Argon Dashboard - Free Dashboard for Bootstrap 4</title>
+    <title>@yield('title',"Dashboard")</title>
     <!-- Favicon -->
     <link rel="icon" href="{{asset('assets/img/brand/favicon.png')}}" type="image/png">
     <!-- Fonts -->
@@ -25,7 +25,7 @@
         <!-- Brand -->
         <div class="sidenav-header  align-items-center">
             <a class="navbar-brand" href="javascript:void(0)">
-                <img src="../../../public/assets/img/brand/blue.png" class="navbar-brand-img" alt="...">
+                <img src="{{asset('assets/img/brand/blue.png')}}" class="navbar-brand-img" alt="...">
             </a>
         </div>
         <div class="navbar-inner">
@@ -37,12 +37,6 @@
                         <a class="nav-link active" href="examples/dashboard.html">
                             <i class="ni ni-tv-2 text-primary"></i>
                             <span class="nav-link-text">Dashboard</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="examples/icons.html">
-                            <i class="ni ni-planet text-orange"></i>
-                            <span class="nav-link-text">Icons</span>
                         </a>
                     </li>
                     <li class="nav-item">
@@ -75,52 +69,9 @@
                             <span class="nav-link-text">Register</span>
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="examples/upgrade.html">
-                            <i class="ni ni-send text-dark"></i>
-                            <span class="nav-link-text">Upgrade</span>
-                        </a>
-                    </li>
                 </ul>
                 <!-- Divider -->
                 <hr class="my-3">
-                <!-- Heading -->
-                <h6 class="navbar-heading p-0 text-muted">
-                    <span class="docs-normal">Documentation</span>
-                </h6>
-                <!-- Navigation -->
-                <ul class="navbar-nav mb-md-3">
-                    <li class="nav-item">
-                        <a class="nav-link" href="https://demos.creative-tim.com/argon-dashboard/docs/getting-started/overview.html" target="_blank">
-                            <i class="ni ni-spaceship"></i>
-                            <span class="nav-link-text">Getting started</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="https://demos.creative-tim.com/argon-dashboard/docs/foundation/colors.html" target="_blank">
-                            <i class="ni ni-palette"></i>
-                            <span class="nav-link-text">Foundation</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="https://demos.creative-tim.com/argon-dashboard/docs/components/alerts.html" target="_blank">
-                            <i class="ni ni-ui-04"></i>
-                            <span class="nav-link-text">Components</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="https://demos.creative-tim.com/argon-dashboard/docs/plugins/charts.html" target="_blank">
-                            <i class="ni ni-chart-pie-35"></i>
-                            <span class="nav-link-text">Plugins</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active active-pro" href="examples/upgrade.html">
-                            <i class="ni ni-send text-dark"></i>
-                            <span class="nav-link-text">Upgrade to PRO</span>
-                        </a>
-                    </li>
-                </ul>
             </div>
         </div>
     </div>
@@ -177,7 +128,7 @@
                                     <div class="row align-items-center">
                                         <div class="col-auto">
                                             <!-- Avatar -->
-                                            <img alt="Image placeholder" src="../../../public/assets/img/theme/team-1.jpg" class="avatar rounded-circle">
+                                            <img alt="Image placeholder" src="{{asset('assets/img/theme/team-1.jpg')}}" class="avatar rounded-circle">
                                         </div>
                                         <div class="col ml--2">
                                             <div class="d-flex justify-content-between align-items-center">
@@ -196,7 +147,7 @@
                                     <div class="row align-items-center">
                                         <div class="col-auto">
                                             <!-- Avatar -->
-                                            <img alt="Image placeholder" src="../../../public/assets/img/theme/team-2.jpg" class="avatar rounded-circle">
+                                            <img alt="Image placeholder" src="{{asset('assets/img/theme/team-2.jpg')}}" class="avatar rounded-circle">
                                         </div>
                                         <div class="col ml--2">
                                             <div class="d-flex justify-content-between align-items-center">
@@ -215,7 +166,7 @@
                                     <div class="row align-items-center">
                                         <div class="col-auto">
                                             <!-- Avatar -->
-                                            <img alt="Image placeholder" src="../../../public/assets/img/theme/team-3.jpg" class="avatar rounded-circle">
+                                            <img alt="Image placeholder" src="{{asset('assets/img/theme/team-3.jpg')}}" class="avatar rounded-circle">
                                         </div>
                                         <div class="col ml--2">
                                             <div class="d-flex justify-content-between align-items-center">
@@ -234,7 +185,7 @@
                                     <div class="row align-items-center">
                                         <div class="col-auto">
                                             <!-- Avatar -->
-                                            <img alt="Image placeholder" src="../../../public/assets/img/theme/team-4.jpg" class="avatar rounded-circle">
+                                            <img alt="Image placeholder" src="{{asset('assets/img/theme/team-4.jpg')}}" class="avatar rounded-circle">
                                         </div>
                                         <div class="col ml--2">
                                             <div class="d-flex justify-content-between align-items-center">
@@ -253,7 +204,7 @@
                                     <div class="row align-items-center">
                                         <div class="col-auto">
                                             <!-- Avatar -->
-                                            <img alt="Image placeholder" src="../../../public/assets/img/theme/team-5.jpg" class="avatar rounded-circle">
+                                            <img alt="Image placeholder" src="{{asset('assets/img/theme/team-5.jpg')}}" class="avatar rounded-circle">
                                         </div>
                                         <div class="col ml--2">
                                             <div class="d-flex justify-content-between align-items-center">
@@ -324,7 +275,7 @@
                         <a class="nav-link pr-0" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <div class="media align-items-center">
                   <span class="avatar avatar-sm rounded-circle">
-                    <img alt="Image placeholder" src="../../../public/assets/img/theme/team-4.jpg">
+                    <img alt="Image placeholder" src="{{asset('assets/img/theme/team-4.jpg')}}">
                   </span>
                                 <div class="media-body  ml-2  d-none d-lg-block">
                                     <span class="mb-0 text-sm  font-weight-bold">John Snow</span>
@@ -383,13 +334,16 @@
                         <a href="#" class="btn btn-sm btn-neutral">Filters</a>
                     </div>
                 </div>
-                <!-- Card stats -->
 
             </div>
         </div>
     </div>
+</div>
+
     <!-- Page content -->
+    @yield('content')
         <!-- Footer -->
+
         <footer class="footer pt-0">
             <div class="row align-items-center justify-content-lg-between">
                 <div class="col-lg-6">
@@ -417,18 +371,10 @@
         </footer>
     </div>
 </div>
+</body>
 <!-- Argon Scripts -->
 <!-- Core -->
-<script src="{{asset('assets/vendor/jquery/dist/jquery.min.js')}}"></script>
-<script src="{{asset('assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js')}}"></script>
-<script src="{{asset('assets/vendor/js-cookie/js.cookie.js')}}"></script>
-<script src="{{asset('assets/vendor/jquery.scrollbar/jquery.scrollbar.min.js')}}"></script>
-<script src="{{asset('assets/vendor/jquery-scroll-lock/dist/jquery-scrollLock.min.js')}}"></script>
-<!-- Optional JS -->
-<script src="{{asset('assets/vendor/chart.js/dist/Chart.min.js')}}"></script>
-<script src="{{asset('assets/vendor/chart.js/dist/Chart.extension.js')}}"></script>
-<!-- Argon JS -->
-<script src="{{asset('assets/js/argon.js?v=1.2.0')}}"></script>
+
 </body>
 
 </html>
