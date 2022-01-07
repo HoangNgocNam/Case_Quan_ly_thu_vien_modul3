@@ -23,4 +23,6 @@ Route::prefix('auth')->group(function (){
     Route::post('/register', [AuthController::class, 'register'])->name('auth.register');
     Route::get('login', [\App\Http\Controllers\AuthController::class, 'showFormLogin'])->name('auth.showFormLogin');
     Route::post('login', [\App\Http\Controllers\AuthController::class, 'login'])->name('auth.login');
+    Route::get('/reset',[AuthController::class,"showFromResetPassword"])->name("auth.showFromResetPassword");
+    Route::post('/reset',[AuthController::class,"resetPassword"])->name("auth.resetPassword");
 });
