@@ -15,6 +15,14 @@ class UserController extends Controller
         return view('users.list', compact('users', 'roles'));
     }
 
+    public function delete($id)
+    {
+      $user = User::findOrFail($id);
+      $user->roles()->detach();
+      $user->delete();
+      return redirect()->route('users.index');
+    }
+
         public function create()
         {
             $roles = Role::all();

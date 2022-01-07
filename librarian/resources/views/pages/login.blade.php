@@ -1,143 +1,224 @@
 {{--<input type="text" placeholder="Enter Email" name="email">--}}
 {{--<input type="text" placeholder="Enter password" name="password">--}}
 {{--<button type="submit">Login</button>--}}
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<!------ Include the above in your HEAD tag ---------->
-
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html>
 
 <head>
-    <title>My Awesome Login Page</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
-          integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
-    <style>
-        /* Coded with love by Mutiullah Samim */
-        body,
-        html {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            /*background: #f6d845 !important;*/
-            background-image: url("http://trumpwallpapers.com/wp-content/uploads/Library-Wallpaper-03-1920x1080-1.jpg");
-        }
-        .user_card {
-            height: 400px;
-            width: 350px;
-            margin-top: auto;
-            margin-bottom: auto;
-            background: #f8f9fa;
-            position: relative;
-            display: flex;
-            justify-content: center;
-            flex-direction: column;
-            padding: 10px;
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-            -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-            -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-            border-radius: 5px;
-
-        }
-        .brand_logo_container {
-            position: absolute;
-            height: 170px;
-            width: 170px;
-            top: -75px;
-            border-radius: 50%;
-            background: #60a3bc;
-            padding: 10px;
-            text-align: center;
-        }
-        .brand_logo {
-            height: 150px;
-            width: 150px;
-            border-radius: 50%;
-            border: 2px solid white;
-        }
-        .form_container {
-            margin-top: 100px;
-        }
-        .login_btn {
-            width: 100%;
-            background: #c0392b !important;
-            color: white !important;
-        }
-        .login_btn:focus {
-            box-shadow: none !important;
-            outline: 0px !important;
-        }
-        .login_container {
-            padding: 0 2rem;
-        }
-        .input-group-text {
-            background: #c0392b !important;
-            color: white !important;
-            border: 0 !important;
-            border-radius: 0.25rem 0 0 0.25rem !important;
-        }
-        .input_user,
-        .input_pass:focus {
-            box-shadow: none !important;
-            outline: 0px !important;
-        }
-        .custom-checkbox .custom-control-input:checked~.custom-control-label::before {
-            background-color: #c0392b !important;
-        }
-    </style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Start your development with a Dashboard for Bootstrap 4.">
+    <meta name="author" content="Creative Tim">
+    <title>Argon Dashboard - Free Dashboard for Bootstrap 4</title>
+    <link rel="icon" href="{{assert('assets/img/brand/favicon.png')}}" type="image/png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
+    <link rel="stylesheet" href="{{asset('assets/vendor/nucleo/css/nucleo.css')}}" type="text/css">
+    <link rel="stylesheet" href="{{asset('assets/vendor/@fortawesome/fontawesome-free/css/all.min.css')}}" type="text/css">
+    <link rel="stylesheet" href="{{asset('assets/css/argon.css?v=1.2.0')}}" type="text/css">
 </head>
-<!--Coded with love by Mutiullah Samim-->
-<body>
-<div class="container h-100">
-    <div class="d-flex justify-content-center h-100">
-        <div class="user_card">
-            <div class="d-flex justify-content-center">
-                <div class="brand_logo_container">
-                    <img src="https://media.istockphoto.com/illustrations/female-librarian-illustration-id164325637?k=20&m=164325637&s=612x612&w=0&h=4w9jKb_gZoiPttBiT6LjkFgBGW7q1a4TU5KFa0I4ZB0="
-                         class="brand_logo" alt="Logo">
-                </div>
-            </div>
-            <div class="d-flex justify-content-center form_container">
-                <form method="post">
-                    @csrf
-                    <div class="input-group mb-3">
-                        <div class="input-group-append">
-                            <span class="input-group-text"><i class="fas fa-user"></i></span>
-                        </div>
-                        <input type="text" name="email" class="form-control input_user" value="" placeholder="Email">
-                    </div>
-                    <div class="input-group mb-2">
-                        <div class="input-group-append">
-                            <span class="input-group-text"><i class="fas fa-key"></i></span>
-                        </div>
-                        <input type="password" name="password" class="form-control input_pass" value="" placeholder="Password">
-                    </div>
-                    <div class="form-group">
-                        <div class="custom-control custom-checkbox">
-                            <input type="checkbox" class="custom-control-input" id="customControlInline">
-                            <label class="custom-control-label" for="customControlInline">Remember me</label>
-                        </div>
-                    </div>
-                    <div class="d-flex justify-content-center mt-3 login_container">
-                        <button type="submit" name="button" class="btn login_btn">Login</button>
-                    </div>
-                </form>
-            </div>
 
-            <div class="mt-4">
-                <div class="d-flex justify-content-center links">
-                    Don't have an account? <a href="{{route('auth.showFormRegister')}}" class="ml-2">Sign Up</a>
+<body class="bg-default">
+<nav id="navbar-main" class="navbar navbar-horizontal navbar-transparent navbar-main navbar-expand-lg navbar-light">
+    <div class="container">
+        <a class="navbar-brand" href="dashboard.html">
+            <img src="../../../../public/assets/img/brand/white.png">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse navbar-custom-collapse collapse" id="navbar-collapse">
+            <div class="navbar-collapse-header">
+                <div class="row">
+                    <div class="col-6 collapse-brand">
+                        <a href="dashboard.html">
+                            <img src="../../../../public/assets/img/brand/blue.png">
+                        </a>
+                    </div>
+                    <div class="col-6 collapse-close">
+                        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                            <span></span>
+                            <span></span>
+                        </button>
+                    </div>
                 </div>
-                <div class="d-flex justify-content-center links">
-                    <a href="#">Forgot your password?</a>
+            </div>
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a href="dashboard.html" class="nav-link">
+                        <span class="nav-link-inner--text">Dashboard</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{route('auth.login')}}" class="nav-link">
+                        <span class="nav-link-inner--text">Login</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{route('auth.register')}}" class="nav-link">
+                        <span class="nav-link-inner--text">Register</span>
+                    </a>
+                </li>
+            </ul>
+            <hr class="d-lg-none" />
+            <ul class="navbar-nav align-items-lg-center ml-lg-auto">
+                <li class="nav-item">
+                    <a class="nav-link nav-link-icon" href="https://www.facebook.com/creativetim" target="_blank" data-toggle="tooltip" data-original-title="Like us on Facebook">
+                        <i class="fab fa-facebook-square"></i>
+                        <span class="nav-link-inner--text d-lg-none">Facebook</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-link-icon" href="https://www.instagram.com/creativetimofficial" target="_blank" data-toggle="tooltip" data-original-title="Follow us on Instagram">
+                        <i class="fab fa-instagram"></i>
+                        <span class="nav-link-inner--text d-lg-none">Instagram</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-link-icon" href="https://twitter.com/creativetim" target="_blank" data-toggle="tooltip" data-original-title="Follow us on Twitter">
+                        <i class="fab fa-twitter-square"></i>
+                        <span class="nav-link-inner--text d-lg-none">Twitter</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-link-icon" href="https://github.com/creativetimofficial" target="_blank" data-toggle="tooltip" data-original-title="Star us on Github">
+                        <i class="fab fa-github"></i>
+                        <span class="nav-link-inner--text d-lg-none">Github</span>
+                    </a>
+                </li>
+                <li class="nav-item d-none d-lg-block ml-lg-4">
+                    <a href="https://www.creative-tim.com/product/argon-dashboard-pro?ref=ad_upgrade_pro" target="_blank" class="btn btn-neutral btn-icon">
+              <span class="btn-inner--icon">
+                <i class="fas fa-shopping-cart mr-2"></i>
+              </span>
+                        <span class="nav-link-inner--text">Upgrade to PRO</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!-- Main content -->
+<div class="main-content">
+    <!-- Header -->
+    <div class="header bg-gradient-primary py-7 py-lg-8 pt-lg-9">
+        <div class="container">
+            <div class="header-body text-center mb-7">
+                <div class="row justify-content-center">
+                    <div class="col-xl-5 col-lg-6 col-md-8 px-5">
+                        <h1 class="text-white">Welcome!</h1>
+                        <p class="text-lead text-white">Use these awesome forms to login or create new account in your project for free.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="separator separator-bottom separator-skew zindex-100">
+            <svg x="0" y="0" viewBox="0 0 2560 100" preserveAspectRatio="none" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                <polygon class="fill-default" points="2560 0 2560 100 0 100"></polygon>
+            </svg>
+        </div>
+    </div>
+    <!-- Page content -->
+    <div class="container mt--8 pb-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-5 col-md-7">
+                <div class="card bg-secondary border-0 mb-0">
+                    <div class="card-header bg-transparent pb-5">
+                        <div class="text-muted text-center mt-2 mb-3"><small>Sign in with</small></div>
+                        <div class="btn-wrapper text-center">
+                            <a href="#" class="btn btn-neutral btn-icon">
+                                <span class="btn-inner--icon"><img src="../../../../public/assets/img/icons/common/github.svg"></span>
+                                <span class="btn-inner--text">Github</span>
+                            </a>
+                            <a href="#" class="btn btn-neutral btn-icon">
+                                <span class="btn-inner--icon"><img src="../../../../public/assets/img/icons/common/google.svg"></span>
+                                <span class="btn-inner--text">Google</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card-body px-lg-5 py-lg-5">
+                        <div class="text-center text-muted mb-4">
+                            <small>Or sign in with credentials</small>
+                        </div>
+                        <form role="form">
+                            <div class="form-group mb-3">
+                                <div class="input-group input-group-merge input-group-alternative">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="ni ni-email-83"></i></span>
+                                    </div>
+                                    <input class="form-control" name="email" placeholder="Email" type="email">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-group input-group-merge input-group-alternative">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>
+                                    </div>
+                                    <input class="form-control" name="password" placeholder="Password" type="password">
+                                </div>
+                            </div>
+                            <div class="custom-control custom-control-alternative custom-checkbox">
+                                <input class="custom-control-input" id=" customCheckLogin" type="checkbox">
+                                <label class="custom-control-label" for=" customCheckLogin">
+                                    <span class="text-muted">Remember me</span>
+                                </label>
+                            </div>
+                            <div class="text-center">
+                                <button type="button" class="btn btn-primary my-4">
+                                    <a href="{{route('auth.register')}}">Sign in</a>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-6">
+                        <a href="#" class="text-light"><small>Forgot password?</small></a>
+                    </div>
+                    <div class="col-6 text-right">
+                        <a href="{{route('auth.register')}}" class="text-light"><small>Create new account</small></a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+<!-- Footer -->
+<footer class="py-5" id="footer-main">
+    <div class="container">
+        <div class="row align-items-center justify-content-xl-between">
+            <div class="col-xl-6">
+                <div class="copyright text-center text-xl-left text-muted">
+                    &copy; 2020 <a href="https://www.creative-tim.com" class="font-weight-bold ml-1" target="_blank">Creative Tim</a>
+                </div>
+            </div>
+            <div class="col-xl-6">
+                <ul class="nav nav-footer justify-content-center justify-content-xl-end">
+                    <li class="nav-item">
+                        <a href="https://www.creative-tim.com" class="nav-link" target="_blank">Creative Tim</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="https://www.creative-tim.com/presentation" class="nav-link" target="_blank">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="http://blog.creative-tim.com" class="nav-link" target="_blank">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="https://github.com/creativetimofficial/argon-dashboard/blob/master/LICENSE.md" class="nav-link" target="_blank">MIT License</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- Argon Scripts -->
+<!-- Core -->
+<script src="../../../../public/assets/vendor/jquery/dist/jquery.min.js"></script>
+<script src="../../../../public/assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../../../../public/assets/vendor/js-cookie/js.cookie.js"></script>
+<script src="../../../../public/assets/vendor/jquery.scrollbar/jquery.scrollbar.min.js"></script>
+<script src="../../../../public/assets/vendor/jquery-scroll-lock/dist/jquery-scrollLock.min.js"></script>
+<!-- Argon JS -->
+<script src="../../../../public/assets/js/argon.js?v=1.2.0"></script>
 </body>
+
 </html>

@@ -13,4 +13,6 @@
     @endforeach
     <br>
     <button type="submit">Thêm mới</button>
+    <br>
+    <a href="{{route('users.index')}}">Back</a>
 </form>

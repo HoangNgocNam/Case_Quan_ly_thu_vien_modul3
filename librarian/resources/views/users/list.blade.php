@@ -35,6 +35,9 @@
                     <p>Chua phan quyen</p>
                 @endif
             </td>
+            <td>
+                <a onclick="return confirm('Ban co muon xoa khong')" href="{{route('users.delete',$user->id)}}">Delete</a>
+            </td>
         </tr>
     @endforeach
     </tbody>
