@@ -2,6 +2,7 @@
 
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\CatalogController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -38,3 +39,11 @@ Route::prefix('users')->group(function (){
     Route::post('/{id}/update', [UserController::class, 'update'])->name('users.update');
 });
 
+Route::prefix('catalogs')->group(function (){
+    Route::get('',[CatalogController::class,'index'])->name('catalogs.index');
+    Route::get('create',[CatalogController::class,'creare'])->name('catalogs.creare');
+    Route::post('create',[CatalogController::class,'store'])->name('catalogs.store');
+    Route::get('/{id}/update',[CatalogController::class,'edit'])->name('catalogs.edit');
+    Route::post('/{id}/update',[CatalogController::class,'update'])->name('catalogs.update');
+    Route::get('/{id}/delete',[CatalogController::class,'delete'])->name('catalogs.delete');
+});
