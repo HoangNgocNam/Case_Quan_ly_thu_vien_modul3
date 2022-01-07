@@ -21,13 +21,17 @@ Route::get('/', function () {
 });
 
 
-Route::prefix('auth')->group(function (){
+Route::prefix('auth')->group(function () {
     Route::get('/register', [AuthController::class, 'showFormRegister'])->name('auth.showFormRegister');
     Route::post('/register', [AuthController::class, 'register'])->name('auth.register');
     Route::get('login', [AuthController::class, 'showFormLogin'])->name('auth.showFormLogin');
     Route::post('login', [AuthController::class, 'login'])->name('auth.login');
     Route::get('logout', [AuthController::class, 'logout'])->name('auth.logout');
 });
+
 Route::prefix('users')->group(function (){
     Route::get('', [UserController::class, "index"])->name("users.index");
+    Route::get('create', [UserController::class, 'create'])->name('users.create');
+    Route::post('create', [UserController::class, 'store'])->name('users.store');
 });
+
