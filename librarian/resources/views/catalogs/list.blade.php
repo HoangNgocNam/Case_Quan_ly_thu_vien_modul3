@@ -45,10 +45,10 @@
 {{--</div>--}}
 {{--</body>--}}
 {{--</html>--}}
-@extends('home.master')
-@section('title', "User Management")
+{{--@extends('home.master')--}}
+{{--@section('title', "User Management")--}}
 {{--@section('title-content', 'User Management')--}}
-@section('content')
+{{--@section('content')--}}
     <table>
         <thead>
             <tr>
@@ -78,4 +78,4 @@
                 @endif
                 </tbody>
         </table>
-@endsection
+{{--@endsection--}}
