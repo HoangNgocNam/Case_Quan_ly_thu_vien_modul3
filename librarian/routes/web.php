@@ -61,9 +61,9 @@ Route::prefix('students')->group(function () {
 });
 
 Route::prefix('books')->group(function (){
-    Route::get('',[BookController::class,"index"])-> name("books.index");
-    Route::get('create',[BookController::class,"create"])-> name("books.create");
-    Route::post('create',[BookController::class,"store"])-> name("books.store");
+    Route::get('/',[BookController::class,"index"])-> name("books.index");
+    Route::get('/create',[BookController::class,"create"])-> name("books.create");
+    Route::post('/create',[BookController::class,"store"])-> name("books.store");
     Route::get('/{id}/update',[BookController::class,"edit"])-> name("books.edit");
     Route::post('/{id}/update',[BookController::class,"update"])-> name("books.update");
     Route::get('/{id}/delete',[BookController::class,"delete"])-> name("books.delete");

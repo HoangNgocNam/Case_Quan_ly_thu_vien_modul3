@@ -1,3 +1,9 @@
+@extends("home.master")
+@section("title","Student")
+@section("title-content","Quản lý Học sinh")
+@section("content")
+
+
 <a href="{{route('students.create')}}">Create Student</a>
 <div class="card mb-4">
     <div class="card-header">
@@ -9,12 +15,12 @@
             <thead>
             <tr>
                 <th scope="col">ID</th>
-                <th scope="col">Name</th>
-                <th scope="col">Student Code</th>
+                <th scope="col">Tên</th>
+                <th scope="col">Mã học sinh</th>
                 <th scope="col">Email</th>
-                <th scope="col">Address</th>
-                <th scope="col">Birthday</th>
-                <th scope="col">Action</th>
+                <th scope="col">Địa chỉ</th>
+                <th scope="col">Ngày sinh</th>
+                <th scope="col">Thao tác</th>
             </tr>
             </thead>
             <tbody>
@@ -26,11 +32,12 @@
                     <td>{{$student->email}}</td>
                     <td>{{$student->address}}</td>
                     <td>{{$student->birthday}}</td>
-                    <td><a href="{{route('students.update',$student->id)}}">Update</a></td>
-                    <td><a onclick="confirm('Are you sure?')" href="{{route('students.delete',$student->id)}}">Delete</a></td>
+                    <td><a href="{{route('students.update',$student->id)}}">Sửa</a></td>
+                    <td><a onclick="confirm('Are you sure?')" href="{{route('students.delete',$student->id)}}">Xóa</a></td>
                 </tr>
             @endforeach
             </tbody>
         </table>
     </div>
 </div>
+@endsection
