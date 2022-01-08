@@ -2,6 +2,7 @@
 
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\BookController;
 use App\Http\Controllers\CatalogController;
 use App\Http\Controllers\StudentController;
 use App\Http\Controllers\UserController;
@@ -49,8 +50,19 @@ Route::prefix('catalogs')->group(function (){
     Route::get('/{id}/delete',[CatalogController::class,'delete'])->name('catalogs.delete');
 });
 
+
 Route::prefix('students')->group(function () {
     Route::get('/',[StudentController::class,"index"])->name("students.list");
     Route::get('/create',[StudentController::class,"create"])->name("students.create");
     Route::get('/create',[StudentController::class,"store"])->name("students.store");
+});
+
+Route::prefix('books')->group(function (){
+    Route::get('',[BookController::class,"index"])-> name("books.index");
+    Route::get('create',[BookController::class,"create"])-> name("books.create");
+    Route::post('create',[BookController::class,"store"])-> name("books.store");
+    Route::get('/{id}/update',[BookController::class,"edit"])-> name("books.edit");
+    Route::post('/{id}/update',[BookController::class,"update"])-> name("books.update");
+    Route::get('/{id}/delete',[BookController::class,"delete"])-> name("books.delete");
+
 });
