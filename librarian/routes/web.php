@@ -3,6 +3,7 @@
 
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BookController;
+use App\Http\Controllers\BorrowController;
 use App\Http\Controllers\CatalogController;
 use App\Http\Controllers\StudentController;
 use App\Http\Controllers\UserController;
@@ -68,4 +69,8 @@ Route::prefix('books')->group(function (){
     Route::post('/{id}/update',[BookController::class,"update"])-> name("books.update");
     Route::get('/{id}/delete',[BookController::class,"delete"])-> name("books.delete");
 
+});
+
+Route::prefix('borrows')->group(function (){
+    Route::get('',[BorrowController::class,"index"])->name('borrows.index');
 });
