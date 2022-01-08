@@ -20,6 +20,7 @@ class UserController extends Controller
       $user = User::findOrFail($id);
       $user->roles()->detach();
       $user->delete();
+        toastr()->success('Xóa thành công!');
       return redirect()->route('users.index');
     }
 
@@ -51,6 +52,7 @@ class UserController extends Controller
         }
         $user->save();
         $user->roles()->sync($request->role);
+        toastr()->success('Thêm thành công');
         return redirect()->route('users.index');
     }
 
@@ -63,6 +65,13 @@ class UserController extends Controller
 
     public function update(Request $request , $id)
     {
+        $request->validate([
+            "name"=>"required",
+            "email"=>"required|email",
+            "password"=>"required|min:6",
+            "birthday"=>"required|date",
+            "phone"=>"required|Numeric",
+        ]);
         $user = User::findOrFail($id);
         $user->name = $request->name;
         $user->email = $request->email;
@@ -76,6 +85,7 @@ class UserController extends Controller
         }
         $user->save();
         $user->roles()->sync($request->role);
+        toastr()->success('Cập nhật thành công');
         return redirect()->route('users.index');
     }
 }

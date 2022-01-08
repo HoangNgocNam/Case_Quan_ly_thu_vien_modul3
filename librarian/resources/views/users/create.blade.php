@@ -14,35 +14,35 @@
                 @csrf
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Tên</label>
-                    <input type="text" name="name" class="form-control" placeholder="Nhập tên">
+                    <input type="text" name="name" class="form-control" placeholder="Nhập tên" value="{{old('name')}}">
                     @error('name')
                     <p style="color: red">{{$message}}</p>
                     @enderror
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">Email</label>
-                    <input type="email" name="email" class="form-control" placeholder="Nhập email">
+                    <input type="email" name="email" class="form-control" placeholder="Nhập email" value="{{old('email')}}">
                     @error('email')
                     <p style="color: red">{{$message}}</p>
                     @enderror
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">Mật khẩu</label>
-                    <input type="password" name="password" class="form-control" placeholder="Nhập mật khẩu">
+                    <input type="password" name="password" class="form-control" placeholder="Nhập mật khẩu" value="{{old('password')}}">
                     @error('password')
                     <p style="color: red">{{$message}}</p>
                     @enderror
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">Ngày sinh</label>
-                    <input type="date" name="birthday" class="form-control" placeholder="Nhập ngày sinh">
+                    <input type="date" name="birthday" class="form-control" placeholder="Nhập ngày sinh" value="{{old('birthday')}}">
                     @error('birthday')
                     <p style="color: red">{{$message}}</p>
                     @enderror
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">Số điện thoại</label>
-                    <input type="password" name="phone" class="form-control" placeholder="Nhập số điện thoại">
+                    <input type="text" name="phone" class="form-control" placeholder="Nhập số điện thoại"value="{{old('phone')}}">
                     @error('phone')
                     <p style="color: red">{{$message}}</p>
                     @enderror
