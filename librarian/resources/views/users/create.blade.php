@@ -42,7 +42,7 @@
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">Số điện thoại</label>
-                    <input type="password" name="phone" class="form-control" placeholder="Nhập số điện thoại"value="{{old('phone')}}">
+                    <input type="text" name="phone" class="form-control" placeholder="Nhập số điện thoại"value="{{old('phone')}}">
                     @error('phone')
                     <p style="color: red">{{$message}}</p>
                     @enderror
