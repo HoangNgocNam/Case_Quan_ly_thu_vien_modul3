@@ -5,6 +5,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BookController;
 use App\Http\Controllers\BorrowController;
 use App\Http\Controllers\CatalogController;
+use App\Http\Controllers\SocialController;
 use App\Http\Controllers\StudentController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
@@ -62,15 +63,23 @@ Route::prefix('students')->group(function () {
 });
 
 Route::prefix('books')->group(function (){
-    Route::get('',[BookController::class,"index"])-> name("books.index");
-    Route::get('create',[BookController::class,"create"])-> name("books.create");
-    Route::post('create',[BookController::class,"store"])-> name("books.store");
+    Route::get('/',[BookController::class,"index"])-> name("books.index");
+    Route::get('/create',[BookController::class,"create"])-> name("books.create");
+    Route::post('/create',[BookController::class,"store"])-> name("books.store");
     Route::get('/{id}/update',[BookController::class,"edit"])-> name("books.edit");
     Route::post('/{id}/update',[BookController::class,"update"])-> name("books.update");
     Route::get('/{id}/delete',[BookController::class,"delete"])-> name("books.delete");
 
 });
 
+
 Route::prefix('borrows')->group(function (){
     Route::get('',[BorrowController::class,"index"])->name('borrows.index');
 });
+
+
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/auth/redirect/{provider}',[SocialController::class,'redirect']);
+Route::get('/callback/{provider}',[SocialController::class,'callback']);
+
