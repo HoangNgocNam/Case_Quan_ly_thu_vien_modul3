@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @extends("home.master")
 @section("title","Student")
 @section("title-content","Cập Nhật Sách")
@@ -13,7 +14,7 @@
                 <div class="mb-3">
                     <label for="exampleFormControlInput1">Ảnh</label>
                     <input type="file" name="imag" class="form-control-file" placeholder="Nhập tên sách">
-                    <img style="width: 100px;" src="{{$book->imag}}" alt="">
+                    <img style="width: 100px;" src="{{asset('storage/'.$book->imag)}}" alt="">
                 </div>
                 <div class="mb-3">
                     <label for="exampleFormControlInput1">Tên sách</label>
