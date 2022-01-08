@@ -12,7 +12,7 @@
 <body>
 <h1 style="text-align: center">Danh Mục Sách</h1>
 <div class="container">
-    <a href="{{route('catalogs.creare')}}">Create</a>
+    <a href="{{route('catalogs.create')}}">Create</a>
     <table class="table table-hover">
         <thead>
         <tr>
