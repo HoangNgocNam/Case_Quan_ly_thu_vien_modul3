@@ -1,17 +1,10 @@
 
 
-
 @extends("home.master")
-@section("title","Sách")
+@section("title","Book")
 @section("title-content","Quản lý sách")
 @section("content")
-
-
-<div class="container">
-    <a href="{{route('books.create')}}">Thêm sách</a>
-</div>
-{{--<a href="{{route('students.create')}}">Create Student</a>--}}
-<div class="card mb-4">
+    <div class="card mb-4">
     <div class="card-header">
         <i class="fas fa-table me-1"></i>
         Danh sách sách

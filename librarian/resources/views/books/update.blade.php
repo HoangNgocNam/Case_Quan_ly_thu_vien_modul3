@@ -1,6 +1,6 @@
-<<<<<<< HEAD
+
 @extends("home.master")
-@section("title","Student")
+@section("title","Book")
 @section("title-content","Cập Nhật Sách")
 @section("content")
     <div class="card mb-4">

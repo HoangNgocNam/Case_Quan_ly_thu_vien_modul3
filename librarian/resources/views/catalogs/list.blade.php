@@ -1,10 +1,8 @@
 @extends("home.master")
-@section("title","Danh mục sách")
+@section("title","Catalog")
 @section("title-content","Quản lý danh mục sách")
 @section("content")
 
-
-    <a href="{{route('catalogs.create')}}">Thêm mới</a>
     <div class="card mb-4">
         <div class="card-header">
             <i class="fas fa-table me-1"></i>
