@@ -54,7 +54,10 @@ Route::prefix('catalogs')->group(function (){
 Route::prefix('students')->group(function () {
     Route::get('/',[StudentController::class,"index"])->name("students.list");
     Route::get('/create',[StudentController::class,"create"])->name("students.create");
-    Route::get('/create',[StudentController::class,"store"])->name("students.store");
+    Route::post('/create',[StudentController::class,"store"])->name("students.store");
+    Route::get('/{id}/update',[StudentController::class,"edit"])->name("students.edit");
+    Route::post('/{id}/update',[StudentController::class,"update"])->name("students.update");
+    Route::get('/{id}/delete',[StudentController::class,"delete"])->name("students.delete");
 });
 
 Route::prefix('books')->group(function (){
