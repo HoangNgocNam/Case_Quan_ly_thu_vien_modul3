@@ -37,6 +37,7 @@ class BookController extends Controller
         $book->status = $request->status;
         $book->category_id = $request->category_id;
         $book->publisher_id = $request->publisher_id;
+        $book->quanlity = $request->quanlity;
         $book->save();
         return redirect()->route('books.index');
     }
@@ -62,6 +63,7 @@ class BookController extends Controller
         $book->status = $request->status;
         $book->category_id = $request->category_id;
         $book->publisher_id = $request->publisher_id;
+        $book->quanlity = $request->quanlity;
         $book->save();
         return redirect()->route('books.index');
     }

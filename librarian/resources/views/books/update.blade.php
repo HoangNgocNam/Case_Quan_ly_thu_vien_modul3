@@ -1,4 +1,3 @@
-
 @extends("home.master")
 @section("title","Book")
 @section("title-content","Cập Nhật Sách")
@@ -18,7 +17,8 @@
                 </div>
                 <div class="mb-3">
                     <label for="exampleFormControlInput1">Tên sách</label>
-                    <input type="text" name="name" class="form-control" placeholder="Nhập tên sách" value="{{$book->name}}">
+                    <input type="text" name="name" class="form-control" placeholder="Nhập tên sách"
+                           value="{{$book->name}}">
                 </div>
                 <div class="mb-3">
                     <label for="exampleFormControlInput1">Mô tả</label>
@@ -50,6 +50,11 @@
                             </option>
                         @endforeach
                     </select>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1">Số Lượng</label>
+                    <input type="number" name="quanlity" class="form-control" placeholder="Nhập Số Lượng"
+                           value="{{$book->quanlity}}">
                 </div>
                 <a class="btn btn-secondary" href="{{route('books.index')}}">Quay lại</a>
                 <button type="submit" class="btn btn-primary">Cập nhật</button>

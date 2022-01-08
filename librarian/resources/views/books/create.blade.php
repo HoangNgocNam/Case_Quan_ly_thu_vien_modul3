@@ -46,6 +46,10 @@
                         @endforeach
                     </select>
                 </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1">Số Lượng</label>
+                    <input type="number" name="quanlity" class="form-control" placeholder="Nhập Số Lượng">
+                </div>
                 <a class="btn btn-secondary" href="{{route('books.index')}}">Quay lại</a>
                 <button type="submit" class="btn btn-primary">Thêm mới</button>
             </form>

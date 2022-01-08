@@ -23,6 +23,7 @@
                 <th scope="col">Trạng Thái</th>
                 <th scope="col">Thể Loại</th>
                 <th scope="col">Nhà Xuất Bản</th>
+                <th scope="col">Số Lượng</th>
                 <th colspan="2">Thao tác</th>
             </tr>
             </thead>
@@ -56,6 +57,7 @@
                                 <p>Chưa Cập Nhật</p>
                             @endif
                         </td>
+                        <td>{{$book->quanlity}}</td>
                         <td>
                             <a href="{{route('books.update',$book->id)}}">Sửa</a>
                         </td>
