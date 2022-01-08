@@ -51,7 +51,7 @@
                 <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">Ảnh</label>
                     <input type="file" name="img" class="form-control" placeholder="Thêm ảnh">
-                    <img style="width: 100px" src="{{$user->img}}" alt="">
+                    <img style="width: 100px" src="{{asset('storage/'.$user->img)}}" alt="">
                 </div>
                 <div class="mb-3">
                     {{--                    <label for="exampleInputPassword1" class="form-label">Role</label>--}}
@@ -61,7 +61,7 @@
                     @endforeach
                 </div>
                 <a href="{{route('users.index')}}" class="btn btn-secondary">Quay lại</a>
-                <button type="submit" class="btn btn-primary">Thêm mới</button>
+                <button type="submit" class="btn btn-primary">Cập Nhật</button>
             </form>
         </div>
     </div>
