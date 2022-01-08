@@ -3,6 +3,7 @@
 
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CatalogController;
+use App\Http\Controllers\StudentController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -46,4 +47,10 @@ Route::prefix('catalogs')->group(function (){
     Route::get('/{id}/update',[CatalogController::class,'edit'])->name('catalogs.edit');
     Route::post('/{id}/update',[CatalogController::class,'update'])->name('catalogs.update');
     Route::get('/{id}/delete',[CatalogController::class,'delete'])->name('catalogs.delete');
+});
+
+Route::prefix('students')->group(function () {
+    Route::get('/',[StudentController::class,"index"])->name("students.list");
+    Route::get('/create',[StudentController::class,"create"])->name("students.create");
+    Route::get('/create',[StudentController::class,"store"])->name("students.store");
 });
