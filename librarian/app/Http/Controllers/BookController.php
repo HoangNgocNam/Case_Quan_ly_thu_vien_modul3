@@ -26,6 +26,12 @@ class BookController extends Controller
 
     public function store(Request $request)
     {
+        $request->validate([
+            'name' => 'required',
+            'desc' => 'required',
+            'category_id' => 'required',
+            'publisher_id' => 'required',
+        ]);
         $book = new Book();
         if ($request->hasFile('imag')) {
             $imag = $request->file('imag');
@@ -38,6 +44,7 @@ class BookController extends Controller
         $book->category_id = $request->category_id;
         $book->publisher_id = $request->publisher_id;
         $book->save();
+        toastr()->success('Thêm sách thành công!');
         return redirect()->route('books.index');
     }
 
@@ -51,6 +58,12 @@ class BookController extends Controller
 
     public function update(Request $request,$id)
     {
+        $request->validate([
+            'name' => 'required',
+            'desc' => 'required',
+            'category_id' => 'required',
+            'publisher_id' => 'required',
+        ]);
         $book = Book::findOrFail($id);
         if ($request->hasFile('imag')) {
             $imag = $request->file('imag');
@@ -63,6 +76,7 @@ class BookController extends Controller
         $book->category_id = $request->category_id;
         $book->publisher_id = $request->publisher_id;
         $book->save();
+        toastr()->success('Cập nhật thành công');
         return redirect()->route('books.index');
     }
 
@@ -70,6 +84,7 @@ class BookController extends Controller
     {
         $book = Book::findOrFail($id);
         $book->delete();
+        toastr()->success('Xóa thành công!');
         return redirect()->route('books.index');
     }
 

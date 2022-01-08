@@ -13,16 +13,22 @@
                 @csrf
                 <div class="mb-3">
                     <label for="exampleFormControlInput1">Ảnh</label>
-                    <input type="file" name="imag" class="form-control-file" placeholder="Nhập tên sách">
+                    <input type="file" name="imag" class="form-control-file" placeholder="Cập nhật ảnh">
                     <img style="width: 100px;" src="{{asset('storage/'.$book->imag)}}" alt="">
                 </div>
                 <div class="mb-3">
                     <label for="exampleFormControlInput1">Tên sách</label>
                     <input type="text" name="name" class="form-control" placeholder="Nhập tên sách" value="{{$book->name}}">
+                    @error('name')
+                    <p style="color: red">{{$message}}</p>
+                    @enderror
                 </div>
                 <div class="mb-3">
                     <label for="exampleFormControlInput1">Mô tả</label>
                     <textarea name="desc" class="form-control">{{$book->desc}}</textarea>
+                    @error('desc')
+                    <p style="color: red">{{$message}}</p>
+                    @enderror
                 </div>
                 <div class="mb-3">
                     <label for="exampleFormControlSelect1">Trạng Thái</label>

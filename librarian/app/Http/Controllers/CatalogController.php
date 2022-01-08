@@ -41,6 +41,10 @@ class CatalogController extends Controller
 
     public function update(Request $request,$id)
     {
+        $request->validate([
+            'code' => 'required',
+            'name' => 'required',
+        ]);
         $catalog = Catalog::findOrFail($id);
         $catalog->code = $request->code;
         $catalog->name = $request->name;

@@ -16,16 +16,21 @@
                 </div>
                 <div class="mb-3">
                     <label for="exampleFormControlInput1">Tên Sách</label>
-                    <input type="text" name="name" class="form-control" placeholder="Nhập tên sách">
+                    <input type="text" name="name" class="form-control" placeholder="Nhập tên sách" value="{{old('name')}}">
+                    @error('name')
+                    <p style="color: red">{{$message}}</p>
+                    @enderror
                 </div>
                 <div class="mb-3">
                     <label for="exampleFormControlInput1">Mô Tả</label>
                     <textarea name="desc" class="form-control" placeholder="Nhập mô tả"></textarea>
+                    @error('desc')
+                    <p style="color: red">{{$message}}</p>
+                    @enderror
                 </div>
                 <div class="mb-3">
                     <label for="exampleFormControlSelect1">Trạng Thái</label>
                     <select class="form-control" name="status">
-                        <option value="Mới">Chọn</option>
                         <option value="Mới">Mới</option>
                         <option value="Cũ">Cũ</option>
                     </select>

@@ -26,6 +26,7 @@ class AuthController extends Controller
         $data['password'] = Hash::make($request->password);
         $user = User::query()->create($data);
         $user->save();
+        toastr()->success('Đăng ký thành công!');
         return redirect()->route('auth.showFormLogin');
 
     }
@@ -46,9 +47,10 @@ class AuthController extends Controller
         ];
 
         if (!Auth::attempt($data)) {
-            session()->flash('error-login', 'Tai khoan khong dung');
+            session()->flash('error-login', 'Tài khoản không đúng');
             return redirect()->route('auth.showFormLogin');
         } else {
+            toastr()->success('Đăng nhập thành công!');
             return view('home.home');
         }
     }
@@ -56,6 +58,7 @@ class AuthController extends Controller
     public function logout()
     {
         Auth::logout();
+        toastr()->success('Đăng xuất thành công');
         return redirect()->route('auth.login');
     }
 

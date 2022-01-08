@@ -20,6 +20,13 @@ class StudentController extends Controller
 
     public function store(Request $request)
     {
+        $request->validate([
+            'name' => 'required',
+            'student_code' => 'required',
+            'email' => 'required|email',
+            'address' => 'required',
+            'birthday' => 'required|date',
+        ]);
         $student = new Student();
         $student->name = $request->name;
         $student->student_code = $request->student_code;
@@ -27,6 +34,7 @@ class StudentController extends Controller
         $student->address = $request->address;
         $student->birthday = $request->birthday;
         $student->save();
+        toastr()->success('Thêm thành công!');
         return redirect()->route("students.list");
     }
 
@@ -34,6 +42,7 @@ class StudentController extends Controller
     {
         $student = Student::findOrFail($id);
         $student->delete();
+        toastr()->success('Xóa thành công');
         return redirect()->route("students.list");
     }
 
@@ -45,6 +54,13 @@ class StudentController extends Controller
 
     public function update(Request $request,$id)
     {
+        $request->validate([
+            'name' => 'required',
+            'email' => 'required|email',
+            'password' => 'required|min:3',
+            'birthday' => 'required|date',
+            'phone' => 'required|Numeric',
+        ]);
         $student = Student::findOrFail($id);
         $student->name = $request->name;
         $student->student_code = $request->student_code;
@@ -53,6 +69,7 @@ class StudentController extends Controller
         $student->birthday = $request->birthday;
         $student->save();
         $student->update();
+        toastr()->success('Cập nhật thành công');
         return redirect()->route("students.list");
     }
 }
