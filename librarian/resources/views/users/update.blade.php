@@ -6,7 +6,7 @@
     <input type="date" name="birthday" placeholder="Phập ngày sinh" value="{{$user->birthday}}">
     <input type="text" name="phone" placeholder="Phập số điện thoại" value="{{$user->phone}}">
     <input type="file" name="img" placeholder="Thêm ảnh">
-    <img style="width: 100px" src="{{$user->img}}" alt="">
+    <img style="width: 100px" src="{{asset('storage/'.$user->img)}}" alt="">
     <hr>
     @foreach($roles as $role)
         <input {{$user->checkRole($role->id)?"checked":""}} name="role[{{$role->id}}]" class="form-check-input" type="checkbox" value="{{ $role->id }}"
