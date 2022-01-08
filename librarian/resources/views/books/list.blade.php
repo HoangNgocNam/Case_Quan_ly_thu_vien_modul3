@@ -11,6 +11,10 @@
 </head>
 <body>
 <h1 style="text-align: center">Danh Sách Sách</h1>
+<div class="col-12 col-md-4">
+    <input type="text" name="keyword" class="form-control" id="searchBook">
+</div>
+<br>
 <div class="container">
     <a href="{{route('books.create')}}">Create Book</a>
     <table class="table table-striped table-hover">
@@ -26,7 +30,7 @@
             <th scope="col">Action</th>
         </tr>
         </thead>
-        <tbody>
+        <tbody id="list-book">
         @if(isset($books))
             @foreach($books as $book)
                 <tr>

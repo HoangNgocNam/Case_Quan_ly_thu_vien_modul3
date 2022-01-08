@@ -72,4 +72,15 @@ class BookController extends Controller
         $book->delete();
         return redirect()->route('books.index');
     }
+
+    public function searchBook(Request $request)
+    {
+        $keyword = $request->keyword;
+        $books = Book::where('publisher','LIKE','%'.$keyword.'%')->get();
+        $data = [
+            'status' => 'success',
+            'data' => $books
+        ];
+        return response()->json($data);
+    }
 }
