@@ -1,5 +1,5 @@
 @extends("home.master")
-@section("title","Người dùng")
+@section("title","User")
 @section("title-content","Quản lý Người dùng")
 @section("content")
 
