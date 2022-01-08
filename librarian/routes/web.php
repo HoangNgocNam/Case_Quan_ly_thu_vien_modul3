@@ -4,6 +4,7 @@
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BookController;
 use App\Http\Controllers\CatalogController;
+use App\Http\Controllers\SocialController;
 use App\Http\Controllers\StudentController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
@@ -69,3 +70,9 @@ Route::prefix('books')->group(function (){
     Route::get('/{id}/delete',[BookController::class,"delete"])-> name("books.delete");
 
 });
+
+
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/auth/redirect/{provider}',[SocialController::class,'redirect']);
+Route::get('/callback/{provider}',[SocialController::class,'callback']);

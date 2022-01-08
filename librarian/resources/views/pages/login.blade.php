@@ -66,7 +66,7 @@
                     </form>
                     <p class="w-100 text-center">&mdash; Đăng Nhập Với &mdash;</p>
                     <div class="social d-flex text-center">
-                        <a href="#" class="px-2 py-2 mr-md-1 rounded"><i class="fab fa-google-plus-g"></i> Google</a>
+                        <a href="{{ url('/auth/redirect/google') }}" class="px-2 py-2 mr-md-1 rounded"><i class="fab fa-google-plus-g"></i> Google</a>
                     </div>
                 </div>
             </div>
