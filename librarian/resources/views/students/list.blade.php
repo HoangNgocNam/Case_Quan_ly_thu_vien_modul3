@@ -1,4 +1,4 @@
-{{--<a href="{{route('students.create')}}">Thêm mới</a>--}}
+<a href="{{route('students.create')}}">Create Student</a>
 <div class="card mb-4">
     <div class="card-header">
         <i class="fas fa-table me-1"></i>
@@ -26,8 +26,9 @@
                     <td>{{$student->email}}</td>
                     <td>{{$student->address}}</td>
                     <td>{{$student->birthday}}</td>
+                    <td><a href="{{route('students.update',$student->id)}}">Update</a></td>
+                    <td><a onclick="confirm('Are you sure?')" href="{{route('students.delete',$student->id)}}">Delete</a></td>
                 </tr>
-
             @endforeach
             </tbody>
         </table>
