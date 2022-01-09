@@ -42,7 +42,9 @@
         </div>
         <div class="collapse navbar-collapse">
             <a href="{{route('auth.showFormLogin')}}">Đăng Nhập</a>
+{{--            <a href="{{route('auth.showFormRegister')}}">Đăng Ký</a>--}}
         </div>
+
     </div>
 </nav>
 
@@ -57,7 +59,7 @@
                         <span class="watch">Xem video</span>
                     </a>
                 </p>
-                <h1 class="mb-4" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Một cuốn sách hay cho ta một điều tốt, một người bạn tốt cho ta một điều hay</h1>
+                <h1 class="mb-4" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Một cuốn sách thực sự hay nên đọc lúc còn trẻ, và đọc lại khi đã trưởng thành</h1>
                 <p class="mb-4" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">"Việc đọc sách rất quan trọng. Nếu bạn biết cách đọc, cả thế giới sẽ mở ra cho bạn"</p>
             </div>
         </div>
@@ -184,14 +186,14 @@
             <div class="col-md-8 col-lg-4 ftco-animate">
                 <div class="staff">
                     <div class="img-wrap d-flex align-items-stretch">
-                        <div class="img align-self-stretch" style="background-image: url(images/ni.jpg);"></div>
+                        <div class="img align-self-stretch" style="background-image: url({{asset('images/ni.jpg')}});"></div>
                     </div>
                     <div class="text d-flex align-items-center pt-3 text-center">
                         <div>
                             <span class="position mb-2">Thủ thư</span>
                             <h3 class="mb-4">Nam Hoàng</h3>
                             <div class="faded">
-                                <p>"Những gì sách dạy chúng ta cũng giống như lửa. Chúng ta lấy nó từ nhà hàng xóm, thắp nó trong nhà ra, đem nó truyền cho người khác và nó trở thành tài sản của tất cả mọi người.”</p>
+                                <p>"Những gì sách dạy giống như lửa. Lấy nó từ nhà hàng xóm, thắp nó trong nhà, rồi đem truyền cho người khác và nó trở thành tài sản của tất cả chúng ta.”</p>
                                 <ul class="ftco-social text-center">
                                     <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
                                     <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
@@ -206,7 +208,7 @@
             <div class="col-md-8 col-lg-4 ftco-animate">
                 <div class="staff">
                     <div class="img-wrap d-flex align-items-stretch">
-                        <div class="img align-self-stretch" style="background-image: url(images/hi.jpg);"></div>
+                        <div class="img align-self-stretch" style="background-image: url({{asset('images/hi.jpg')}});"></div>
                     </div>
                     <div class="text d-flex align-items-center pt-3 text-center">
                         <div>
@@ -228,7 +230,7 @@
             <div class="col-md-8 col-lg-4 ftco-animate">
                 <div class="staff">
                     <div class="img-wrap d-flex align-items-stretch">
-                        <div class="img align-self-stretch" style="background-image: url(images/mi.jpg);"></div>
+                        <div class="img align-self-stretch" style="background-image: url({{asset('images/mi.jpg')}});"></div>
                     </div>
                     <div class="text d-flex align-items-center pt-3 text-center">
                         <div>
@@ -259,7 +261,7 @@
                 <div class="carousel-testimony owl-carousel">
                     <div class="item">
                         <div class="testimony-wrap d-flex align-items-stretch">
-                            <div class="user-img d-flex align-self-stretch" style="background-image: url(images/my.jpg)">
+                            <div class="user-img d-flex align-self-stretch" style="background-image: url({{asset('images/my.jpg')}});">
                             </div>
                             <div class="text d-flex align-items-center">
                                 <div>
@@ -275,7 +277,7 @@
                     </div>
                     <div class="item">
                         <div class="testimony-wrap d-flex align-items-stretch">
-                            <div class="user-img d-flex align-self-stretch" style="background-image: url(images/testimony-2.jpg)">
+                            <div class="user-img d-flex align-self-stretch" style="background-image: url({{asset('images/testimony-2.jpg')}});">
                             </div>
                             <div class="text d-flex align-items-center">
                                 <div>
@@ -307,13 +309,13 @@
         <div class="row d-flex">
             <div class="col-md-4 d-flex ftco-animate">
                 <div class="blog-entry justify-content-end">
-                    <a href="single.html" class="block-20" style="background-image: url('images/coxanh.jpg');">
+                    <a href="https://vi.wikipedia.org/wiki/T%C3%B4i_th%E1%BA%A5y_hoa_v%C3%A0ng_tr%C3%AAn_c%E1%BB%8F_xanh" class="block-20" style="background-image: url({{asset('images/coxanh.jpg')}});">
                     </a>
                     <div class="text mt-3 float-right d-block">
                         <div class="d-flex align-items-center pt-2 mb-4 topp">
 
                         </div>
-                        <h3 class="heading"><a href="single.html">Tôi thấy hoa vàng trên cỏ xanh</a></h3>
+                        <h3 class="heading"><a href="https://vi.wikipedia.org/wiki/T%C3%B4i_th%E1%BA%A5y_hoa_v%C3%A0ng_tr%C3%AAn_c%E1%BB%8F_xanh">Tôi thấy hoa vàng trên cỏ xanh</a></h3>
                         <p>Tác phẩm như một tập nhật ký xoay quanh cuộc sống của những đứa trẻ ở một vùng quê Việt Nam nghèo khó, nổi bật lên là thông điệp về tình anh em, tình làng nghĩa xóm và những tâm tư của tuổi mới lớn.</p>
 
                         <div class="d-flex align-items-center mt-4 meta">
@@ -328,13 +330,13 @@
             </div>
             <div class="col-md-4 d-flex ftco-animate">
                 <div class="blog-entry justify-content-end">
-                    <a href="single.html" class="block-20" style="background-image: url('images/demen.jpg');">
+                    <a href="https://vi.wikipedia.org/wiki/D%E1%BA%BF_M%C3%A8n_phi%C3%AAu_l%C6%B0u_k%C3%BD" class="block-20" style="background-image: url({{asset('images/demen.jpg')}});">
                     </a>
                     <div class="text mt-3 float-right d-block">
                         <div class="d-flex align-items-center pt-2 mb-4 topp">
 
                         </div>
-                        <h3 class="heading"><a href="single.html">Dế mèn phiêu lưu ký</a></h3>
+                        <h3 class="heading"><a href="https://vi.wikipedia.org/wiki/D%E1%BA%BF_M%C3%A8n_phi%C3%AAu_l%C6%B0u_k%C3%BD">Dế mèn phiêu lưu ký</a></h3>
                         <p>Tác phẩm văn xuôi đặc sắc và nổi tiếng nhất của nhà văn Tô Hoài viết về loài vật, dành cho lứa tuổi thiếu nhi. Ban đầu truyện có tên là "Con dế mèn". Sau đó đổi thành "Dế Mèn phiêu lưu ký"</p>
                         <div class="d-flex align-items-center mt-4 meta">
                             <p class="mb-0"><a href="#" class="btn btn-secondary">Đọc thêm <span class="ion-ios-arrow-round-forward"></span></a></p>
@@ -348,13 +350,13 @@
             </div>
             <div class="col-md-4 d-flex ftco-animate">
                 <div class="blog-entry">
-                    <a href="single.html" class="block-20" style="background-image: url('images/chotoi.jpg');">
+                    <a href="https://vi.wikipedia.org/wiki/Cho_t%C3%B4i_xin_m%E1%BB%99t_v%C3%A9_%C4%91i_tu%E1%BB%95i_th%C6%A1" class="block-20" style="background-image: url({{asset('images/chotoi.jpg')}});">
                     </a>
                     <div class="text mt-3 float-right d-block">
                         <div class="d-flex align-items-center pt-2 mb-4 topp">
 
                         </div>
-                        <h3 class="heading"><a href="single.html">Cho tôi xin một vé đi tuổi thơ</a></h3>
+                        <h3 class="heading"><a href="https://vi.wikipedia.org/wiki/Cho_t%C3%B4i_xin_m%E1%BB%99t_v%C3%A9_%C4%91i_tu%E1%BB%95i_th%C6%A1">Cho tôi xin một vé đi tuổi thơ</a></h3>
                         <p>Nguyễn Nhật Ánh: "Tôi viết cuốn sách này không dành cho trẻ em. Tôi viết cho những ai từng là trẻ em". Tác phẩm gồm những câu chuyện nhỏ xoay xung quanh 4 đứa trẻ trong cùng một khu xóm</p>
                         <div class="d-flex align-items-center mt-4 meta">
                             <p class="mb-0"><a href="#" class="btn btn-secondary">Đọc thêm <span class="ion-ios-arrow-round-forward"></span></a></p>
@@ -369,13 +371,13 @@
 
             <div class="col-md-4 d-flex ftco-animate">
                 <div class="blog-entry justify-content-end">
-                    <a href="single.html" class="block-20" style="background-image: url('images/kimm.jpg');">
+                    <a href="https://vi.wikipedia.org/wiki/Nh%C3%A0_gi%E1%BA%A3_kim_(ti%E1%BB%83u_thuy%E1%BA%BFt)" class="block-20" style="background-image: url({{asset('images/kimm.jpg')}});">
                     </a>
                     <div class="text mt-3 float-right d-block">
                         <div class="d-flex align-items-center pt-2 mb-4 topp">
 
                         </div>
-                        <h3 class="heading"><a href="single.html">Nhà giả kim</a></h3>
+                        <h3 class="heading"><a href="https://vi.wikipedia.org/wiki/Nh%C3%A0_gi%E1%BA%A3_kim_(ti%E1%BB%83u_thuy%E1%BA%BFt)">Nhà giả kim</a></h3>
                         <p>Nhân vật chính là Santiago. Cha mẹ Santiago mong muốn cậu trở thành linh mục để mang lại niềm tự hào cho gia đình, nhưng vì ước mơ từ nhỏ của chính mình là đi đây đi đó khắp thế giới, Santigo đã thuyết phục được cha cậu và trở thành một người chăn cừu.</p>
                         <div class="d-flex align-items-center mt-4 meta">
                             <p class="mb-0"><a href="#" class="btn btn-secondary">Đọc thêm <span class="ion-ios-arrow-round-forward"></span></a></p>
@@ -389,13 +391,13 @@
             </div>
             <div class="col-md-4 d-flex ftco-animate">
                 <div class="blog-entry justify-content-end">
-                    <a href="single.html" class="block-20" style="background-image: url('images/chipheo.jpg');">
+                    <a href="https://vi.wikipedia.org/wiki/Ch%C3%AD_Ph%C3%A8o" class="block-20" style="background-image: url({{asset('images/chipheo.jpg')}});">
                     </a>
                     <div class="text mt-3 float-right d-block">
                         <div class="d-flex align-items-center pt-2 mb-4 topp">
 
                         </div>
-                        <h3 class="heading"><a href="single.html">Chí phèo</a></h3>
+                        <h3 class="heading"><a href="https://vi.wikipedia.org/wiki/Ch%C3%AD_Ph%C3%A8o">Chí phèo</a></h3>
                         <p>Truyện ngắn Chí Phèo, nguyên có tên là Cái lò gạch cũ. Là một truyện ngắn nổi tiếng, một tác phẩm xuất sắc, thể hiện nghệ thuật viết truyện độc đáo của Nam Cao, đồng thời là một tấn bi kịch của một người nông dân nghèo bị tha hóa trong xã hội </p>
                         <div class="d-flex align-items-center mt-4 meta">
                             <p class="mb-0"><a href="#" class="btn btn-secondary">Đọc thêm <span class="ion-ios-arrow-round-forward"></span></a></p>
@@ -409,13 +411,13 @@
             </div>
             <div class="col-md-4 d-flex ftco-animate">
                 <div class="blog-entry">
-                    <a href="single.html" class="block-20" style="background-image: url('images/pi.jpg');">
+                    <a href="https://vi.wikipedia.org/wiki/Cu%E1%BB%99c_%C4%91%E1%BB%9Di_c%E1%BB%A7a_Pi" class="block-20" style="background-image: url({{asset('images/pi.jpg')}});">
                     </a>
                     <div class="text mt-3 float-right d-block">
                         <div class="d-flex align-items-center pt-2 mb-4 topp">
 
                         </div>
-                        <h3 class="heading"><a href="single.html">Cuộc đời của Pi</a></h3>
+                        <h3 class="heading"><a href="https://vi.wikipedia.org/wiki/Cu%E1%BB%99c_%C4%91%E1%BB%9Di_c%E1%BB%A7a_Pi">Cuộc đời của Pi</a></h3>
                         <p>Pi là con trai của một chủ vườn thú tại Pondicherry của Ấn Độ. Cậu say mê tôn giáo và cùng một lúc theo cả đạo Hindu, đạo Hồi và đạo Thiên Chúa. Để tránh những biến cố chính trị, gia đình cậu chuyển toàn bộ vườn thú tới Canada trên một con tàu của Nhật Bản có tên là Tsimtsum.</p>
                         <div class="d-flex align-items-center mt-4 meta">
                             <p class="mb-0"><a href="#" class="btn btn-secondary">Đọc thêm <span class="ion-ios-arrow-round-forward"></span></a></p>
