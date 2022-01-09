@@ -29,7 +29,7 @@ class CatalogController extends Controller
        $catalog->code = $request->code;
        $catalog->name = $request->name;
        $catalog->save();
-
+       toastr()->success('Thêm danh mục thành công!');
        return redirect()->route('catalogs.index');
     }
 
@@ -49,6 +49,7 @@ class CatalogController extends Controller
         $catalog->code = $request->code;
         $catalog->name = $request->name;
         $catalog->save();
+        toastr()->success('Cập nhật danh mục thành công!');
         return redirect()->route('catalogs.index');
     }
 
@@ -56,6 +57,7 @@ class CatalogController extends Controller
     {
         $catalog = Catalog::findOrFail($id);
         $catalog -> delete();
+        toastr()->success('Xóa thành công!');
         return redirect()->route('catalogs.index');
     }
 }

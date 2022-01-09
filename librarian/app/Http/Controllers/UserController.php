@@ -20,7 +20,7 @@ class UserController extends Controller
       $user = User::findOrFail($id);
       $user->roles()->detach();
       $user->delete();
-        toastr()->success('Xóa thành công!');
+        toastr()->success('Xóa người dùng thành công!');
       return redirect()->route('users.index');
     }
 
@@ -52,7 +52,7 @@ class UserController extends Controller
         }
         $user->save();
         $user->roles()->sync($request->role);
-        toastr()->success('Thêm thành công');
+        toastr()->success('Thêm người dùng thành công');
         return redirect()->route('users.index');
     }
 
@@ -85,7 +85,7 @@ class UserController extends Controller
         }
         $user->save();
         $user->roles()->sync($request->role);
-        toastr()->success('Cập nhật thành công');
+        toastr()->success('Cập nhật người dùng thành công');
         return redirect()->route('users.index');
     }
 }

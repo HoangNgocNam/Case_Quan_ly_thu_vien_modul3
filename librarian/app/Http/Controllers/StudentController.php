@@ -34,7 +34,7 @@ class StudentController extends Controller
         $student->address = $request->address;
         $student->birthday = $request->birthday;
         $student->save();
-        toastr()->success('Thêm thành công!');
+        toastr()->success('Thêm khách hàng thành công!');
         return redirect()->route("students.list");
     }
 
@@ -42,7 +42,7 @@ class StudentController extends Controller
     {
         $student = Student::findOrFail($id);
         $student->delete();
-        toastr()->success('Xóa thành công');
+        toastr()->success('Xóa khách thành công');
         return redirect()->route("students.list");
     }
 
@@ -69,7 +69,7 @@ class StudentController extends Controller
         $student->birthday = $request->birthday;
         $student->save();
         $student->update();
-        toastr()->success('Cập nhật thành công');
+        toastr()->success('Cập nhật khách hàng thành công');
         return redirect()->route("students.list");
     }
 }

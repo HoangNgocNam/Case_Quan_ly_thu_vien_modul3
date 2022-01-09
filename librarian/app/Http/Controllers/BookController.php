@@ -45,7 +45,7 @@ class BookController extends Controller
         $book->publisher_id = $request->publisher_id;
         $book->quanlity = $request->quanlity;
         $book->save();
-        toastr()->success('Thêm sách thành công!');
+        toastr()->success('Thêm mới sách thành công!');
         return redirect()->route('books.index');
     }
 
@@ -78,7 +78,7 @@ class BookController extends Controller
         $book->publisher_id = $request->publisher_id;
         $book->quanlity = $request->quanlity;
         $book->save();
-        toastr()->success('Cập nhật thành công');
+        toastr()->success('Cập nhật sách thành công');
         return redirect()->route('books.index');
     }
 

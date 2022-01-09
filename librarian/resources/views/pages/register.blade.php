@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>Login</title>
+    <title>Register </title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="{{asset('https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap')}}" rel="stylesheet">
@@ -49,7 +49,15 @@
                                 <input type="text" id="email" name="email" value="{{old('email')}}" class="form-control" placeholder="Nhập email">
                             </div>
                         </div>
-
+{{--                        <div class="form-group">--}}
+{{--                            <label class="sr-only" for="inlineFormInputGroup">Phone</label>--}}
+{{--                            <div class="input-group mb-2">--}}
+{{--                                <div class="input-group-prepend">--}}
+{{--                                    <div class="input-group-text"><i class="fas fa-phone"></i></div>--}}
+{{--                                </div>--}}
+{{--                                <input type="text" id="email" name="phone" value="{{old('phone')}}" class="form-control" placeholder="Nhập số điện thoại">--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
 
                         <div class="form-group">
                             <label class="sr-only" for="inlineFormInputGroup">Password</label>
