@@ -22,13 +22,12 @@ class AuthController extends Controller
             'email' => 'required',
             'password' => 'required|min:6',
         ]);
-        $data = $request->only('name', 'email', 'password');
+        $data = $request->only('name','email','password');
         $data['password'] = Hash::make($request->password);
-        $user = User::query()->create($data);
+        $user = User::create($data);
         $user->save();
         toastr()->success('Đăng ký thành công!');
         return redirect()->route('auth.showFormLogin');
-
     }
 
     public function showFormLogin()
@@ -51,7 +50,7 @@ class AuthController extends Controller
             return redirect()->route('auth.showFormLogin');
         } else {
             toastr()->success('Đăng nhập thành công!');
-            return view('home.home');
+            return redirect()->route('students.list');
         }
     }
 
