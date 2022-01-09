@@ -24,13 +24,6 @@
                 <div class="login-wrap p-0">
                     <form action="{{route('auth.register')}}" method="post" class="signin-form">
                         @csrf
-                        {{--                        <div class="form-group">--}}
-                        {{--                            <input type="text" name="email" class="form-control" placeholder="Email" required>--}}
-                        {{--                        </div>--}}
-                        {{--                        <div class="form-group">--}}
-                        {{--                            <input id="password-field" name="password" type="password" class="form-control" placeholder="Mật khẩu" required>--}}
-                        {{--                            <span toggle="#password-field" id="eye-password" class="fa fa-fw fa-eye-slash field-icon"></span>--}}
-                        {{--                        </div>--}}
                         <div class="form-group">
                             <label class="sr-only" for="inlineFormInputGroup">Name</label>
                             <div class="input-group mb-2">

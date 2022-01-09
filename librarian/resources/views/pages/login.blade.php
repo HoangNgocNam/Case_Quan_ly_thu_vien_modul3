@@ -12,7 +12,6 @@
 </head>
 <body class="img js-fullheight" style="background-image: url({{asset('images/aa.jpg')}});">
 <section class="ftco-section">
-<section class="ftco-section">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-6 text-center mb-5">
@@ -24,14 +23,6 @@
                 <div class="login-wrap p-0">
                     <form action="{{route('auth.login')}}" method="post" class="signin-form">
                         @csrf
-                        {{--                        <div class="form-group">--}}
-                        {{--                            <input type="text" name="email" class="form-control" placeholder="Email" required>--}}
-                        {{--                        </div>--}}
-                        {{--                        <div class="form-group">--}}
-                        {{--                            <input id="password-field" name="password" type="password" class="form-control" placeholder="Mật khẩu" required>--}}
-                        {{--                            <span toggle="#password-field" id="eye-password" class="fa fa-fw fa-eye-slash field-icon"></span>--}}
-                        {{--                        </div>--}}
-
                         <div class="form-group">
                             <label class="sr-only" for="inlineFormInputGroup">Email</label>
                             <div class="input-group mb-2">
@@ -80,7 +71,6 @@
 <script src="{{asset('js/popper.js')}}"></script>
 <script src="{{asset('js/boottstrap.min.js')}}"></script>
 <script src="{{asset('js/mainn.js')}}"></script>
-</section>
 </body>
 </html>
 
