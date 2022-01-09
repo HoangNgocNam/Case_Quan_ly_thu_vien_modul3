@@ -27,7 +27,7 @@ class CategorySeeder extends Seeder
         $category -> save();
 
         $category = new Category();
-        $category -> name = 'Kinh Dịch';
+        $category -> name = 'Kinh Dị';
         $category -> save();
 
         $category = new Category();

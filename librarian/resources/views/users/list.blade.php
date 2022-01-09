@@ -3,8 +3,9 @@
 @section("title-content","Quản lý Người dùng")
 @section("content")
 
-
-<a href="{{ route('users.create') }}">Create User</a>
+    <button class="btn btn-primary mb-3">
+        <a style="color: white; text-decoration: none" href="{{ route('users.create') }}">Thêm mới người dùng</a>
+    </button>
 <div class="card mb-4">
     <div class="card-header">
         <i class="fas fa-table me-1"></i>
@@ -15,13 +16,13 @@
             <thead>
             <tr>
                 <th scope="col">Id</th>
-                <th scope="col">Name</th>
-                <th scope="col">Avatar</th>
+                <th scope="col">Tên</th>
+                <th scope="col">Ảnh</th>
                 <th scope="col">Email</th>
-                <th scope="col">Birthday</th>
-                <th scope="col">Phone</th>
-                <th scope="col">Role</th>
-                <th colspan="2">Action</th>
+                <th scope="col">Ngày sinh</th>
+                <th scope="col">Số điện thoại</th>
+                <th scope="col">Quyền</th>
+                <th colspan="2">Thao tác</th>
             </tr>
 
             </thead>
@@ -35,7 +36,7 @@
                             <img style="width: 100px; height: 100px" src="{{asset('storage/'.$user->img)}}"
                                  alt="{{asset('storage/'.$user->img)}}">
                         @else
-                            <p>Chua co anh</p>
+                            <p>Chưa có ảnh</p>
                         @endif
                     </td>
                     <td>{{$user->email}}</td>
@@ -51,10 +52,12 @@
                         @endif
                     </td>
                     <td>
-                        <a href="{{route('users.update',$user->id)}}">Update</a>
-                    </td>
-                    <td>
-                        <a onclick="return confirm('Ban co muon xoa khong')" href="{{route('users.delete',$user->id)}}">Delete</a>
+                        <button class="btn btn-success">
+                            <a style="color: white" href="{{route('users.update',$user->id)}}"><i class="fas fa-pen"></i></a>
+                        </button>
+                        <button class="btn btn-danger">
+                            <a style="color: white" onclick="return confirm('Bạn có chắc muốn xóa người dùng này không?')" href="{{route('users.delete',$user->id)}}"><i class="fas fa-trash-alt"></i></a>
+                        </button>
                     </td>
                 </tr>
             @endforeach

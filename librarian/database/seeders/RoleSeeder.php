@@ -15,11 +15,11 @@ class RoleSeeder extends Seeder
     public function run()
     {
         $role = new Role();
-        $role->name = "Admin";
+        $role->name = " Admin";
         $role->save();
 
         $role = new Role();
-        $role->name = "librarian";
+        $role->name = " Librarian";
         $role->save();
     }
 }
