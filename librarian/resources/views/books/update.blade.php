@@ -17,15 +17,12 @@
                 </div>
                 <div class="mb-3">
                     <label for="exampleFormControlInput1">Tên sách</label>
-<<<<<<< HEAD
                     <input type="text" name="name" class="form-control" placeholder="Nhập tên sách"
                            value="{{$book->name}}">
-=======
                     <input type="text" name="name" class="form-control" placeholder="Nhập tên sách" value="{{$book->name}}">
                     @error('name')
                     <p style="color: red">{{$message}}</p>
                     @enderror
->>>>>>> eb158ee9bb03674466c2ed88975cada91b124bf4
                 </div>
                 <div class="mb-3">
                     <label for="exampleFormControlInput1">Mô tả</label>
