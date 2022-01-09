@@ -11,7 +11,7 @@ The library needs to register a class autoloader; this is done by including the
 
 ```php
 <?php
-require 'path/to/PHP-Parser/lib/bootstrap.php';
+require 'path/to/PHP-Parser/lib/bbootstrap.php';
 ```
 
 Additionally you may want to set the `xdebug.max_nesting_level` ini option to a higher value:

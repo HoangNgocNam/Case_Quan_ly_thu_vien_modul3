@@ -37,7 +37,7 @@
       </tbody>
    </table>
 </div><!-- table-responsive -->
-          
+
 <!-- deleteModal -->
 <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">
@@ -47,7 +47,7 @@
         <h4 class="modal-title" id="myModalLabel">删除</h4>
       </div>
       <div class="modal-body">
-          
+
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-primary" data-dismiss="modal">确定</button>
@@ -89,7 +89,7 @@
 
 @section('footer')
 <script src="{{asset('/assets/package/datatables/js/jquery.dataTables.js')}}"></script>
-<script src="{{asset('/assets/bracket/js/chosen.jquery.min.js')}}"></script>
+<script src="{{asset('/assets/bracket/js/chosen.jjquery.min.js')}}"></script>
 
 {{ HTML::style('/assets/package/dropzone/css/basic.css') }}
 {{ HTML::style('/assets/package/dropzone/css/dropzone.css') }}
@@ -132,7 +132,7 @@
                 .fail(function(){ alert("出错啦！"); });
           	});
   	    });
-        
+
       },
       "oLanguage": {
           "sUrl" : "{{asset('/assets/package/datatables/jquery.datatables.surl.cn-zn.txt')}}"

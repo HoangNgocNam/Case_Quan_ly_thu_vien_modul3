@@ -34,7 +34,7 @@ $loader->set('', DOC_ROOT . '/app/src');
 |
 */
 
-if (file_exists($compiled = DOC_ROOT.'/bootstrap/compiled.php'))
+if (file_exists($compiled = DOC_ROOT.'/bbootstrap/compiled.php'))
 {
 	require $compiled;
 }

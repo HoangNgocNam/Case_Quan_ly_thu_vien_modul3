@@ -19,29 +19,29 @@
     @section('css')
         {{-- include all required stylesheets --}}
     @show
-    
+
 </head>
 <body>
-   
+
 <!-- Preloader -->
 <div id="preloader">
     <div id="status"><i class="fa fa-spinner fa-spin"></i></div>
 </div>
 
 <section>
-  
+
   <div class="leftpanel">
-    
+
     <!-- logopanel -->
     <div class="logopanel">
         <h1><span>[</span>{{$title}}<span>]</span></h1>
     </div>
-    
+
     <!--  leftpanelinner -->
-    <div class="leftpanelinner">    
-        
+    <div class="leftpanelinner">
+
         <!-- This is only visible to small devices -->
-        <div class="visible-xs hidden-sm hidden-md hidden-lg">   
+        <div class="visible-xs hidden-sm hidden-md hidden-lg">
             <div class="media userlogged">
                 <img alt="" src="{{asset('/assets/bracket/images/photos/loggeduser.png')}}" class="media-object">
                 <div class="media-body">
@@ -49,7 +49,7 @@
                     <span>"Life is so..."</span>
                 </div>
             </div>
-          
+
             <h5 class="sidebartitle actitle">Account</h5>
             <ul class="nav nav-pills nav-stacked nav-bracket mb30">
               <li><a href="profile.html"><i class="fa fa-user"></i> <span>Profile</span></a></li>
@@ -58,7 +58,7 @@
               <li><a href="signout.html"><i class="fa fa-sign-out"></i> <span>Sign Out</span></a></li>
             </ul>
         </div>
-          
+
         <h5 class="sidebartitle">Navigation</h5>
         <ul class="nav nav-pills nav-stacked nav-bracket">
         <?php
@@ -74,23 +74,23 @@
                     @foreach ($value['submenu'] as $val)
                         <?php if ($val['is_active']) { $currentnav = $val; } ?>
                         <li class="{{$val['is_active']}}"><a href="{{url($val['url'])}}"><i class="fa fa-caret-right"></i>{{$val['name']}}</a></li>
-                    @endforeach        
-                </ul>                    
+                    @endforeach
+                </ul>
                 @endif
             </li>
         @endforeach
         </ul>
     </div><!-- leftpanelinner -->
   </div><!-- leftpanel -->
-  
+
   <div class="mainpanel">
     <div class="headerbar">
       <a class="menutoggle"><i class="fa fa-bars"></i></a>
-      
+
 <!--       <form class="searchform" action="index.html" method="post"> -->
 <!--         <input type="text" class="form-control" name="keyword" placeholder="Search here..." /> -->
 <!--       </form> -->
-      
+
       <div class="header-right">
         <ul class="headermenu">
 <!--           <li> -->
@@ -277,13 +277,13 @@
 <!--           </li> -->
         </ul>
       </div><!-- header-right -->
-      
+
     </div><!-- headerbar -->
     <div class="pageheader">
       <h2>
           <i class="{{empty($parentnav) ? : $parentnav['icons']}}"></i>
           {{empty($parentnav) ? '' : $parentnav['name']}}
-          <?php 
+          <?php
               if (!empty($currentnav))
               {
                   echo '<span>';
@@ -292,7 +292,7 @@
               }
           ?>
       </h2>
-      
+
       <?php /*
       <div class="breadcrumb-wrapper">
         <span class="label">You are here:</span>
@@ -318,9 +318,9 @@
     <div class="contentpanel">
          @yield('content')
     </div><!-- contentpanel -->
-    
+
   </div><!-- mainpanel -->
-  
+
   <div class="rightpanel">
     <!-- Nav tabs -->
     <ul class="nav nav-tabs nav-justified">
@@ -329,7 +329,7 @@
         <li><a href="#rp-history" data-toggle="tab"><i class="fa fa-clock-o"></i></a></li>
         <li><a href="#rp-settings" data-toggle="tab"><i class="fa fa-gear"></i></a></li>
     </ul>
-        
+
     <!-- Tab panes -->
     <div class="tab-content">
         <div class="tab-pane active" id="rp-alluser">
@@ -392,9 +392,9 @@
                     </div><!-- media -->
                 </li>
             </ul>
-            
+
             <div class="mb30"></div>
-            
+
             <h5 class="sidebartitle">Offline Users</h5>
             <ul class="chatuserlist">
                 <li>
@@ -575,7 +575,7 @@
             </ul>
         </div>
         <div class="tab-pane pane-settings" id="rp-settings">
-            
+
             <h5 class="sidebartitle mb20">Settings</h5>
             <div class="form-group">
                 <label class="col-xs-8 control-label">Show Offline Users</label>
@@ -583,41 +583,41 @@
                     <div class="toggle toggle-success"></div>
                 </div>
             </div>
-            
+
             <div class="form-group">
                 <label class="col-xs-8 control-label">Enable History</label>
                 <div class="col-xs-4 control-label">
                     <div class="toggle toggle-success"></div>
                 </div>
             </div>
-            
+
             <div class="form-group">
                 <label class="col-xs-8 control-label">Show Full Name</label>
                 <div class="col-xs-4 control-label">
                     <div class="toggle-chat1 toggle-success"></div>
                 </div>
             </div>
-            
+
             <div class="form-group">
                 <label class="col-xs-8 control-label">Show Location</label>
                 <div class="col-xs-4 control-label">
                     <div class="toggle toggle-success"></div>
                 </div>
             </div>
-            
+
         </div><!-- tab-pane -->
-        
+
     </div><!-- tab-content -->
   </div><!-- rightpanel -->
-  
-  
+
+
 </section>
 @yield('footer-content')
 
 <script src="{{asset('/assets/bracket/js/jquery-1.10.2.min.js')}}"></script>
 <script src="{{asset('/assets/bracket/js/jquery-migrate-1.2.1.min.js')}}"></script>
 <script src="{{asset('/assets/bracket/js/jquery-ui-1.10.3.min.js')}}"></script>
-<script src="{{asset('/assets/bracket/js/bootstrap.min.js')}}"></script>
+<script src="{{asset('/assets/bracket/js/bbootstrap.min.js')}}"></script>
 <script src="{{asset('/assets/bracket/js/modernizr.min.js')}}"></script>
 <script src="{{asset('/assets/bracket/js/jquery.sparkline.min.js')}}"></script>
 <script src="{{asset('/assets/bracket/js/toggles.min.js')}}"></script>

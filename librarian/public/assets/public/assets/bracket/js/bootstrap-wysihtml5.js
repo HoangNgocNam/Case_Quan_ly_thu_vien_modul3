@@ -46,7 +46,7 @@
         "link": function(locale, options) {
             var size = (options && options.size) ? ' btn-'+options.size : '';
             return "<li>" +
-              "<div class='bootstrap-wysihtml5-insert-link-modal modal fade'>" +
+              "<div class='bbootstrap-wysihtml5-insert-link-modal modal fade'>" +
                 "<div class='modal-dialog'>" +
                   "<div class='modal-content'>" +
                     "<div class='modal-header'>" +
@@ -54,8 +54,8 @@
                       "<h3 class='modal-title'>" + locale.link.insert + "</h3>" +
                     "</div>" +
                     "<div class='modal-body'>" +
-                      "<input value='http://' class='bootstrap-wysihtml5-insert-link-url form-control'>" +
-                      "<label class='checkbox'> <input type='checkbox' class='bootstrap-wysihtml5-insert-link-target' checked>" + locale.link.target + "</label>" +
+                      "<input value='http://' class='bbootstrap-wysihtml5-insert-link-url form-control'>" +
+                      "<label class='checkbox'> <input type='checkbox' class='bbootstrap-wysihtml5-insert-link-target' checked>" + locale.link.target + "</label>" +
                     "</div>" +
                     "<div class='modal-footer'>" +
                       "<a href='#' class='btn btn-default' data-dismiss='modal'>" + locale.link.cancel + "</a>" +
@@ -71,7 +71,7 @@
         "image": function(locale, options) {
             var size = (options && options.size) ? ' btn-'+options.size : '';
             return "<li>" +
-              "<div class='bootstrap-wysihtml5-insert-image-modal modal fade'>" +
+              "<div class='bbootstrap-wysihtml5-insert-image-modal modal fade'>" +
                 "<div class='modal-dialog'>" +
                   "<div class='modal-content'>" +
                     "<div class='modal-header'>" +
@@ -79,7 +79,7 @@
                       "<h3 class='modal-title'>" + locale.image.insert + "</h3>" +
                     "</div>" +
                     "<div class='modal-body'>" +
-                      "<input value='http://' class='bootstrap-wysihtml5-insert-image-url form-control'>" +
+                      "<input value='http://' class='bbootstrap-wysihtml5-insert-image-url form-control'>" +
                     "</div>" +
                     "<div class='modal-footer'>" +
                       "<a href='#' class='btn btn-default' data-dismiss='modal'>" + locale.image.cancel + "</a>" +
@@ -155,7 +155,7 @@
 
         createEditor: function(options) {
             options = options || {};
-            
+
             // Add the toolbar to a clone of the options object so multiple instances
             // of the WYISYWG don't break because "toolbar" is already defined
             options = $.extend(true, {}, options);
@@ -238,8 +238,8 @@
 
         initInsertImage: function(toolbar) {
             var self = this;
-            var insertImageModal = toolbar.find('.bootstrap-wysihtml5-insert-image-modal');
-            var urlInput = insertImageModal.find('.bootstrap-wysihtml5-insert-image-url');
+            var insertImageModal = toolbar.find('.bbootstrap-wysihtml5-insert-image-modal');
+            var urlInput = insertImageModal.find('.bbootstrap-wysihtml5-insert-image-url');
             var insertButton = insertImageModal.find('a.btn-primary');
             var initialValue = urlInput.val();
             var caretBookmark;
@@ -292,9 +292,9 @@
 
         initInsertLink: function(toolbar) {
             var self = this;
-            var insertLinkModal = toolbar.find('.bootstrap-wysihtml5-insert-link-modal');
-            var urlInput = insertLinkModal.find('.bootstrap-wysihtml5-insert-link-url');
-            var targetInput = insertLinkModal.find('.bootstrap-wysihtml5-insert-link-target');
+            var insertLinkModal = toolbar.find('.bbootstrap-wysihtml5-insert-link-modal');
+            var urlInput = insertLinkModal.find('.bbootstrap-wysihtml5-insert-link-url');
+            var targetInput = insertLinkModal.find('.bbootstrap-wysihtml5-insert-link-target');
             var insertButton = insertLinkModal.find('a.btn-primary');
             var initialValue = urlInput.val();
             var caretBookmark;
@@ -387,7 +387,7 @@
             return methods.init.apply( this, arguments );
         } else {
             $.error( 'Method ' +  method + ' does not exist on jQuery.wysihtml5' );
-        }    
+        }
     };
 
     $.fn.wysihtml5.Constructor = Wysihtml5;

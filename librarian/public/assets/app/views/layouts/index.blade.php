@@ -10,7 +10,7 @@
 <meta name="keywords" content="@yield('keywords')" />
 <link rel="shortcut icon" href="{{asset('assets/images/favicon.png')}}" type="image/png">
 
-{{ HTML::style('assets/simplex/css/bootstrap.min.css?' . date("Ymd", time()) . '.css') }} 
+{{ HTML::style('assets/simplex/css/bbootstrap.min.css?' . date("Ymd", time()) . '.css') }}
 {{ HTML::style('assets/simplex/css/base.css?' .  date("Ymd", time()) . '.css') }}
 {{ HTML::style('assets/bracket/css/jquery.gritter.css?' . date("Ymd", time()) . '.css') }}
 
@@ -19,7 +19,7 @@
     <script src="{{asset('assets/bracket/js/html5shiv.js')}}"></script>
     <script src="{{asset('assets/bracket/js/respond.min.js')}}"></script>
     <![endif]-->
-    
+
 @section('css')
     {{-- include all required stylesheets --}}
 @show
@@ -48,7 +48,7 @@
 						    class="active"
 						    @endif
 						><a href="/baby">我的宝贝</a></li>
-						
+
 						{{---
 						<li class="dropdown"><a href="#" class="dropdown-toggle"
 							data-toggle="dropdown">Dropdown <b class="caret"></b></a>
@@ -64,7 +64,7 @@
 					   ---}}
 					</ul>
 					<ul class="nav navbar-nav navbar-right">
-					
+
 					  @if (!Auth::check())
 						<li><a href="/login">登录</a></li>
 						<li><a href="/signup">注册</a></li>
@@ -72,11 +72,11 @@
 						<li>
     				        <a href="{{url('baby/create')}}" data-toggle="modal" data-target="#addBaby">添加宝宝</a>
     					</li>
-    					
+
     					@foreach ((array)Session::get('mybabys') as $bb)
     					<li><a href="{{url('photo/create?bid=' . $bb['id'])}}" data-toggle="modal" data-target="#addPhoto">上传[{{$bb['nickname']}}]照片</a></li>
     					@endforeach
-    					
+
 						<li class="dropdown">
 						    <a href="#" class="dropdown-toggle"	data-toggle="dropdown">{{Auth::user()->username}}<b class="caret"></b>
 							</a>
@@ -95,7 +95,7 @@
 			</div>
 		</div>
 	</section>
-	
+
 	<section class="Modal">
     	<!-- addModal -->
         <div class="modal fade" id="addBaby" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="static">
@@ -104,7 +104,7 @@
             </div>
           </div>
         </div>
-        
+
         <div class="modal fade" id="addPhoto" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="static">
           <div class="modal-dialog">
             <div class="modal-content">
@@ -128,7 +128,7 @@
 		</div>
 		<!--end copyrights-->
 	</div>
-	
+
 	<!-- gototop -->
 	<div id="backtotop" class=""><div class="bttbg"></div></div>
 
@@ -136,12 +136,12 @@
 	<script
 		src="{{asset('/assets/bracket/js/jquery-migrate-1.2.1.min.js')}}"></script>
 	<script src="{{asset('/assets/bracket/js/jquery-ui-1.10.3.min.js')}}"></script>
-	<script src="{{asset('/assets/bracket/js/bootstrap.min.js')}}"></script>
+	<script src="{{asset('/assets/bracket/js/bbootstrap.min.js')}}"></script>
 	<script src="{{asset('/assets/bracket/js/retina.min.js')}}"></script>
 	<script src="{{asset('/assets/bracket/js/jquery.cookies.js')}}"></script>
 	<script src="{{asset('/assets/bracket/js/jquery.gritter.min.js')}}"></script>
 
-	
+
   <script type="text/javascript">
     function notify(title, content, class_name){
     	var sticky = arguments[3] || false;
@@ -157,7 +157,7 @@
     	return false;
     };
   </script>
-	
+
 	@yield('ext')
 </body>
 </html>

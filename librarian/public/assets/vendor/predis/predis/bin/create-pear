@@ -203,7 +203,7 @@ function modifyPhpunitXml($file)
 {
     $cfg = new SimpleXMLElement($file, null, true);
 
-    $cfg[0]['bootstrap'] = str_replace('tests/', '', $cfg[0]['bootstrap']);
+    $cfg[0]['bbootstrap'] = str_replace('tests/', '', $cfg[0]['bbootstrap']);
     $cfg->testsuites->testsuite->directory = str_replace('tests/', '', $cfg->testsuites->testsuite->directory);
 
     $cfg->saveXml($file);

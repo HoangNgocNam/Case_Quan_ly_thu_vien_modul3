@@ -31,7 +31,7 @@
 <script src="{{asset('/assets/bracket/js/jquery-1.10.2.min.js')}}"></script>
 <script src="{{asset('/assets/bracket/js/jquery-migrate-1.2.1.min.js')}}"></script>
 <script src="{{asset('/assets/bracket/js/jquery-ui-1.10.3.min.js')}}"></script>
-<script src="{{asset('/assets/bracket/js/bootstrap.min.js')}}"></script>
+<script src="{{asset('/assets/bracket/js/bbootstrap.min.js')}}"></script>
 <script src="{{asset('/assets/bracket/js/modernizr.min.js')}}"></script>
 <script src="{{asset('/assets/bracket/js/jquery.sparkline.min.js')}}"></script>
 <script src="{{asset('/assets/bracket/js/toggles.min.js')}}"></script>
