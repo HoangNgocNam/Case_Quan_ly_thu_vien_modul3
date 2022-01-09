@@ -80,7 +80,7 @@
 <script src="{{asset('js/popper.js')}}"></script>
 <script src="{{asset('js/boottstrap.min.js')}}"></script>
 <script src="{{asset('js/mainn.js')}}"></script>
-
+</section>
 </body>
 </html>
 

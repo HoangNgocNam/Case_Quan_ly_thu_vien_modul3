@@ -1,7 +1,7 @@
 
 @extends("home.master")
 @section("title","Catalog")
-@section("title-content","Thêm mới danh mục")
+@section("title-content","Thêm Mới Danh Mục")
 @section("content")
     <div class="card mb-4">
         <div class="card-header">
