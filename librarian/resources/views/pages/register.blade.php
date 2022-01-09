@@ -14,8 +14,8 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-6 text-center mb-5">
-                <h1 class="heading-section">Bạn chưa có tài khoản?</h1>
-                <h2 class="heading-section">Đăng ký ngay nào</h2>
+                <h1 style="color: yellow">Bạn chưa có tài khoản?</h1>
+                <h2 style="color: yellow">Đăng ký ngay nào</h2>
             </div>
         </div>
         <div class="row justify-content-center">
@@ -52,9 +52,9 @@
                             </div>
                         </div>
 
-                        <div class="form-group">
+                        <div class="form-group" style="text-align: center">
 {{--                            <button type="submit" class="form-control btn btn-primary submit px-3">Đăng Ký</button>--}}
-                            <a href="{{route('auth.login')}}" class="btn btn-warning">Quay lại</a>
+                            <a href="{{route('auth.login')}}" class="btn btn-danger">Hủy</a>
                             <button type="submit" class="btn btn-success">Đăng Ký</button>
                         </div>
 

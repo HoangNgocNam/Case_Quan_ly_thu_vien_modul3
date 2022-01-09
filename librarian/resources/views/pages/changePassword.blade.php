@@ -7,7 +7,6 @@
     <link href="{{asset('https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap')}}" rel="stylesheet">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.2.0/css/all.css">
     <link rel="stylesheet" href="{{asset('css/sstyle.css')}}">
-
 </head>
 <body class="img js-fullheight" style="background-image: url({{asset('images/gg.jpg')}});">
 <section class="ftco-section">
