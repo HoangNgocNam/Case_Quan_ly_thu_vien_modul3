@@ -75,6 +75,8 @@ Route::prefix('books')->group(function (){
 
 Route::prefix('borrows')->group(function (){
     Route::get('',[BorrowController::class,"index"])->name('borrows.index');
+    Route::get('create',[BorrowController::class,"create"])->name('borrows.create');
+    Route::post('create',[BorrowController::class,"create"])->name('borrows.create');
 });
 
 

@@ -1,13 +1,13 @@
 @extends("home.master")
 @section("title","Student")
-@section("title-content","Cập Nhật Học Sinh")
+@section("title-content","Cập Nhật Khách Hàng")
 @section("content")
 
 
 <div class="card mb-4">
     <div class="card-header">
         <i class="fas fa-table me-1"></i>
-        Cập nhật chi tiết học sinh
+        Cập nhật chi tiết khách hàng
     </div>
     <div class="card-body">
         <form method="post">

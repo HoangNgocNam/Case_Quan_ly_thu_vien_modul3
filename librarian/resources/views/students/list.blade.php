@@ -1,6 +1,6 @@
 @extends("home.master")
 @section("title","Student")
-@section("title-content","Quản lý Học sinh")
+@section("title-content","Danh Sách Khách Hàng")
 @section("content")
 
 
@@ -8,7 +8,7 @@
 <div class="card mb-4">
     <div class="card-header">
         <i class="fas fa-table me-1"></i>
-        Danh sách học sinh
+        Danh sách khách hàng
     </div>
     <div class="card-body">
         <table class="table" border="1px">

@@ -14,4 +14,14 @@ class BorrowController extends Controller
         $borrows = Borrow::all();
         return view('borrows.list',compact('borrows'));
     }
+
+    public function create()
+    {
+        return view('borrows.create');
+    }
+
+    public function store(Request $request)
+    {
+
+    }
 }
