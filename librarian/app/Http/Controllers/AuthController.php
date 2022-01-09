@@ -58,7 +58,7 @@ class AuthController extends Controller
     public function logout()
     {
         Auth::logout();
-        toastr()->success('Đăng xuất thành công');
+        toastr()->success('Đăng xuất thành cônge');
         return redirect()->route('auth.login');
     }
 
