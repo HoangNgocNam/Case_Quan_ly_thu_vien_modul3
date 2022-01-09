@@ -11,11 +11,23 @@
 </head>
 <body>
 <div class="container">
-    <form action="" method="GET">
-        @csrf
-        Ma sinh vien: <input type="text" name="student_code">
-        <button>Tim kiem</button>
-    </form>
+    <a href="{{route('borrows.create')}}">Thêm Mới</a>
+    <div class="btn btn-White">
+        <div class="search-box">
+            <form action="#" method="GET">
+                <div class="input-group">
+                        <span class="algolia-autocomplete"
+                              style="position: relative; display: inline-block; direction: ltr;">
+                            <input type="search" name="keyword" class="form-control ds-input" placeholder="Search..."
+                                   aria-label="Search for...">
+                        </span>
+                    <div>
+                        <button  class="btn btn-info" type="submit">Tìm Kiếm</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
     <table class="table table-striped">
         <thead>
         <tr>
@@ -25,6 +37,7 @@
             <th scope="col">Ngày Mượn</th>
             <th scope="col">Ngảy Trả</th>
             <th scope="col">Thời Gian Mượn</th>
+            <th scope="col">Trạng Thái</th>
             <th scope="col">Action</th>
         </tr>
         </thead>
@@ -38,6 +51,9 @@
             <td>{{$borrow->borrow_date}}</td>
             <td>{{$borrow->borrow_return}}</td>
             <td>{{$borrow->time_allowed_to_borrow}}</td>
+            <td>{{$borrow->status}}</td>
+            <td><a href="{{route('borrows.update',$borrow->id)}}">Sửa</a></td>
+            <td><a onclick="return confirm('Bạn chắc Chắn Muốn Xóa ??')" href="{{route('borrows.delete',$borrow->id)}}">Xóa</a></td>
         </tr>
             @endforeach
         @else

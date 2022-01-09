@@ -76,7 +76,10 @@ Route::prefix('books')->group(function (){
 Route::prefix('borrows')->group(function (){
     Route::get('',[BorrowController::class,"index"])->name('borrows.index');
     Route::get('create',[BorrowController::class,"create"])->name('borrows.create');
-    Route::post('create',[BorrowController::class,"create"])->name('borrows.create');
+    Route::post('create',[BorrowController::class,"store"])->name('borrows.store');
+    Route::get('/{id}/update',[BorrowController::class,"edit"])->name('borrows.edit');
+    Route::post('/{id}/update',[BorrowController::class,"update"])->name('borrows.update');
+    Route::get('/{id}/delete',[BorrowController::class,"delete"])->name('borrows.delete');
 });
 
 
