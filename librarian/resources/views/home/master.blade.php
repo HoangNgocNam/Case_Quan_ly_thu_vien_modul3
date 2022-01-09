@@ -8,7 +8,7 @@
     <meta name="description" content="" />
     <meta name="author" content="" />
     <title>@yield('title','Trang chủ')</title>
-    <link href="{{asset('https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css')}}" rel="stylesheet" />
+    <link href="{{asset('https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/sstyle.css')}}" rel="stylesheet" />
     <link href="{{asset('css/styles.css')}}" rel="stylesheet" />
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.2.0/css/all.css">
     <link rel="stylesheet" href="https://static.fontawesome.com/css/fontawesome-app.css">
@@ -141,7 +141,7 @@
 @jquery
 @toastr_js
 @toastr_render
-<script src="{{asset('https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js')}}" crossorigin="anonymous"></script>
+<script src="{{asset('https://cdn.jsdelivr.net/npm/bbootstrap@5.1.3/dist/js/bbootstrap.bundle.min.js')}}" crossorigin="anonymous"></script>
 <script src="{{asset('js/scripts.js')}}"></script>
 <script src="{{asset('https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js')}}" crossorigin="anonymous"></script>
 <script src="{{asset('assets/demo/chart-area-demo.js')}}"></script>

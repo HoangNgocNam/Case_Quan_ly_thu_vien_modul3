@@ -201,7 +201,7 @@ class Application extends Container implements HttpKernelInterface, TerminableIn
 	}
 
 	/**
-	 * Get the application bootstrap file.
+	 * Get the application bbootstrap file.
 	 *
 	 * @return string
 	 */

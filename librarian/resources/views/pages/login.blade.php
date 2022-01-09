@@ -7,7 +7,7 @@
     <link href="{{asset('https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap')}}" rel="stylesheet">
     {{--    <link rel="stylesheet" href="{{asset('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css')}}">--}}
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.2.0/css/all.css">
-    <link rel="stylesheet" href="{{asset('css/style.css')}}">
+    <link rel="stylesheet" href="{{asset('css/sstyle.css')}}">
 
 </head>
 <body class="img js-fullheight" style="background-image: url({{asset('images/aa.jpg')}});">

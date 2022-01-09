@@ -1,7 +1,7 @@
 default:
     paths:
         features: tests/features
-        bootstrap: %behat.paths.features%/bootstrap
+        bootstrap: %behat.paths.features%/bbootstrap
     extensions:
         Behat\MinkExtension\Extension:
             base_url: http://localhost:8000
