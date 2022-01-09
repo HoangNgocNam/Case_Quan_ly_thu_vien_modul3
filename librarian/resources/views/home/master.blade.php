@@ -73,8 +73,8 @@
                     </a>
                     <div class="collapse" id="collapseLayouts2" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                         <nav class="sb-sidenav-menu-nested nav">
-                            <a class="nav-link" href="{{route('catalogs.index')}}">Danh sách</a>
-                            <a class="nav-link" href="{{route('catalogs.create')}}">Tạo mới</a>
+                            <a class="nav-link" href="{{route('category.index')}}">Danh sách</a>
+                            <a class="nav-link" href="{{route('category.create')}}">Tạo mới</a>
                         </nav>
                     </div>
 
@@ -104,16 +104,28 @@
                         </nav>
                     </div>
 
-
-                    <div class="sb-sidenav-menu-heading">Addons</div>
-                    <a class="nav-link" href="charts.html">
-                        <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
+                    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts5" aria-expanded="false" aria-controls="collapseLayouts">
+                        <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
                         Phiếu mượn
+                        <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                     </a>
-                    <a class="nav-link" href="tables.html">
-                        <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
-                        Tables
-                    </a>
+                    <div class="collapse" id="collapseLayouts5" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                        <nav class="sb-sidenav-menu-nested nav">
+                            <a class="nav-link" href="{{route('borrows.index')}}">Danh sách</a>
+                            <a class="nav-link" href="{{route('borrows.create')}}">Tạo mới</a>
+                        </nav>
+                    </div>
+
+
+{{--                    <div class="sb-sidenav-menu-heading">Addons</div>--}}
+{{--                    <a class="nav-link" href="charts.html">--}}
+{{--                        <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>--}}
+{{--                        Phiếu mượn--}}
+{{--                    </a>--}}
+{{--                    <a class="nav-link" href="tables.html">--}}
+{{--                        <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>--}}
+{{--                        Tables--}}
+{{--                    </a>--}}
                 </div>
             </div>
 
