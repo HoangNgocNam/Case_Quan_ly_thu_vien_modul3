@@ -5,12 +5,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="{{asset('https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap')}}" rel="stylesheet">
-    {{--    <link rel="stylesheet" href="{{asset('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css')}}">--}}
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.2.0/css/all.css">
     <link rel="stylesheet" href="{{asset('css/sstyle.css')}}">
 
 </head>
-<body class="img js-fullheight" style="background-image: url({{asset('images/aa.jpg')}});">
+<body class="img js-fullheight" style="background-image: url({{asset('images/ee.jpg')}});">
 <section class="ftco-section">
     <div class="container">
         <div class="row justify-content-center">
@@ -45,16 +44,16 @@
                         </div>
 
                         <div class="form-group">
-                            <button type="submit" class="form-control btn btn-primary submit px-3">Đăng Nhập</button>
+                            <a href="{{route('auth.showFormChangePassword')}}" class="btn btn-danger" style="color: #fff">Đổi mật khẩu</a>
+                            <a href="{{route('auth.showFormRegister')}}" class="btn btn-warning" style="color: #fff">Đăng ký</a>
+                            <button type="submit" class="btn btn-success">Đăng Nhập</button>
                         </div>
 
-                        <div class="form-group d-md-flex">
-                            <div class="w-50">
-                            </div>
-                            <div class="w-50 text-md-right">
-                                <a href="{{route('auth.showFormRegister')}}" style="color: #fff">Đăng ký</a>
-                            </div>
-                        </div>
+
+
+
+
+
                     </form>
                     <p class="w-100 text-center">&mdash; Đăng Nhập Với &mdash;</p>
                     <div class="social d-flex text-center">
