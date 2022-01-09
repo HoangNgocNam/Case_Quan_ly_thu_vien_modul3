@@ -1,6 +1,6 @@
 
 @extends("home.master")
-@section("title","Catalog")
+@section("title","category")
 @section("title-content","Thêm Mới Danh Mục")
 @section("content")
     <div class="card mb-4">
@@ -25,7 +25,7 @@
                     <p style="color: red">{{$message}}</p>
                     @enderror
                 </div>
-                <a href="{{route('catalogs.index')}}" class="btn btn-secondary">Quay lại</a>
+                <a href="{{route('category.index')}}" class="btn btn-secondary">Quay lại</a>
                 <button type="submit" class="btn btn-primary">Thêm mới</button>
             </form>
         </div>

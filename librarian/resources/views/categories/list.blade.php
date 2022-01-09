@@ -1,9 +1,9 @@
 @extends("home.master")
-@section("title","Catalog")
+@section("title","category")
 @section("title-content","Quản lý danh mục sách")
 @section("content")
     <button class="btn btn-primary mb-3">
-        <a style="color: white; text-decoration: none" href="{{route('catalogs.create')}}">Thêm mới danh mục</a>
+        <a style="color: white; text-decoration: none" href="{{route('category.create')}}">Thêm mới danh mục</a>
     </button>
     <div class="card mb-4">
         <div class="card-header">
@@ -16,23 +16,23 @@
                 <tr>
                     <th scope="col">ID</th>
                     <th scope="col">Mã sách</th>
-                    <th scope="col">Tên sách</th>
+                    <th scope="col">Tên Danh Mục</th>
                     <th scope="col">Thao tác</th>
                 </tr>
                 </thead>
                 <tbody>
-                @if(isset($catalogs))
-                    @foreach($catalogs as $catalog)
+                @if(isset($categories))
+                    @foreach($categories as $category)
                         <tr>
-                            <th>{{$catalog->id}}</th>
-                            <td>{{$catalog->code}}</td>
-                            <td>{{$catalog->name}}</td>
+                            <th>{{$category->id}}</th>
+                            <td>{{$category->code}}</td>
+                            <td>{{$category->name}}</td>
                             <td>
                                 <button class="btn btn-success">
-                                    <a style="color: white" href="{{route('catalogs.update',$catalog->id)}}"><i class="fas fa-pen"></i></a>
+                                    <a style="color: white" href="{{route('category.update',$category->id)}}"><i class="fas fa-pen"></i></a>
                                 </button>
                                 <button class="btn btn-danger">
-                                    <a style="color: white" onclick="return confirm('Bạn chắc muốn xóa?')" href="{{route('catalogs.delete',$catalog->id)}}"><i class="fas fa-trash-alt"></i></a>
+                                    <a style="color: white" onclick="return confirm('Bạn chắc muốn xóa?')" href="{{route('category.delete',$category->id)}}"><i class="fas fa-trash-alt"></i></a>
                                 </button>
                             </td>
                         </tr>
