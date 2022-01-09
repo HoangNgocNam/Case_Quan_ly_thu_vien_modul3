@@ -1,168 +1,88 @@
-{{--<form action=""method="post">--}}
-{{--    @csrf--}}
-{{--    <input type="text" name="name" placeholder="Nhập tên">--}}
-{{--    @error('name')--}}
-{{--    <p style="color: red">{{$message}}</p>--}}
-{{--    @enderror--}}
-{{--    <input type="email" name="email" placeholder="Nhập Email">--}}
-{{--    @error('email')--}}
-{{--    <p style="color: red">{{$message}}</p>--}}
-{{--    @enderror--}}
-{{--    <input type="password" name="password" placeholder="Nhập Mật khẩu">--}}
-{{--    @error('password')--}}
-{{--    <p style="color: red">{{$message}}</p>--}}
-{{--    @enderror--}}
-{{--    <button type="submit">Register</button>--}}
-{{--</form>--}}
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-<!------ Include the above in your HEAD tag ---------->
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
+    <title>Login</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="{{asset('https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap')}}" rel="stylesheet">
+    {{--    <link rel="stylesheet" href="{{asset('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css')}}">--}}
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.2.0/css/all.css">
+    <link rel="stylesheet" href="{{asset('css/style.css')}}">
 
-    <!-- Website CSS style -->
-    <link rel="stylesheet" type="text/css" href="assets/css/main.css">
-
-    <!-- Website Font style -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
-
-    <!-- Google Fonts -->
-    <link href='https://fonts.googleapis.com/css?family=Passion+One' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
-
-    <title>Admin</title>
-    <style>
-        body, html{
-            height: 100%;
-            background-repeat: no-repeat;
-            /*background-color: #d3d3d3;*/
-            background-image: url("http://trumpwallpapers.com/wp-content/uploads/Library-Wallpaper-03-1920x1080-1.jpg");
-            font-family: 'Oxygen', sans-serif;
-        }
-        .main{
-            margin-top: 70px;
-        }
-        h1.title {
-            font-size: 50px;
-            font-family: 'Passion One', cursive;
-            font-weight: 400;
-            color: white;
-            margin-top: -21px;
-        }
-
-        hr{
-            width: 10%;
-            color: #fff;
-        }
-
-        .form-group{
-            margin-bottom: 15px;
-        }
-
-        label{
-            margin-bottom: 15px;
-        }
-
-        input,
-        input::-webkit-input-placeholder {
-            font-size: 11px;
-            padding-top: 3px;
-        }
-
-        .main-login{
-            background-color: #fff;
-            /* shadows and rounded borders */
-            -moz-border-radius: 2px;
-            -webkit-border-radius: 2px;
-            border-radius: 2px;
-            -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
-            -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
-            box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
-
-        }
-
-        .main-center{
-            margin-top: 30px;
-            margin: 0 auto;
-            max-width: 330px;
-            padding: 40px 40px;
-
-        }
-
-        .login-button{
-            margin-top: 5px;
-        }
-
-        .login-register{
-            font-size: 11px;
-            text-align: center;
-        }
-    </style>
 </head>
-<body>
-<div class="container">
-    <div class="row main">
-        <div class="panel-heading">
-            <div class="panel-title text-center">
-                <h1 class="title">Register</h1>
-                <hr />
+<body class="img js-fullheight" style="background-image: url({{asset('images/bb.jpg')}});">
+<section class="ftco-section">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6 text-center mb-5">
+                <h1 class="heading-section">Bạn chưa có tài khoản?</h1>
+                <h2 class="heading-section">Đăng ký ngay nào</h2>
             </div>
         </div>
-        <div class="main-login main-center">
-            <form class="form-horizontal" method="post">
+        <div class="row justify-content-center">
+            <div class="col-md-6 col-lg-4">
+                <div class="login-wrap p-0">
+                    <form action="{{route('auth.login')}}" method="post" class="signin-form">
+                        @csrf
+                        {{--                        <div class="form-group">--}}
+                        {{--                            <input type="text" name="email" class="form-control" placeholder="Email" required>--}}
+                        {{--                        </div>--}}
+                        {{--                        <div class="form-group">--}}
+                        {{--                            <input id="password-field" name="password" type="password" class="form-control" placeholder="Mật khẩu" required>--}}
+                        {{--                            <span toggle="#password-field" id="eye-password" class="fa fa-fw fa-eye-slash field-icon"></span>--}}
+                        {{--                        </div>--}}
+                        <div class="form-group">
+                            <label class="sr-only" for="inlineFormInputGroup">Name</label>
+                            <div class="input-group mb-2">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text"><i class="fa fa-user"></i></div>
+                                </div>
+                                <input type="text" id="name" name="name" value="{{old('name')}}" class="form-control" placeholder="Nhập tên">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="sr-only" for="inlineFormInputGroup">Email</label>
+                            <div class="input-group mb-2">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text"><i class="fas fa-envelope"></i></div>
+                                </div>
+                                <input type="text" id="email" name="email" value="{{old('email')}}" class="form-control" placeholder="Nhập email">
+                            </div>
+                        </div>
 
-                <div class="form-group">
-                    <label for="name" class="cols-sm-2 control-label">Your Name</label>
-                    <div class="cols-sm-10">
-                        <div class="input-group">
-                            <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
-                            <input type="text" class="form-control" name="name" id="name"  placeholder="Enter your Name"/>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="form-group">
-                    <label for="email" class="cols-sm-2 control-label">Your Email</label>
-                    <div class="cols-sm-10">
-                        <div class="input-group">
-                            <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
-                            <input type="text" class="form-control" name="email" id="email"  placeholder="Enter your Email"/>
+                        <div class="form-group">
+                            <label class="sr-only" for="inlineFormInputGroup">Password</label>
+                            <div class="input-group mb-2">
+                                <div class="input-group-prepend" id="icon-eye-password">
+                                    <div class="input-group-text"><i id="eye-password" class="fas fa-eye-slash"></i></div>
+                                </div>
+                                <input type="password" id="password" name="password" class="form-control" placeholder="Nhập mật khẩu">
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="password" class="cols-sm-2 control-label">Password</label>
-                    <div class="cols-sm-10">
-                        <div class="input-group">
-                            <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
-                            <input type="password" class="form-control" name="password" id="password"  placeholder="Enter your Password"/>
+
+                        <div class="form-group">
+                            <button type="submit" class="form-control btn btn-primary submit px-3">Đăng Ký</button>
                         </div>
-                    </div>
+
+                        <div class="form-group d-md-flex">
+                            <div class="w-50">
+                            </div>
+                        </div>
+                    </form>
+
                 </div>
-{{--                <div class="form-group">--}}
-{{--                    <label for="confirm" class="cols-sm-2 control-label">Confirm Password</label>--}}
-{{--                    <div class="cols-sm-10">--}}
-{{--                        <div class="input-group">--}}
-{{--                            <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>--}}
-{{--                            <input type="password" class="form-control" name="confirm" id="confirm"  placeholder="Confirm your Password"/>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-                <div class="form-group ">
-                    <button type="button" class="btn btn-primary btn-lg btn-block login-button">
-                        <a style="color: white" href="{{ route('auth.showFormRegister') }}">Register</a>
-                    </button>
-                </div>
-            </form>
+            </div>
         </div>
     </div>
-</div>
-
-<script type="text/javascript" src="assets/js/bootstrap.js"></script>
+</section>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="{{asset('js/login.js')}}"></script>
+<script src="{{asset('js/jqueryy.min.js')}}"></script>
+<script src="{{asset('js/popper.js')}}"></script>
+<script src="{{asset('js/boottstrap.min.js')}}"></script>
+<script src="{{asset('js/mainn.js')}}"></script>
 </body>
 </html>
+
+

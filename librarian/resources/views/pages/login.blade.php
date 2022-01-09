@@ -12,6 +12,7 @@
 </head>
 <body class="img js-fullheight" style="background-image: url({{asset('images/aa.jpg')}});">
 <section class="ftco-section">
+<section class="ftco-section">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-6 text-center mb-5">
@@ -60,7 +61,7 @@
                             <div class="w-50">
                             </div>
                             <div class="w-50 text-md-right">
-                                <a href="#" style="color: #fff">Đăng ký</a>
+                                <a href="{{route('auth.showFormRegister')}}" style="color: #fff">Đăng ký</a>
                             </div>
                         </div>
                     </form>
