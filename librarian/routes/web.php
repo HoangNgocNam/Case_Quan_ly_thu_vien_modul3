@@ -5,6 +5,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BookController;
 use App\Http\Controllers\BorrowController;
 use App\Http\Controllers\CatalogController;
+use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\SocialController;
 use App\Http\Controllers\StudentController;
 use App\Http\Controllers\UserController;
@@ -88,6 +89,25 @@ Route::get('/callback/{provider}',[SocialController::class,'callback']);
 
 
 
+
+
+Route::prefix('category')->group(function (){
+    Route::get('/',[CategoryController::class,'index'])->name('category.index');
+    Route::get('/create',[CategoryController::class,'create'])->name('category.create');
+    Route::post('/create',[CategoryController::class,'store'])->name('category.store');
+    Route::get('/{id}/update',[CategoryController::class,'edit'])->name('category.edit');
+    Route::post('/{id}/update',[CategoryController::class,'update'])->name('category.update');
+    Route::get('/{id}/delete',[CategoryController::class,'delete'])->name('category.delete');
+});
+
+//Route::prefix('students')->group(function () {
+//    Route::get('/',[StudentController::class,"index"])->name("students.list");
+//    Route::get('/create',[StudentController::class,"create"])->name("students.create");
+//    Route::post('/create',[StudentController::class,"store"])->name("students.store");
+//    Route::get('/{id}/update',[StudentController::class,"edit"])->name("students.edit");
+//    Route::post('/{id}/update',[StudentController::class,"update"])->name("students.update");
+//    Route::get('/{id}/delete',[StudentController::class,"delete"])->name("students.delete");
+//});
 
 
 
