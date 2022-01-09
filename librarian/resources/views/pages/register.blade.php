@@ -72,6 +72,9 @@
                         <div class="form-group">
                             <button type="submit" class="form-control btn btn-primary submit px-3">Đăng Ký</button>
                         </div>
+                        <div class="form-group">
+                            <a href="{{route('auth.login')}}" class="form-control btn btn-secondary submit px-3">Quay lại</a>
+                        </div>
 
                         <div class="form-group d-md-flex">
                             <div class="w-50">
