@@ -25,7 +25,6 @@ Route::get('/', function () {
     return view('home.master');
 });
 
-
 Route::prefix('auth')->group(function () {
     Route::get('/register',[AuthController::class,'showFormRegister'])->name('auth.showFormRegister');
     Route::post('/register',[AuthController::class,'register'])->name('auth.register');
