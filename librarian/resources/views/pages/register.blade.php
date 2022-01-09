@@ -22,7 +22,7 @@
         <div class="row justify-content-center">
             <div class="col-md-6 col-lg-4">
                 <div class="login-wrap p-0">
-                    <form action="{{route('auth.login')}}" method="post" class="signin-form">
+                    <form action="{{route('auth.register')}}" method="post" class="signin-form">
                         @csrf
                         {{--                        <div class="form-group">--}}
                         {{--                            <input type="text" name="email" class="form-control" placeholder="Email" required>--}}
