@@ -6,26 +6,26 @@
     <div class="card mb-4">
         <div class="card-header">
             <i class="fas fa-table me-1"></i>
-            Thêm mới học sinh
+            Thêm mới danh mục
         </div>
         <div class="card-body">
             <form method="post">
                 @csrf
                 <div class="mb-3">
-                    <label for="exampleInputEmail1">Mã Sách</label>
-                    <input type="text" name="code" class="form-control" placeholder="Nhập mã sách">
+                    <label for="exampleInputEmail1">Mã danh mục</label>
+                    <input type="text" name="code" class="form-control" placeholder="Nhập mã danh mục">
                     @error('code')
                     <p style="color: red">{{$message}}</p>
                     @enderror
                 </div>
                 <div class="mb-3">
-                    <label for="exampleInputPassword1">Tên sách</label>
-                    <input type="text" name="name" class="form-control" placeholder="Nhập Tên sách">
+                    <label for="exampleInputPassword1">Tên danh mục</label>
+                    <input type="text" name="name" class="form-control" placeholder="Nhập tên danh mục">
                     @error('name')
                     <p style="color: red">{{$message}}</p>
                     @enderror
                 </div>
-                <a href="{{route('catalogs.index')}}" class="btn btn-secondary">back</a>
+                <a href="{{route('catalogs.index')}}" class="btn btn-secondary">Quay lại</a>
                 <button type="submit" class="btn btn-primary">Thêm mới</button>
             </form>
         </div>

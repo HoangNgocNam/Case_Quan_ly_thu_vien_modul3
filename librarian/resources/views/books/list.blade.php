@@ -4,6 +4,9 @@
 @section("title","Book")
 @section("title-content","Quản lý sách")
 @section("content")
+    <button class="btn btn-primary mb-3">
+        <a style="color: white; text-decoration: none" href="{{route('books.create')}}">Thêm mới Sách</a>
+    </button>
     <div class="card mb-4">
     <div class="card-header">
         <i class="fas fa-table me-1"></i>
@@ -59,10 +62,14 @@
                         </td>
                         <td>{{$book->quanlity}}</td>
                         <td>
-                            <a href="{{route('books.update',$book->id)}}">Sửa</a>
+                            <button class="btn btn-success">
+                                <a style="color: white" href="{{route('books.update',$book->id)}}"><i class="fas fa-pen"></i></a>
+                            </button>
                         </td>
                         <td>
-                            <a onclick="return confirm('Bạn có muốn Xóa ??')" href="{{route('books.delete',$book->id)}}">Xóa</a>
+                            <button class="btn btn-danger">
+                                <a style="color: white" onclick="return confirm('Bạn có muốn Xóa ??')" href="{{route('books.delete',$book->id)}}"><i class="fas fa-trash-alt"></i></a>
+                            </button>
                         </td>
                     </tr>
                 @endforeach

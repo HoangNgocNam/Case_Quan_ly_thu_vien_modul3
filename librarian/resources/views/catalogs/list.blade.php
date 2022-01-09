@@ -2,7 +2,9 @@
 @section("title","Catalog")
 @section("title-content","Quản lý danh mục sách")
 @section("content")
-
+    <button class="btn btn-primary mb-3">
+        <a style="color: white; text-decoration: none" href="{{route('catalogs.create')}}">Thêm mới danh mục</a>
+    </button>
     <div class="card mb-4">
         <div class="card-header">
             <i class="fas fa-table me-1"></i>
@@ -25,8 +27,14 @@
                             <th>{{$catalog->id}}</th>
                             <td>{{$catalog->code}}</td>
                             <td>{{$catalog->name}}</td>
-                            <td><a href="{{route('catalogs.update',$catalog->id)}}">Sửa</a></td>
-                            <td><a onclick="return confirm('Bạn chắc muốn xóa?')" href="{{route('catalogs.delete',$catalog->id)}}">Xóa</a></td>
+                            <td>
+                                <button class="btn btn-success">
+                                    <a style="color: white" href="{{route('catalogs.update',$catalog->id)}}"><i class="fas fa-pen"></i></a>
+                                </button>
+                                <button class="btn btn-danger">
+                                    <a style="color: white" onclick="return confirm('Bạn chắc muốn xóa?')" href="{{route('catalogs.delete',$catalog->id)}}"><i class="fas fa-trash-alt"></i></a>
+                                </button>
+                            </td>
                         </tr>
                     @endforeach
                 @else

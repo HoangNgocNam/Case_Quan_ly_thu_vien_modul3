@@ -19,7 +19,7 @@
                     <label for="exampleFormControlInput1">Tên sách</label>
                     <input type="text" name="name" class="form-control" placeholder="Nhập tên sách"
                            value="{{$book->name}}">
-                    <input type="text" name="name" class="form-control" placeholder="Nhập tên sách" value="{{$book->name}}">
+{{--                    <input type="text" name="name" class="form-control" placeholder="Nhập tên sách" value="{{$book->name}}">--}}
                     @error('name')
                     <p style="color: red">{{$message}}</p>
                     @enderror

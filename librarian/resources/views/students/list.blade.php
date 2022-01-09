@@ -3,8 +3,10 @@
 @section("title-content","Danh Sách Khách Hàng")
 @section("content")
 
+    <button class="btn btn-primary mb-3">
+        <a style="color: white; text-decoration: none" href="{{route('students.create')}}">Thêm khách hàng</a>
+    </button>
 
-<a href="{{route('students.create')}}">Create Student</a>
 <div class="card mb-4">
     <div class="card-header">
         <i class="fas fa-table me-1"></i>
@@ -32,8 +34,14 @@
                     <td>{{$student->email}}</td>
                     <td>{{$student->address}}</td>
                     <td>{{$student->birthday}}</td>
-                    <td><a href="{{route('students.update',$student->id)}}">Sửa</a></td>
-                    <td><a onclick="confirm('Are you sure?')" href="{{route('students.delete',$student->id)}}">Xóa</a></td>
+                    <td>
+                        <button class="btn btn-success">
+                            <a style="color: white" href="{{route('students.update',$student->id)}}"><i class="fas fa-pen"></i></a>
+                        </button>
+                        <button class="btn btn-danger">
+                            <a style="color: white" onclick="return confirm('Bạn có chắc muốn xóa khách hàng này?')" href="{{route('students.delete',$student->id)}}"><i class="fas fa-trash-alt"></i></a>
+                        </button>
+                    </td>
                 </tr>
             @endforeach
             </tbody>

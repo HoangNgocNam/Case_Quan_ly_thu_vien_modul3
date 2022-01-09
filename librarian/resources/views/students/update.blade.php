@@ -1,6 +1,6 @@
 @extends("home.master")
 @section("title","Student")
-@section("title-content","Cập Nhật Khách Hàng")
+@section("title-content","Cập Nhật Thông Tin Khách Hàng")
 @section("content")
 
 
