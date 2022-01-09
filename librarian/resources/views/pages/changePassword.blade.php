@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>Register </title>
+    <title>Change Password</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="{{asset('https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap')}}" rel="stylesheet">
@@ -9,53 +9,53 @@
     <link rel="stylesheet" href="{{asset('css/sstyle.css')}}">
 
 </head>
-<body class="img js-fullheight" style="background-image: url({{asset('images/bb.jpg')}});">
+<body class="img js-fullheight" style="background-image: url({{asset('images/gg.jpg')}});">
 <section class="ftco-section">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-6 text-center mb-5">
-                <h1 class="heading-section">Bạn chưa có tài khoản?</h1>
-                <h2 class="heading-section">Đăng ký ngay nào</h2>
+                <h1 class="heading-section">Bạn muốn đổi mật khẩu?</h1>
             </div>
         </div>
         <div class="row justify-content-center">
             <div class="col-md-6 col-lg-4">
                 <div class="login-wrap p-0">
-                    <form action="{{route('auth.register')}}" method="post" class="signin-form">
+                    <form action="{{route('auth.changePassword')}}" method="post" class="signin-form">
                         @csrf
-                        <div class="form-group">
-                            <label class="sr-only" for="inlineFormInputGroup">Name</label>
-                            <div class="input-group mb-2">
-                                <div class="input-group-prepend">
-                                    <div class="input-group-text"><i class="fa fa-user"></i></div>
-                                </div>
-                                <input type="text" id="name" name="name" value="{{old('name')}}" class="form-control" placeholder="Nhập tên">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="sr-only" for="inlineFormInputGroup">Email</label>
-                            <div class="input-group mb-2">
-                                <div class="input-group-prepend">
-                                    <div class="input-group-text"><i class="fas fa-envelope"></i></div>
-                                </div>
-                                <input type="text" id="email" name="email" value="{{old('email')}}" class="form-control" placeholder="Nhập email">
-                            </div>
-                        </div>
 
                         <div class="form-group">
-                            <label class="sr-only" for="inlineFormInputGroup">Password</label>
+                            <label class="sr-only" for="inlineFormInputGroup">Password cũ</label>
                             <div class="input-group mb-2">
                                 <div class="input-group-prepend" id="icon-eye-password">
                                     <div class="input-group-text"><i id="eye-password" class="fas fa-eye-slash"></i></div>
                                 </div>
-                                <input type="password" id="password" name="password" class="form-control" placeholder="Nhập mật khẩu">
+                                <input type="password" id="currentPassword" name="currentPassword" class="form-control" placeholder="Nhập mật khẩu cũ">
                             </div>
                         </div>
 
                         <div class="form-group">
-{{--                            <button type="submit" class="form-control btn btn-primary submit px-3">Đăng Ký</button>--}}
-                            <a href="{{route('auth.login')}}" class="btn btn-warning">Quay lại</a>
-                            <button type="submit" class="btn btn-success">Đăng Ký</button>
+                            <label class="sr-only" for="inlineFormInputGroup">Password mới</label>
+                            <div class="input-group mb-2">
+                                <div class="input-group-prepend" id="icon-eye-password">
+                                    <div class="input-group-text"><i id="eye-password" class="fas fa-eye-slash"></i></div>
+                                </div>
+                                <input type="password" id="newPassword" name="newPassword" class="form-control" placeholder="Nhập mật khẩu mới">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="sr-only" for="inlineFormInputGroup">Nhập lại Password</label>
+                            <div class="input-group mb-2">
+                                <div class="input-group-prepend" id="icon-eye-password">
+                                    <div class="input-group-text"><i id="eye-password" class="fas fa-eye-slash"></i></div>
+                                </div>
+                                <input type="password" id="confirmPassword" name="confirmPassword" class="form-control" placeholder="Nhập lại mật khẩu mới">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <button href="{{ route('auth.login') }}" class="btn btn-danger" onclick="window.history.go(-1); return false;">Hủy</button>
+                            <button type="submit" class="btn btn-success">Xác nhận</button>
                         </div>
 
                         <div class="form-group d-md-flex">
@@ -77,5 +77,4 @@
 <script src="{{asset('js/mainn.js')}}"></script>
 </body>
 </html>
-
 
