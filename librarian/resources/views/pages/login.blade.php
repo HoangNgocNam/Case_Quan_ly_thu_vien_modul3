@@ -7,7 +7,7 @@
     <link href="{{asset('https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap')}}" rel="stylesheet">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.2.0/css/all.css">
     <link rel="stylesheet" href="{{asset('css/sstyle.css')}}">
-
+    @toastr_css
 </head>
 <body class="img js-fullheight" style="background-image: url({{asset('images/ee.jpg')}});">
 <section class="ftco-section">
@@ -66,6 +66,9 @@
 <script src="{{asset('js/boottstrap.min.js')}}"></script>
 <script src="{{asset('js/mainn.js')}}"></script>
 </body>
+@jquery
+@toastr_js
+@toastr_render
 </html>
 
 

@@ -10,7 +10,6 @@
     <link href="{{asset('https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/sstyle.css')}}" rel="stylesheet" />
     <link href="{{asset('css/styles.css')}}" rel="stylesheet" />
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.2.0/css/all.css">
-{{--    <link rel="stylesheet" href="https://static.fontawesome.com/css/fontawesome-app.css">--}}
     <script src="{{asset('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js')}}" crossorigin="anonymous"></script>
     @toastr_css
 </head>
@@ -34,10 +33,9 @@
             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                 <li><a class="dropdown-item" href="#!">{{\Illuminate\Support\Facades\Auth::user()->name??""}}</a></li>
                 <li><hr class="dropdown-divider" /></li>
-                <li><a class="dropdown-item" href="#!">Settings</a></li>
-                <li><a class="dropdown-item" href="#!">Activity Log</a></li>
+                <li><a class="dropdown-item" href="{{route('auth.showFormChangePassword')}}">Đổi mật khẩu</a></li>
                 <li><hr class="dropdown-divider" /></li>
-                <li><a class="dropdown-item" href="#!">Logout</a></li>
+                <li><a class="dropdown-item" href="{{route('auth.logout')}}">Đăng xuất</a></li>
             </ul>
         </li>
     </ul>
