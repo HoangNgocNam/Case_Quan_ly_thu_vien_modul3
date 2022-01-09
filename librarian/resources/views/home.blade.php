@@ -37,7 +37,7 @@
                 <li class="nav-item"><a href="#" class="nav-link" data-nav-section="projects"><span>Sách hay</span></a></li>
                 <li class="nav-item"><a href="#" class="nav-link" data-nav-section="team"><span>Nhóm</span></a></li>
                 <li class="nav-item"><a href="#" class="nav-link" data-nav-section="testimony"><span>Testimony</span></a></li>
-                <li class="nav-item"><a href="#" class="nav-link" data-nav-section="blog"><span>Blog</span></a></li>
+                <li class="nav-item"><a href="#" class="nav-link" data-nav-section="blog"><span>Yêu thích</span></a></li>
             </ul>
         </div>
         <div class="collapse navbar-collapse">
@@ -314,7 +314,7 @@
 
                         </div>
                         <h3 class="heading"><a href="single.html">Tôi thấy hoa vàng trên cỏ xanh</a></h3>
-                        <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+                        <p>Tác phẩm như một tập nhật ký xoay quanh cuộc sống của những đứa trẻ ở một vùng quê Việt Nam nghèo khó, nổi bật lên là thông điệp về tình anh em, tình làng nghĩa xóm và những tâm tư của tuổi mới lớn.</p>
 
                         <div class="d-flex align-items-center mt-4 meta">
                             <p class="mb-0"><a href="#" class="btn btn-secondary">Đọc thêm <span class="ion-ios-arrow-round-forward"></span></a></p>
@@ -335,7 +335,7 @@
 
                         </div>
                         <h3 class="heading"><a href="single.html">Dế mèn phiêu lưu ký</a></h3>
-                        <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+                        <p>Tác phẩm văn xuôi đặc sắc và nổi tiếng nhất của nhà văn Tô Hoài viết về loài vật, dành cho lứa tuổi thiếu nhi. Ban đầu truyện có tên là "Con dế mèn". Sau đó đổi thành "Dế Mèn phiêu lưu ký"</p>
                         <div class="d-flex align-items-center mt-4 meta">
                             <p class="mb-0"><a href="#" class="btn btn-secondary">Đọc thêm <span class="ion-ios-arrow-round-forward"></span></a></p>
                             <p class="ml-auto mb-0">
@@ -355,7 +355,7 @@
 
                         </div>
                         <h3 class="heading"><a href="single.html">Cho tôi xin một vé đi tuổi thơ</a></h3>
-                        <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+                        <p>Nguyễn Nhật Ánh: "Tôi viết cuốn sách này không dành cho trẻ em. Tôi viết cho những ai từng là trẻ em". Tác phẩm gồm những câu chuyện nhỏ xoay xung quanh 4 đứa trẻ trong cùng một khu xóm</p>
                         <div class="d-flex align-items-center mt-4 meta">
                             <p class="mb-0"><a href="#" class="btn btn-secondary">Đọc thêm <span class="ion-ios-arrow-round-forward"></span></a></p>
                             <p class="ml-auto mb-0">
@@ -376,7 +376,7 @@
 
                         </div>
                         <h3 class="heading"><a href="single.html">Nhà giả kim</a></h3>
-                        <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+                        <p>Nhân vật chính là Santiago. Cha mẹ Santiago mong muốn cậu trở thành linh mục để mang lại niềm tự hào cho gia đình, nhưng vì ước mơ từ nhỏ của chính mình là đi đây đi đó khắp thế giới, Santigo đã thuyết phục được cha cậu và trở thành một người chăn cừu.</p>
                         <div class="d-flex align-items-center mt-4 meta">
                             <p class="mb-0"><a href="#" class="btn btn-secondary">Đọc thêm <span class="ion-ios-arrow-round-forward"></span></a></p>
                             <p class="ml-auto mb-0">
@@ -396,7 +396,7 @@
 
                         </div>
                         <h3 class="heading"><a href="single.html">Chí phèo</a></h3>
-                        <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+                        <p>Truyện ngắn Chí Phèo, nguyên có tên là Cái lò gạch cũ. Là một truyện ngắn nổi tiếng, một tác phẩm xuất sắc, thể hiện nghệ thuật viết truyện độc đáo của Nam Cao, đồng thời là một tấn bi kịch của một người nông dân nghèo bị tha hóa trong xã hội </p>
                         <div class="d-flex align-items-center mt-4 meta">
                             <p class="mb-0"><a href="#" class="btn btn-secondary">Đọc thêm <span class="ion-ios-arrow-round-forward"></span></a></p>
                             <p class="ml-auto mb-0">
@@ -416,7 +416,7 @@
 
                         </div>
                         <h3 class="heading"><a href="single.html">Cuộc đời của Pi</a></h3>
-                        <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+                        <p>Pi là con trai của một chủ vườn thú tại Pondicherry của Ấn Độ. Cậu say mê tôn giáo và cùng một lúc theo cả đạo Hindu, đạo Hồi và đạo Thiên Chúa. Để tránh những biến cố chính trị, gia đình cậu chuyển toàn bộ vườn thú tới Canada trên một con tàu của Nhật Bản có tên là Tsimtsum.</p>
                         <div class="d-flex align-items-center mt-4 meta">
                             <p class="mb-0"><a href="#" class="btn btn-secondary">Đọc thêm <span class="ion-ios-arrow-round-forward"></span></a></p>
                             <p class="ml-auto mb-0">
