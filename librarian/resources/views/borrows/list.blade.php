@@ -32,7 +32,7 @@
                 <tr>
                     <th scope="col">ID</th>
                     <th scope="col">Mã Sinh Viên</th>
-                    <th scope="col">Mã Sách</th>
+{{--                    <th scope="col">Mã Sách</th>--}}
                     <th scope="col">Ngày Mượn</th>
                     <th scope="col">Ngảy Trả</th>
                     <th scope="col">Thời Gian Mượn</th>
@@ -46,7 +46,7 @@
                         <tr>
                             <th scope="row">{{$borrow->id}}</th>
                             <td>{{$borrow->student->name}}</td>
-                            <th>{{$borrow->book->name}}</th>
+{{--                            <th>{{$borrow->book->name}}</th>--}}
                             <td>{{$borrow->borrow_date}}</td>
                             <td>{{$borrow->borrow_return}}</td>
                             <td>{{$borrow->time_allowed_to_borrow}}</td>

@@ -24,7 +24,7 @@ class BorrowController extends Controller
     {
         $borrow = new Borrow();
         $borrow->student_id = $request->student_id;
-        $borrow->book_id = $request->book_id;
+//        $borrow->book_id = $request->book_id;
         $borrow->borrow_date = $request->borrow_date;
         $borrow->borrow_return = $request->borrow_return;
         $borrow->time_allowed_to_borrow = $request->time_allowed_to_borrow;
@@ -43,7 +43,7 @@ class BorrowController extends Controller
     {
         $borrow = Borrow::findOrFail($id);
         $borrow->student_id = $request->student_id;
-        $borrow->book_id = $request->book_id;
+//        $borrow->book_id = $request->book_id;
         $borrow->borrow_date = $request->borrow_date;
         $borrow->borrow_return = $request->borrow_return;
         $borrow->time_allowed_to_borrow = $request->time_allowed_to_borrow;
