@@ -19,13 +19,13 @@
                     <p style="color: red">{{$message}}</p>
                     @enderror
                 </div>
-{{--                <div class="mb-3">--}}
-{{--                    <label for="exampleInputEmail1" class="form-label">Tên Sách</label>--}}
-{{--                    <input type="text" name="book_id" class="form-control" id="student_code" placeholder="Nhập id Sách" value="{{$borrow->book->id}}">--}}
-{{--                    @error('book_id')--}}
-{{--                    <p style="color: red">{{$message}}</p>--}}
-{{--                    @enderror--}}
-{{--                </div>--}}
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Tên Sách</label>
+                    <input type="text" name="book_id" class="form-control" id="student_code" placeholder="Nhập id Sách" value="{{$borrow->book->id}}">
+                    @error('book_id')
+                    <p style="color: red">{{$message}}</p>
+                    @enderror
+                </div>
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Ngày Mượn</label>
                     <input type="date" name="borrow_date" class="form-control" id="email" placeholder="Nhập Ngày Mượn" value="{{$borrow->borrow_date}}">

@@ -32,7 +32,7 @@
                 <tr>
                     <th scope="col">ID</th>
                     <th scope="col">Mã Sinh Viên</th>
-{{--                    <th scope="col">Mã Sách</th>--}}
+                    <th scope="col">Mã Sách</th>
                     <th scope="col">Ngày Mượn</th>
                     <th scope="col">Ngảy Trả</th>
                     <th scope="col">Thời Gian Mượn</th>
@@ -46,13 +46,13 @@
                         <tr>
                             <th scope="row">{{$borrow->id}}</th>
                             <td>{{$borrow->student->name}}</td>
-{{--                            <th>{{$borrow->book->name}}</th>--}}
+                            <th>{{$borrow->book->name}}</th>
                             <td>{{$borrow->borrow_date}}</td>
                             <td>{{$borrow->borrow_return}}</td>
                             <td>{{$borrow->time_allowed_to_borrow}}</td>
                             <td>{{$borrow->status}}</td>
                             <td><a href="{{route('borrows.update',$borrow->id)}}">Sửa</a></td>
-                            <td><a href="{{route('borrows.showDetail',$borrow->id)}}">Chi tiết</a></td>
+{{--                            <td><a href="{{route('borrows.showDetail',$borrow->id)}}">Chi tiết</a></td>--}}
                             <td><a onclick="return confirm('Bạn chắc Chắn Muốn Xóa ??')" href="{{route('borrows.delete',$borrow->id)}}">Xóa</a></td>
                         </tr>
                     @endforeach

@@ -10,6 +10,7 @@
     <link href="{{asset('https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/sstyle.css')}}" rel="stylesheet" />
     <link href="{{asset('css/styles.css')}}" rel="stylesheet" />
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.2.0/css/all.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="{{asset('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js')}}" crossorigin="anonymous"></script>
     @toastr_css
 </head>
@@ -158,5 +159,6 @@
 <script src="{{asset('assets/demo/chart-bar-demo.js')}}"></script>
 <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
 <script src="{{asset('js/datatables-simple-demo.js')}}"></script>
+
 
 
