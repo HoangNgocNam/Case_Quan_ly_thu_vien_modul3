@@ -21,10 +21,10 @@ class CategoryController extends Controller
 
     public function store(Request $request)
     {
-        $validated = $request->validate([
-            "code"=>"required|min:5",
-            "name"=>"required"
-        ]);
+//        $validated = $request->validate([
+//            "code"=>"required|min:5",
+//            "name"=>"required"
+//        ]);
 
         $category = new Category();
         $category->code = $request->code;
@@ -42,10 +42,10 @@ class CategoryController extends Controller
 
     public function update(Request $request,$id)
     {
-        $request->validate([
-            'code' => 'required',
-            'name' => 'required',
-        ]);
+//        $request->validate([
+//            'code' => 'required',
+//            'name' => 'required',
+//        ]);
         $category = Category::findOrFail($id);
         $category->code = $request->code;
         $category->name = $request->name;
