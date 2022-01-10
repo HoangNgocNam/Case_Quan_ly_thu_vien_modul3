@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateBorrowsTable extends Migration
+class CreateBorrowDetailTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,10 @@ class CreateBorrowsTable extends Migration
      */
     public function up()
     {
-        Schema::create('borrows', function (Blueprint $table) {
+        Schema::create('borrow_detail', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('student_id')->nullable();
-//            $table->unsignedBigInteger('book_id')->nullable();
-            $table->date('borrow_date');
-            $table->date('borrow_return');
-            $table->date('time_allowed_to_borrow');
+            $table->unsignedBigInteger('book_id');
+            $table->unsignedBigInteger('borrow_id');
             $table->timestamps();
         });
     }
@@ -31,6 +28,6 @@ class CreateBorrowsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('borrows');
+        Schema::dropIfExists('borrow_detail');
     }
 }
