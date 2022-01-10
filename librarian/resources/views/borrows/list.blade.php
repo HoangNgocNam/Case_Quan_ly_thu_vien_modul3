@@ -1,5 +1,5 @@
 @extends("home.master")
-@section("title","borrow")
+@section("title","Borrow")
 @section("title-content","Quản Lý Phiếu Mượn")
 @section("content")
     <button class="btn btn-primary mb-3">

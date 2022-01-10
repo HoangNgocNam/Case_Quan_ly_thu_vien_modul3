@@ -1,5 +1,5 @@
 @extends("home.master")
-@section("title","category")
+@section("title","Category")
 @section("title-content","Cập Nhật Danh Mục")
 @section("content")
 
