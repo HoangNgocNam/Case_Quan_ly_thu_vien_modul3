@@ -15,7 +15,6 @@
         <div class="row justify-content-center">
             <div class="col-md-6 text-center mb-5">
                 <h1 style="color: white" class="heading-section">Chào mừng bạn đã đến với thư viện sách</h1>
-{{--                <h1 style="color: white">Chào mừng bạn đã đến với thư viện sách</h1>--}}
             </div>
         </div>
         <div class="row justify-content-center">
