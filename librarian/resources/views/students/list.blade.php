@@ -3,9 +3,22 @@
 @section("title-content","Danh Sách Khách Hàng")
 @section("content")
 
-    <button class="btn btn-primary mb-3">
-        <a style="color: white; text-decoration: none" href="{{route('students.create')}}">Thêm khách hàng</a>
-    </button>
+
+    <div class="row">
+        <div class="col">
+            <button class="btn btn-primary mb-3">
+                <a style="color: white; text-decoration: none" href="{{route('students.create')}}">Thêm khách hàng</a>
+            </button>
+        </div>
+        <div class="input-group mb-2 col" style="width: 500px">
+            <input style="height: 42px" type="text" name="keyword" class="form-control" id="searchStudent">
+            <div class="input-group-prepend">
+                <div class="input-group-text" style="height: 42px">
+                    <i class="fas fa fa-search"></i>
+                </div>
+            </div>
+        </div>
+    </div>
 
 <div class="card mb-4">
     <div class="card-header">
@@ -25,7 +38,7 @@
                 <th scope="col">Thao tác</th>
             </tr>
             </thead>
-            <tbody>
+            <tbody id="list-student">
             @foreach($students as $student)
                 <tr>
                     <td>{{$student->id}}</td>
@@ -49,3 +62,6 @@
     </div>
 </div>
 @endsection
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="{{asset('assets/my.js')}}"></script>

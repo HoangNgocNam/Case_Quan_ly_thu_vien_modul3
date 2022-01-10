@@ -58,42 +58,41 @@ Route::middleware('auth')->prefix('admin')->group(function () {
         Route::get('/{id}/update', [BookController::class, 'edit'])->name('books.edit');
         Route::post('/{id}/update', [BookController::class, 'update'])->name('books.update');
         Route::get('/{id}/delete', [BookController::class, 'delete'])->name('books.delete');
-        Route::get('/search',[BookController::class,"searchBook"])->name("searchne");
+        Route::get('/search',[BookController::class,"searchBook"]);
         Route::get("/search/{keyword}", [BookController::class, "searchBook"]);
         Route::get("/{id}", [BookController::class, "findById"]);
-
-
     });
 
 
-        Route::prefix('categories')->group(function () {
-            Route::get('/', [CategoryController::class, 'index'])->name('category.index');
-            Route::get('/create', [CategoryController::class, 'create'])->name('category.create');
-            Route::post('/create', [CategoryController::class, 'store'])->name('category.store');
-            Route::get('/{id}/update', [CategoryController::class, 'edit'])->name('category.edit');
-            Route::post('/{id}/update', [CategoryController::class, 'update'])->name('category.update');
-            Route::get('/{id}/delete', [CategoryController::class, 'delete'])->name('category.delete');
-        });
-
-        Route::prefix('students')->group(function () {
-            Route::get('/', [StudentController::class, "index"])->name("students.list");
-            Route::get('/create', [StudentController::class, "create"])->name("students.create");
-            Route::post('/create', [StudentController::class, "store"])->name("students.store");
-            Route::get('/{id}/update', [StudentController::class, "edit"])->name("students.edit");
-            Route::post('/{id}/update', [StudentController::class, "update"])->name("students.update");
-            Route::get('/{id}/delete', [StudentController::class, "delete"])->name("students.delete");
-        });
-
-        Route::prefix('borrows')->group(function () {
-            Route::get('/', [BorrowController::class, "index"])->name("borrows.index");
-            Route::get('/create', [BorrowController::class, "create"])->name("borrows.create");
-            Route::post('/create', [BorrowController::class, "store"])->name("borrows.store");
-            Route::get('/{id}/update', [BorrowController::class, "edit"])->name("borrows.edit");
-            Route::post('/{id}/update', [BorrowController::class, "update"])->name("borrows.update");
-            Route::get('/{id}/delete', [BorrowController::class, "delete"])->name("borrows.delete");
-            Route::get('/{id}/detail', [BorrowController::class, "showDetail"])->name("borrows.showDetail");
-        });
+    Route::prefix('categories')->group(function () {
+        Route::get('/', [CategoryController::class, 'index'])->name('category.index');
+        Route::get('/create', [CategoryController::class, 'create'])->name('category.create');
+        Route::post('/create', [CategoryController::class, 'store'])->name('category.store');
+        Route::get('/{id}/update', [CategoryController::class, 'edit'])->name('category.edit');
+        Route::post('/{id}/update', [CategoryController::class, 'update'])->name('category.update');
+        Route::get('/{id}/delete', [CategoryController::class, 'delete'])->name('category.delete');
     });
+
+    Route::prefix('students')->group(function () {
+        Route::get('/', [StudentController::class, "index"])->name("students.list");
+        Route::get('/create', [StudentController::class, "create"])->name("students.create");
+        Route::post('/create', [StudentController::class, "store"])->name("students.store");
+        Route::get('/{id}/update', [StudentController::class, "edit"])->name("students.edit");
+        Route::post('/{id}/update', [StudentController::class, "update"])->name("students.update");
+        Route::get('/{id}/delete', [StudentController::class, "delete"])->name("students.delete");
+        Route::get('/search', [StudentController::class, "searchStudent"]);
+    });
+
+    Route::prefix('borrows')->group(function () {
+        Route::get('/', [BorrowController::class, "index"])->name("borrows.index");
+        Route::get('/create', [BorrowController::class, "create"])->name("borrows.create");
+        Route::post('/create', [BorrowController::class, "store"])->name("borrows.store");
+        Route::get('/{id}/update', [BorrowController::class, "edit"])->name("borrows.edit");
+        Route::post('/{id}/update', [BorrowController::class, "update"])->name("borrows.update");
+        Route::get('/{id}/delete', [BorrowController::class, "delete"])->name("borrows.delete");
+        Route::get('/{id}/detail', [BorrowController::class, "showDetail"])->name("borrows.showDetail");
+    });
+});
 
 
 Route::get('/auth/redirect/{provider}',[SocialController::class,'redirect']);

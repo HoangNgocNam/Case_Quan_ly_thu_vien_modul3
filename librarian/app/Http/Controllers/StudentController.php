@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Book;
 use App\Models\Student;
 use Illuminate\Http\Request;
 
@@ -71,5 +72,16 @@ class StudentController extends Controller
         $student->update();
         toastr()->success('Cập nhật khách hàng thành công');
         return redirect()->route("students.list");
+    }
+
+    public function searchStudent(Request $request)
+    {
+        $keystudent = $request->keystudent;
+        $students = Student::where('name','LIKE','%'.$keystudent.'%')->get();
+        $data = [
+            'status' => 'success',
+            'data' => $students
+        ];
+        return response()->json($data);
     }
 }

@@ -50,4 +50,49 @@ $(document).ready(function () {
             }
         })
     })
+
+
+
+    function showStudentHtml(res) {
+        let students = res.data;
+        let html = "";
+        for (let i = 0; i < students.length; i++) {
+            html += "<tr>";
+            html += "<td>";
+            html += students[i].id
+            html += "</td>";
+            html += "<td>";
+            html += students[i].name
+            html += "</td>";
+            html += "<td>";
+            html += students[i].student_code
+            html += "</td>";
+            html += "<td>";
+            html += students[i].email
+            html += "</td>";
+            html += "<td>";
+            html += students[i].address
+            html += "</td>";
+            html += "<td>";
+            html += students[i].birthday
+            html += "</td>";
+            html += "</tr>";
+        }
+        $('#list-student').html(html)
+    }
+
+    $('body').on("keyup","#searchStudent",function () {
+        let keystudent = $(this).val();
+        $.ajax({
+            url: url + "/admin/students/search",
+            method: "GET",
+            type: 'json',
+            data: {
+                keystudent: keystudent
+            },
+            success: function (res) {
+                showStudentHtml(res)
+            }
+        })
+    })
 })
