@@ -88,4 +88,10 @@ class UserController extends Controller
         toastr()->success('Cập nhật người dùng thành công');
         return redirect()->route('users.index');
     }
+
+    public function search($keyword)
+    {
+         $user = User::where("name","like",'%'.$keyword.'%')->get();
+         return response()->json($user);
+    }
 }

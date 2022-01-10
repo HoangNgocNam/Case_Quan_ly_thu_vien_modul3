@@ -91,11 +91,17 @@ class BookController extends Controller
     public function searchBook(Request $request)
     {
         $keyword = $request->keyword;
-        $books = Book::where('name','LIKE','%'.$keyword.'%')->with('publishers')->get();
+        $books = Book::where('name','LIKE','%'.$keyword.'%')->with('publisher')->get();
         $data = [
             'status' => 'success',
             'data' => $books
         ];
         return response()->json($data);
     }
+
+    function findById($id) {
+        $book = Book::find($id);
+        return response()->json($book);
+    }
+
 }
