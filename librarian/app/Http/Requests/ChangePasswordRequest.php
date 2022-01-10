@@ -24,9 +24,9 @@ class ChangePasswordRequest extends FormRequest
     public function rules()
     {
         return [
-            'currentPassword' => 'required',
-            'newPassword' => 'required|min:3',
-            'confirmPassword' => 'required|same:newPassword',
+            'currentPassword' => 'Mật khẩu không khớp!',
+            'newPassword' => 'Độ dài mật khẩu tối thiểu phải có 3 ký tự!|min:3',
+            'confirmPassword' => 'Xác nhận lại mật khẩu!|same:newPassword',
         ];
     }
 }

@@ -24,10 +24,10 @@ class CreateBookRequest extends FormRequest
     public function rules()
     {
         return [
-            'name' => 'required',
-            'desc' => 'required',
-            'category_id' => 'required',
-            'publisher_id' => 'required',
+            'name' => 'Không được để trống tên!',
+            'desc' => 'Không được để trống mô tả!',
+            'category_id' => 'Không được để trống id thể loại!',
+            'publisher_id' => 'Không được để trống nhà xuất bản!',
         ];
     }
 }

@@ -24,8 +24,8 @@ class CreateCatalogRequest extends FormRequest
     public function rules()
     {
         return [
-            "code"=>"required|min:5",
-            "name"=>"required"
+            "code"=>"Độ dài code tối thiểu 5 ký tự!|min:5",
+            "name"=>"Không được để trống tên!"
         ];
     }
 }
