@@ -30,7 +30,7 @@ class AuthController extends Controller
             return redirect()->route('auth.showFormLogin');
         } else {
             toastr()->success('Đăng nhập thành công!');
-            return redirect()->route('students.list');
+            return redirect()->route('home.index');
         }
     }
 

@@ -9,6 +9,7 @@ use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\SocialController;
 use App\Http\Controllers\StudentController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -23,8 +24,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('dashboard');
+    return view('home');
 });
+
+
 
 
 Route::get('/login',[AuthController::class,'showFormLogin'])->name('auth.showFormLogin');
@@ -39,6 +42,7 @@ Route::post('/change-password',[AuthController::class,'changePassword'])->name('
 Route::middleware('auth')->prefix('admin')->group(function () {
     Route::prefix('users')->group(function (){
         Route::get('/', [UserController::class,'index'])->name("users.index");
+        Route::get('/home', [HomeController::class,'index'])->name("home.index");
         Route::get('/create', [UserController::class,'create'])->name('users.create');
         Route::post('/create', [UserController::class,'store'])->name('users.store');
         Route::get('/{id}/delete', [UserController::class,'delete'])->name('users.delete');
