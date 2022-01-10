@@ -1,6 +1,6 @@
 @extends('home.master')
-@section('title', 'borrow')
-@section('title-content','Chi tiết phiếu mượn')
+@section('title','Borrow')
+@section('title-content','Chi Tiết Phiếu Mượn')
 @section('content')
 <section class="content">
     <div class="container-fluid">
