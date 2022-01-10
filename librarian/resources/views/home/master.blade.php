@@ -113,6 +113,7 @@
                         <nav class="sb-sidenav-menu-nested nav">
                             <a class="nav-link" href="{{route('borrows.index')}}">Danh sách</a>
                             <a class="nav-link" href="{{route('borrows.create')}}">Tạo mới</a>
+{{--                            <a class="nav-link" href="{{route('borrows.showDetail')}}">Chi tiết phiếu mượn</a>--}}
                         </nav>
                     </div>
 

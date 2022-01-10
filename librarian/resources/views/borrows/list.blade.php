@@ -52,6 +52,7 @@
                             <td>{{$borrow->time_allowed_to_borrow}}</td>
                             <td>{{$borrow->status}}</td>
                             <td><a href="{{route('borrows.update',$borrow->id)}}">Sửa</a></td>
+                            <td><a href="{{route('borrows.showDetail',$borrow->id)}}">Chi tiết</a></td>
                             <td><a onclick="return confirm('Bạn chắc Chắn Muốn Xóa ??')" href="{{route('borrows.delete',$borrow->id)}}">Xóa</a></td>
                         </tr>
                     @endforeach

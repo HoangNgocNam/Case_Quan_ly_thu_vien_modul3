@@ -23,7 +23,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('borrows.detail');
+    return view('home');
 });
 
 
@@ -91,6 +91,7 @@ Route::middleware('auth')->prefix('admin')->group(function () {
         Route::get('/{id}/update',[BorrowController::class,"edit"])->name("borrows.edit");
         Route::post('/{id}/update',[BorrowController::class,"update"])->name("borrows.update");
         Route::get('/{id}/delete',[BorrowController::class,"delete"])->name("borrows.delete");
+        Route::get('/{id}/detail',[BorrowController::class,"showDetail"])->name("borrows.showDetail");
     });
 });
 

@@ -58,4 +58,12 @@ class BorrowController extends Controller
         $borrow->delete();
         return redirect()->route('borrows.index');
     }
+
+    public function showDetail($id)
+    {
+        $borrow = Borrow::findOrFail($id);
+        $students = Student::all();
+        $books = Book::all();
+        return view('borrows.detail', compact('borrow', 'students', 'books'));
+    }
 }
