@@ -54,13 +54,13 @@
                         <div class="form-group d-md-flex">
                             <div class="w-50">
                             </div>
-                            <div class="w-50 text-md-right">
-                                <a href="{{route('auth.showFormRegister')}}" style="color: black">Đăng ký</a>
-                            </div>
+{{--                            <div class="w-50 text-md-right">--}}
+{{--                                <a href="{{route('auth.showFormRegister')}}" style="color: black">Đăng ký</a>--}}
+{{--                            </div>--}}
                         </div>
                     </form>
                     <p style="background-color: white" class="w-100 text-center">&mdash; Đăng Nhập Với &mdash;</p>
-                    <div style="background-color: white" class="social d-flex text-center">
+                    <div style="background-color: white; padding-left: 125px" class="social d-flex text-center">
                         <a href="{{ url('/auth/redirect/google') }}" class="px-2 py-2 mr-md-1 rounded"><i class="fab fa-google-plus-g"></i> Google</a>
                     </div>
                 </div>
