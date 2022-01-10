@@ -13,11 +13,11 @@
             <form method="post">
                 @csrf
                 <div class="mb-3">
-                    <label for="exampleInputEmail1">Mã Sách</label>
+                    <label style="font-weight: bolder" for="exampleInputEmail1">Mã Sách</label>
                     <input type="text" name="code" class="form-control" placeholder="Nhập mã sách" value="{{$category->code}}">
                 </div>
                 <div class="mb-3">
-                    <label for="exampleInputPassword1">Tên sách</label>
+                    <label style="font-weight: bolder" for="exampleInputPassword1">Tên sách</label>
                     <input type="text" name="name" class="form-control" placeholder="Nhập Tên sách" value="{{$category->name}}">
                 </div>
                 <a href="{{route('category.index')}}" class="btn btn-secondary">Quay lại</a>

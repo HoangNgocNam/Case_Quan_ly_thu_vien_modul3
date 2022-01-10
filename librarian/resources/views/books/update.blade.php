@@ -11,12 +11,12 @@
             <form method="post" enctype="multipart/form-data">
                 @csrf
                 <div class="mb-3">
-                    <label for="exampleFormControlInput1">Ảnh</label>
+                    <label style="font-weight: bolder" for="exampleFormControlInput1">Ảnh</label>
                     <input type="file" name="imag" class="form-control-file" placeholder="Cập nhật ảnh">
                     <img style="width: 100px;" src="{{asset('storage/'.$book->imag)}}" alt="">
                 </div>
                 <div class="mb-3">
-                    <label for="exampleFormControlInput1">Tên sách</label>
+                    <label style="font-weight: bolder" for="exampleFormControlInput1">Tên sách</label>
                     <input type="text" name="name" class="form-control" placeholder="Nhập tên sách"
                            value="{{$book->name}}">
 {{--                    <input type="text" name="name" class="form-control" placeholder="Nhập tên sách" value="{{$book->name}}">--}}
@@ -25,21 +25,21 @@
                     @enderror
                 </div>
                 <div class="mb-3">
-                    <label for="exampleFormControlInput1">Mô tả</label>
+                    <label style="font-weight: bolder" for="exampleFormControlInput1">Mô tả</label>
                     <textarea name="desc" class="form-control">{{$book->desc}}</textarea>
                     @error('desc')
                     <p style="color: red">{{$message}}</p>
                     @enderror
                 </div>
                 <div class="mb-3">
-                    <label for="exampleFormControlSelect1">Trạng Thái</label>
+                    <label style="font-weight: bolder" for="exampleFormControlSelect1">Trạng Thái</label>
                     <select class="form-control" name="status">
                         <option {{$book->status == "Mới" ? "selected": ""}} value="Mới">Mới</option>
                         <option {{$book->status == "Cũ" ? "selected": ""}} value="Cũ">Cũ</option>
                     </select>
                 </div>
                 <div class="mb-3">
-                    <label for="exampleFormControlSelect2">Thể Loại</label>
+                    <label style="font-weight: bolder" for="exampleFormControlSelect2">Thể Loại</label>
                     <select multiple class="form-control" name="category_id">
                         @foreach($categories as $category)
                             <option
@@ -49,7 +49,7 @@
                     </select>
                 </div>
                 <div class="mb-3">
-                    <label for="exampleFormControlSelect2">Nhà Xuất Bản</label>
+                    <label style="font-weight: bolder" for="exampleFormControlSelect2">Nhà Xuất Bản</label>
                     <select multiple class="form-control" name="publisher_id">
                         @foreach($publishers as $publisher)
                             <option
@@ -59,7 +59,7 @@
                     </select>
                 </div>
                 <div class="mb-3">
-                    <label for="exampleFormControlInput1">Số Lượng</label>
+                    <label style="font-weight: bolder" for="exampleFormControlInput1">Số Lượng</label>
                     <input type="number" name="quanlity" class="form-control" placeholder="Nhập Số Lượng"
                            value="{{$book->quanlity}}">
                 </div>

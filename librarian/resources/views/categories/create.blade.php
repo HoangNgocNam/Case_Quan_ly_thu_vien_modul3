@@ -12,21 +12,21 @@
             <form method="post">
                 @csrf
                 <div class="mb-3">
-                    <label for="exampleInputEmail1">Mã danh mục</label>
+                    <label style="font-weight: bolder" for="exampleInputEmail1">Mã danh mục</label>
                     <input type="text" name="code" class="form-control" placeholder="Nhập mã danh mục">
                     @error('code')
                     <p style="color: red">{{$message}}</p>
                     @enderror
                 </div>
                 <div class="mb-3">
-                    <label for="exampleInputPassword1">Tên danh mục</label>
+                    <label style="font-weight: bolder" for="exampleInputPassword1">Tên danh mục</label>
                     <input type="text" name="name" class="form-control" placeholder="Nhập tên danh mục">
                     @error('name')
                     <p style="color: red">{{$message}}</p>
                     @enderror
                 </div>
-                <a href="{{route('category.index')}}" class="btn btn-secondary">Quay lại</a>
-                <button type="submit" class="btn btn-primary">Thêm mới</button>
+                <a href="{{route('category.index')}}" class="btn btn-danger">Hủy</a>
+                <button type="submit" class="btn btn-success">Thêm mới</button>
             </form>
         </div>
     </div>
