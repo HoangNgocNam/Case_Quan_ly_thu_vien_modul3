@@ -1,14 +1,14 @@
 @extends("home.master")
 @section("title","borrow")
-@section("title-content","Quản lý phiếu mượn")
+@section("title-content","Quản Lý Phiếu Mượn")
 @section("content")
     <button class="btn btn-primary mb-3">
-        <a style="color: white; text-decoration: none" href="{{route('borrows.create')}}">Thêm mới phiếu Mượn</a>
+        <a style="color: white; text-decoration: none" href="{{route('borrows.create')}}">Thêm Mới Phiếu Mượn</a>
     </button>
     <div class="card mb-4">
         <div class="card-header">
             <i class="fas fa-table me-1"></i>
-            Danh sách phiếu Mượn
+            Danh sách phiếu mượn
         </div>
         <div class="btn btn-White">
             <div class="search-box">
@@ -20,7 +20,7 @@
                                    aria-label="Search for...">
                         </span>
                         <div>
-                            <button  class="btn btn-info" type="submit">Tìm Kiếm</button>
+                            <button  class="btn btn-secondary" type="submit">Tìm Kiếm</button>
                         </div>
                     </div>
                 </form>
@@ -51,9 +51,11 @@
                             <td>{{$borrow->borrow_return}}</td>
                             <td>{{$borrow->time_allowed_to_borrow}}</td>
                             <td>{{$borrow->status}}</td>
-                            <td><a href="{{route('borrows.update',$borrow->id)}}">Sửa</a></td>
-                            <td><a href="{{route('borrows.showDetail',$borrow->id)}}">Chi tiết</a></td>
-                            <td><a onclick="return confirm('Bạn chắc Chắn Muốn Xóa ??')" href="{{route('borrows.delete',$borrow->id)}}">Xóa</a></td>
+                            <td>
+                                <a type="button" class="btn btn-warning" href="{{route('borrows.showDetail',$borrow->id)}}"><i class="fas fa-calendar-week"></i></a>
+                                <a type="button" class="btn btn-success" href="{{route('borrows.update',$borrow->id)}}"><i class="fas fa-pen"></i></a>
+                                <a type="button" class="btn btn-danger" onclick="return confirm('Bạn chắc Chắn Muốn Xóa ??')" href="{{route('borrows.delete',$borrow->id)}}"><i class="fas fa-trash-alt"></i></a>
+                            </td>
                         </tr>
                     @endforeach
                 @else

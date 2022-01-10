@@ -1,6 +1,6 @@
 @extends('home.master')
 @section('title', 'borrow')
-@section('title-content','Quản lý phiếu mượn')
+@section('title-content','Chi tiết phiếu mượn')
 @section('content')
 <section class="content">
     <div class="container-fluid">
@@ -117,6 +117,7 @@
                                 </div>
                                 <div class="col-12 col-md-6">
                                     <div class="form-group">
+                                        <a href="{{route('borrows.index')}}" type="button" class="btn btn-danger">Hủy</a>
                                         <button class="btn btn-success">Cho mượn</button>
                                     </div>
                                 </div>
