@@ -20,10 +20,10 @@ class CatalogController extends Controller
 
     public function store(Request $request)
     {
-        $validated = $request->validate([
-            "code"=>"required|min:5",
-            "name"=>"required"
-        ]);
+//        $validated = $request->validate([
+//            "code"=>"required|min:5",
+//            "name"=>"required"
+//        ]);
 
        $catalog = new Catalog();
        $catalog->code = $request->code;
@@ -41,10 +41,10 @@ class CatalogController extends Controller
 
     public function update(Request $request,$id)
     {
-        $request->validate([
-            'code' => 'required',
-            'name' => 'required',
-        ]);
+//        $request->validate([
+//            'code' => 'required',
+//            'name' => 'required',
+//        ]);
         $catalog = Catalog::findOrFail($id);
         $catalog->code = $request->code;
         $catalog->name = $request->name;

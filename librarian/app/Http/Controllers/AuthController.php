@@ -68,11 +68,11 @@ class AuthController extends Controller
 
     public function changePassword(Request $request)
     {
-        $request->validate([
-            'currentPassword' => 'required',
-            'newPassword' => 'required|min:3',
-            'confirmPassword' => 'required|same:newPassword',
-        ]);
+//        $request->validate([
+//            'currentPassword' => 'required',
+//            'newPassword' => 'required|min:3',
+//            'confirmPassword' => 'required|same:newPassword',
+//        ]);
         $user = Auth::user();
         $currentPassword = $user->password;
         if (!Hash::check($request->currentPassword, $currentPassword)) {
