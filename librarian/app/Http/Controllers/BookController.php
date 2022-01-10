@@ -12,9 +12,7 @@ class BookController extends Controller
     public function index()
     {
         $books = Book::all();
-        $categories = Category::all();
-        $publishers = Publisher::all();
-        return view('books.list', compact('books', 'categories', 'publishers'));
+        return view('books.list', compact('books'));
     }
 
     public function create()
@@ -26,12 +24,12 @@ class BookController extends Controller
 
     public function store(Request $request)
     {
-        $request->validate([
-            'name' => 'required',
-            'desc' => 'required',
-            'category_id' => 'required',
-            'publisher_id' => 'required',
-        ]);
+//        $request->validate([
+//            'name' => 'required',
+//            'desc' => 'required',
+//            'category_id' => 'required',
+//            'publisher_id' => 'required',
+//        ]);
         $book = new Book();
         if ($request->hasFile('imag')) {
             $imag = $request->file('imag');
@@ -59,12 +57,12 @@ class BookController extends Controller
 
     public function update(Request $request,$id)
     {
-        $request->validate([
-            'name' => 'required',
-            'desc' => 'required',
-            'category_id' => 'required',
-            'publisher_id' => 'required',
-        ]);
+//        $request->validate([
+//            'name' => 'required',
+//            'desc' => 'required',
+//            'category_id' => 'required',
+//            'publisher_id' => 'required',
+//        ]);
         $book = Book::findOrFail($id);
         if ($request->hasFile('imag')) {
             $imag = $request->file('imag');

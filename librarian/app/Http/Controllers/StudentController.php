@@ -20,13 +20,13 @@ class StudentController extends Controller
 
     public function store(Request $request)
     {
-        $request->validate([
-            'name' => 'required',
-            'student_code' => 'required',
-            'email' => 'required|email',
-            'address' => 'required',
-            'birthday' => 'required|date',
-        ]);
+//        $request->validate([
+//            'name' => 'required',
+//            'student_code' => 'required',
+//            'email' => 'required|email',
+//            'address' => 'required',
+//            'birthday' => 'required|date',
+//        ]);
         $student = new Student();
         $student->name = $request->name;
         $student->student_code = $request->student_code;
@@ -54,13 +54,13 @@ class StudentController extends Controller
 
     public function update(Request $request,$id)
     {
-        $request->validate([
-            'name' => 'required',
-            'email' => 'required|email',
-            'password' => 'required|min:3',
-            'birthday' => 'required|date',
-            'phone' => 'required|Numeric',
-        ]);
+//        $request->validate([
+//            'name' => 'required',
+//            'email' => 'required|email',
+//            'password' => 'required|min:3',
+//            'birthday' => 'required|date',
+//            'phone' => 'required|Numeric',
+//        ]);
         $student = Student::findOrFail($id);
         $student->name = $request->name;
         $student->student_code = $request->student_code;

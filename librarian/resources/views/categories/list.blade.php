@@ -1,14 +1,14 @@
 @extends("home.master")
-@section("title","category")
-@section("title-content","Quản lý danh mục sách")
+@section("title","Category")
+@section("title-content","Quản Lý Thể Loại Sách")
 @section("content")
     <button class="btn btn-primary mb-3">
-        <a style="color: white; text-decoration: none" href="{{route('category.create')}}">Thêm mới danh mục</a>
+        <a style="color: white; text-decoration: none" href="{{route('category.create')}}">Thêm mới thể loại</a>
     </button>
     <div class="card mb-4">
         <div class="card-header">
             <i class="fas fa-table me-1"></i>
-            Danh sách danh mục sách
+            Danh sách thể loại
         </div>
         <div class="card-body">
             <table class="table" border="1px">

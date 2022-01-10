@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="{{asset('css/sstyle.css')}}">
 
 </head>
-<body class="img js-fullheight" style="background-image: url({{asset('images/bb.jpg')}});">
+<body class="img js-fullheight">
 <section class="ftco-section">
     <div class="container">
         <div class="row justify-content-center">
@@ -31,6 +31,9 @@
                                 </div>
                                 <input type="text" id="name" name="name" value="{{old('name')}}" class="form-control" placeholder="Nhập tên">
                             </div>
+                            @error('name')
+                            <p class="text-danger">{{ $message }}</p>
+                            @enderror
                         </div>
                         <div class="form-group">
                             <label class="sr-only" for="inlineFormInputGroup">Email</label>

@@ -1,3 +1,4 @@
+
 {{--@extends('home.master')--}}
 {{--@section('title', 'borrow')--}}
 {{--@section('title-content','Quản lý phiếu mượn')--}}
@@ -256,3 +257,6 @@
 {{--    </script>--}}
 {{--    </div>--}}
 {{--@endsection--}}
+
+
+

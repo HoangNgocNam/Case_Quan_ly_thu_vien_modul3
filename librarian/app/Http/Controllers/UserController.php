@@ -32,13 +32,13 @@ class UserController extends Controller
 
     public function store(Request $request)
     {
-        $validated = $request->validate([
-            "name"=>"required",
-            "email"=>"required|email",
-            "password"=>"required|min:6",
-            "birthday"=>"required|date",
-            "phone"=>"required|Numeric",
-        ]);
+//        $validated = $request->validate([
+//            "name"=>"required",
+//            "email"=>"required|email",
+//            "password"=>"required|min:6",
+//            "birthday"=>"required|date",
+//            "phone"=>"required|Numeric",
+//        ]);
         $user = new User();
         $user->name = $request->name;
         $user->email = $request->email;
@@ -65,13 +65,13 @@ class UserController extends Controller
 
     public function update(Request $request , $id)
     {
-        $request->validate([
-            "name"=>"required",
-            "email"=>"required|email",
-            "password"=>"required|min:6",
-            "birthday"=>"required|date",
-            "phone"=>"required|Numeric",
-        ]);
+//        $request->validate([
+//            "name"=>"required",
+//            "email"=>"required|email",
+//            "password"=>"required|min:6",
+//            "birthday"=>"required|date",
+//            "phone"=>"required|Numeric",
+//        ]);
         $user = User::findOrFail($id);
         $user->name = $request->name;
         $user->email = $request->email;

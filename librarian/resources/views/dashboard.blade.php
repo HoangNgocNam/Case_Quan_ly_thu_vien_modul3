@@ -10,7 +10,6 @@
     <link href="{{asset('https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/sstyle.css')}}" rel="stylesheet" />
     <link href="{{asset('css/styles.css')}}" rel="stylesheet" />
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.2.0/css/all.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="{{asset('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js')}}" crossorigin="anonymous"></script>
     @toastr_css
 </head>
@@ -47,7 +46,7 @@
             <div class="sb-sidenav-menu">
                 <div class="nav">
 
-                    <a class="nav-link" href="{{route('home.index')}}">
+                    <a class="nav-link" href="index.html">
                         <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                         Trang chủ
                     </a>
@@ -116,24 +115,138 @@
                             <a class="nav-link" href="{{route('borrows.create')}}">Tạo mới</a>
                         </nav>
                     </div>
+
+
+
                 </div>
             </div>
 
         </nav>
     </div>
     <div id="layoutSidenav_content">
+{{--        <main>--}}
+{{--            <div class="container-fluid px-4">--}}
+{{--                <h2 class="mt-4">@yield("title-content","Thư viện")</h2>--}}
+{{--                <br>--}}
+
+{{--                @yield('content','không có dữ liệu')--}}
+
+
+
+{{--            </div>--}}
+{{--        </main>--}}
         <main>
             <div class="container-fluid px-4">
-                <h2 class="mt-4">@yield("title-content","Thư viện")</h2>
-                <br>
-
-                @yield('content','không có dữ liệu')
-
-
-
+                <h1 class="mt-4">Trang chủ</h1>
+                <div class="row">
+                    <div class="col-xl-3 col-md-6">
+                        <div class="card bg-primary text-white mb-4">
+                            <div class="card-body">Số lượng đơn hàng mới</div>
+                            <div class="card-footer d-flex align-items-center justify-content-between">
+                                <a class="small text-white stretched-link" href="#">Xem thông tin</a>
+                                <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6">
+                        <div class="card bg-warning text-white mb-4">
+                            <div class="card-body">Tỷ lệ tăng trưởng</div>
+                            <div class="card-footer d-flex align-items-center justify-content-between">
+                                <a class="small text-white stretched-link" href="#">Xem thông tin</a>
+                                <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6">
+                        <div class="card bg-success text-white mb-4">
+                            <div class="card-body">Số lượng người dùng đăng kí mới</div>
+                            <div class="card-footer d-flex align-items-center justify-content-between">
+                                <a class="small text-white stretched-link" href="#">Xem thông tin</a>
+                                <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6">
+                        <div class="card bg-danger text-white mb-4">
+                            <div class="card-body">Số lượng người truy cập</div>
+                            <div class="card-footer d-flex align-items-center justify-content-between">
+                                <a class="small text-white stretched-link" href="#">Xem thông tin</a>
+                                <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xl-6">
+                        <div class="card mb-4">
+                            <div class="card-header">
+                                <i class="fas fa-chart-area me-1"></i>
+                                Biểu đồ miền
+                            </div>
+                            <div class="card-body"><canvas id="myAreaChart" width="100%" height="40"></canvas></div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6">
+                        <div class="card mb-4">
+                            <div class="card-header">
+                                <i class="fas fa-chart-bar me-1"></i>
+                                Biểu đồ cột
+                            </div>
+                            <div class="card-body"><canvas id="myBarChart" width="100%" height="40"></canvas></div>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </main>
+            <!-- Main row -->
+            <div class="col-xl-6" style="padding-left: 20px">
+                <div class="card mb-4" style="width: 600px">
+                    <div class="card-header" style="width: 598.73px">
+                        <i class="fas fa-chart-area me-1"></i>
+                        Thời tiết
+                    </div>
+                    <div>
 
+                        <h2 style="padding-left: 20px">Hanoi</h2>
+                        <h3 style="padding-left: 20px">Clouds<span>Wind 1.11m/s <span class="dot">•</span> Precip 0%</span></h3>
+                        <h1 style="padding-left: 40px">14°</h1>
+                        <div class="sky">
+                            <div class="sun"></div>
+                            <div class="cloud">
+                                <div class="circle-small"></div>
+                                <div class="circle-tall"></div>
+                                <div class="circle-medium"></div>
+                            </div>
+                        </div>
+                        <table >
+                            <tr>
+                                <td style="padding-left: 20px">TUE</td>
+                                <td>WED</td>
+                                <td>THU</td>
+                                <td>FRI</td>
+                                <td>SAT</td>
+                            </tr>
+                            <tr>
+                                <td style="padding-left: 20px">30°</td>
+                                <td>34°</td>
+                                <td>36°</td>
+                                <td>34°</td>
+                                <td>37°</td>
+                            </tr>
+                            <tr>
+                                <td style="padding-left: 20px">17°</td>
+                                <td>22°</td>
+                                <td>19°</td>
+                                <td>23°</td>
+                                <td>19°</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- /.row (main row) -->
+
+        </main>
     </div>
 </div>
 </body>
@@ -147,6 +260,7 @@
 <script src="{{asset('assets/demo/chart-bar-demo.js')}}"></script>
 <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
 <script src="{{asset('js/datatables-simple-demo.js')}}"></script>
+
 
 
 

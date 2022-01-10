@@ -13,7 +13,7 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-6 text-center mb-5">
-                <h1 class="heading-section">Bạn muốn đổi mật khẩu?</h1>
+                <h1 style="color: white" class="heading-section">Bạn muốn đổi mật khẩu?</h1>
             </div>
         </div>
         <div class="row justify-content-center">
@@ -52,7 +52,7 @@
                             </div>
                         </div>
 
-                        <div class="form-group">
+                        <div class="form-group" style="text-align: center">
                             <button href="{{ route('auth.login') }}" class="btn btn-danger" onclick="window.history.go(-1); return false;">Hủy</button>
                             <button type="submit" class="btn btn-success">Xác nhận</button>
                         </div>
