@@ -29,17 +29,18 @@ Route::get('/', function () {
 
 
 
-
 Route::get('/login',[AuthController::class,'showFormLogin'])->name('auth.showFormLogin');
 Route::post('/login',[AuthController::class,'login'])->name('auth.login');
-Route::get('/logout',[AuthController::class,'logout'])->name('auth.logout');
 Route::get('/register',[AuthController::class,'showFormRegister'])->name('auth.showFormRegister');
 Route::post('/register',[AuthController::class,'register'])->name('auth.register');
-Route::get('/change-password',[AuthController::class,'showFormChangePassword'])->name('auth.showFormChangePassword');
-Route::post('/change-password',[AuthController::class,'changePassword'])->name('auth.changePassword');
 
 
 Route::middleware('auth')->prefix('admin')->group(function () {
+
+    Route::get('/logout',[AuthController::class,'logout'])->name('auth.logout');
+    Route::get('/change-password',[AuthController::class,'showFormChangePassword'])->name('auth.showFormChangePassword');
+    Route::post('/change-password',[AuthController::class,'changePassword'])->name('auth.changePassword');
+
     Route::prefix('users')->group(function (){
         Route::get('/', [UserController::class,'index'])->name("users.index");
         Route::get('/home', [HomeController::class,'index'])->name("home.index");
@@ -59,16 +60,7 @@ Route::middleware('auth')->prefix('admin')->group(function () {
         Route::get('/{id}/delete',[BookController::class,'delete'])-> name('books.delete');
     });
 
-//    Route::prefix('catalogs')->group(function (){
-//        Route::get('/',[CatalogController::class,'index'])->name('catalogs.index');
-//        Route::get('/create',[CatalogController::class,'create'])->name('catalogs.create');
-//        Route::post('/create',[CatalogController::class,'store'])->name('catalogs.store');
-//        Route::get('/{id}/update',[CatalogController::class,'edit'])->name('catalogs.edit');
-//        Route::post('/{id}/update',[CatalogController::class,'update'])->name('catalogs.update');
-//        Route::get('/{id}/delete',[CatalogController::class,'delete'])->name('catalogs.delete');
-//    });
-
-    Route::prefix('category')->group(function (){
+    Route::prefix('categories')->group(function (){
         Route::get('/',[CategoryController::class,'index'])->name('category.index');
         Route::get('/create',[CategoryController::class,'create'])->name('category.create');
         Route::post('/create',[CategoryController::class,'store'])->name('category.store');
@@ -76,8 +68,6 @@ Route::middleware('auth')->prefix('admin')->group(function () {
         Route::post('/{id}/update',[CategoryController::class,'update'])->name('category.update');
         Route::get('/{id}/delete',[CategoryController::class,'delete'])->name('category.delete');
     });
-
-
 
     Route::prefix('students')->group(function () {
         Route::get('/',[StudentController::class,"index"])->name("students.list");
@@ -101,16 +91,6 @@ Route::middleware('auth')->prefix('admin')->group(function () {
 
 Route::get('/auth/redirect/{provider}',[SocialController::class,'redirect']);
 Route::get('/callback/{provider}',[SocialController::class,'callback']);
-
-
-//Route::prefix('category')->group(function (){
-//    Route::get('/',[CategoryController::class,'index'])->name('category.index');
-//    Route::get('/create',[CategoryController::class,'create'])->name('category.create');
-//    Route::post('/create',[CategoryController::class,'store'])->name('category.store');
-//    Route::get('/{id}/update',[CategoryController::class,'edit'])->name('category.edit');
-//    Route::post('/{id}/update',[CategoryController::class,'update'])->name('category.update');
-//    Route::get('/{id}/delete',[CategoryController::class,'delete'])->name('category.delete');
-//});
 
 
 

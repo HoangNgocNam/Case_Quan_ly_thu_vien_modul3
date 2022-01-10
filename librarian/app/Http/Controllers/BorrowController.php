@@ -17,7 +17,7 @@ class BorrowController extends Controller
 
     public function create()
     {
-        return view('borrows.create');
+        return view('borrows.detail');
     }
 
     public function store(Request $request)

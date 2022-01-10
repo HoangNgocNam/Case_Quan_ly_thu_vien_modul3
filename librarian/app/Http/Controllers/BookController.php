@@ -12,9 +12,7 @@ class BookController extends Controller
     public function index()
     {
         $books = Book::all();
-        $categories = Category::all();
-        $publishers = Publisher::all();
-        return view('books.list', compact('books', 'categories', 'publishers'));
+        return view('books.list', compact('books'));
     }
 
     public function create()

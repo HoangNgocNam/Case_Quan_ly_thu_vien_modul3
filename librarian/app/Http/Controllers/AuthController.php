@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 
+use App\Http\Requests\RegisterRequest;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -17,6 +18,10 @@ class AuthController extends Controller
 
     public function login(Request $request)
     {
+        $request->validate([
+            'email' => 'required',
+            'password' => 'required|min:6',
+        ]);
         $email = $request->email;
         $password = $request->password;
 
@@ -39,16 +44,11 @@ class AuthController extends Controller
         return view('pages.register');
     }
 
-    public function register(Request $request)
+    public function register(RegisterRequest $request)
     {
-        $request->validate([
-            'name' => 'required',
-            'email' => 'required',
-            'password' => 'required|min:6',
-        ]);
-        $data = $request->only('name','email','password');
-        $data['password'] = Hash::make($request->password);
-        $user = User::create($data);
+        $user = new User();
+        $user->fill($request->all());
+        $user->password = Hash::make($request->password);
         $user->save();
         toastr()->success('Đăng ký thành công!');
         return redirect()->route('auth.showFormLogin');
@@ -68,13 +68,13 @@ class AuthController extends Controller
 
     public function changePassword(Request $request)
     {
-        $user = Auth::user();
-        $currentPassword = $user->password;
         $request->validate([
             'currentPassword' => 'required',
             'newPassword' => 'required|min:3',
             'confirmPassword' => 'required|same:newPassword',
         ]);
+        $user = Auth::user();
+        $currentPassword = $user->password;
         if (!Hash::check($request->currentPassword, $currentPassword)) {
             return redirect()->back()->withErrors(['currentPassword' => 'Mật khẩu hiện tại không đúng']);
         }
