@@ -1,6 +1,6 @@
 
 @extends("home.master")
-@section("title","category")
+@section("title","Category")
 @section("title-content","Thêm Mới Danh Mục")
 @section("content")
     <div class="card mb-4">

@@ -1,5 +1,5 @@
 @extends("home.master")
-@section("title","category")
+@section("title","Category")
 @section("title-content","Quản Lý Thể Loại Sách")
 @section("content")
     <button class="btn btn-primary mb-3">
