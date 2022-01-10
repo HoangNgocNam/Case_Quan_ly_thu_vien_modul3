@@ -16,11 +16,12 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-6 text-center mb-5">
-                <h1 class="heading-section">Chào mừng bạn đã đến với thư viện sách</h1>
+                <h1 style="color: white" class="heading-section">Chào mừng bạn đã đến với thư viện sách</h1>
             </div>
         </div>
         <div class="row justify-content-center">
-            <div class="col-md-6 col-lg-4">
+            <div style="background-color: white" class="col-md-6 col-lg-4">
+                <br>
                 <div class="login-wrap p-0">
                     <form action="{{route('auth.login')}}" method="post" class="signin-form">
                         @csrf
@@ -61,12 +62,12 @@
                             <div class="w-50">
                             </div>
                             <div class="w-50 text-md-right">
-                                <a href="{{route('auth.showFormRegister')}}" style="color: #fff">Đăng ký</a>
+                                <a href="{{route('auth.showFormRegister')}}" style="color: black">Đăng ký</a>
                             </div>
                         </div>
                     </form>
-                    <p class="w-100 text-center">&mdash; Đăng Nhập Với &mdash;</p>
-                    <div class="social d-flex text-center">
+                    <p style="background-color: white" class="w-100 text-center">&mdash; Đăng Nhập Với &mdash;</p>
+                    <div style="background-color: white" class="social d-flex text-center">
                         <a href="{{ url('/auth/redirect/google') }}" class="px-2 py-2 mr-md-1 rounded"><i class="fab fa-google-plus-g"></i> Google</a>
                     </div>
                 </div>
