@@ -91,7 +91,7 @@ class BookController extends Controller
     public function searchBook(Request $request)
     {
         $keyword = $request->keyword;
-        $books = Book::where('name','LIKE','%'.$keyword.'%')->with('publishers')->get();
+        $books = Book::where('name','LIKE','%'.$keyword.'%')->get();
         $data = [
             'status' => 'success',
             'data' => $books

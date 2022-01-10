@@ -26,30 +26,26 @@ $(document).ready(function () {
             html += "<td>";
             html += books[i].publisher_id
             html += "</td>";
+            html += "<td>";
+            html += books[i].quanlity
+            html += "</td>";
             html += "</tr>";
         }
         $('#list-book').html(html)
     }
 
-    $('#searchBook').keyup(function () {
-        let keyword = $(this).val()
-        // console.log(keyword)
-        // alert(keyword)
-        $.ajaxSetup({
-            headers: {
-                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-            }
-        });
 
+
+    $('body').on("keyup","#searchBook",function () {
+        let keyword = $(this).val()
         $.ajax({
-            url: url + "/api/search",
-            method: "POST",
+            url: url + "/admin/books/search",
+            method: "GET",
             type: 'json',
             data: {
                 keyword: keyword
             },
             success: function (res) {
-
                 showBookHtml(res)
             }
         })
