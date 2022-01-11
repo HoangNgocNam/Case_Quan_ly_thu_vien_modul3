@@ -135,7 +135,7 @@
                                     <div class="col-12 col-md-6">
                                         <div class="form-group">
                                             <button class="btn btn-success">Cho mượn</button>
-                                            <a class="btn btn-danger" href="{{route('borrows.index')}}">Quay lại</a>
+                                            <a class="btn btn-danger" href="{{route('borrows.index')}}">Hủy</a>
                                         </div>
                                     </div>
                                 </div>
