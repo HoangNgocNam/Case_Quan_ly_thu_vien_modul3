@@ -35,7 +35,7 @@ class RegisterRequest extends FormRequest
         return [
             'name.required' => 'Tên không được để trống',
             'email.required' => 'Email không được để trống',
-            'password.required' => 'password không được để trống',
+            'password.required' => 'Password không được để trống',
             'password.min' => 'Password tối thiểu phải có 6 ký tự'
         ];
     }

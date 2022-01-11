@@ -33,8 +33,9 @@ class ChangePasswordRequest extends FormRequest
     public function messages()
     {
         return [
-            'currentPassword.required' => 'Mật khẩu hiện tại sai',
-            'newPassword.required' => 'Mật khẩu tối thiểu phải có 5 ký tự',
+            'currentPassword.required' => 'Mật khẩu hiện tại không được để trống',
+            'newPassword.min' => 'Mật khẩu tối thiểu phải có 5 ký tự',
+            'newPassword.required' => 'Mật khẩu mới không được để trống',
             'confirmPassword.required' => 'Mật khẩu không khớp'
         ];
     }
