@@ -94,7 +94,6 @@ Route::middleware('auth')->prefix('admin')->group(function () {
     });
 });
 
-
 Route::get('/auth/redirect/{provider}',[SocialController::class,'redirect']);
 Route::get('/callback/{provider}',[SocialController::class,'callback']);
 
