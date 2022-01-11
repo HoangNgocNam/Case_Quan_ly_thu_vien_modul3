@@ -54,6 +54,9 @@
                 <div class="mb-3">
                     <label style="font-weight: bolder" for="exampleFormControlInput1">Số Lượng</label>
                     <input type="number" name="quanlity" class="form-control" placeholder="Nhập Số Lượng">
+                    @error('quantity')
+                    <p style="color: red" >{{$message}}</p>
+                    @enderror
                 </div>
                 <a class="btn btn-danger" href="{{route('books.index')}}">Hủy</a>
                 <button type="submit" class="btn btn-success">Thêm mới</button>
