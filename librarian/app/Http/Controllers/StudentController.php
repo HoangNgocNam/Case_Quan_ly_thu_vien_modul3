@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\CreateStudentRequest;
+use App\Http\Requests\UpdateStudentRequest;
 use App\Models\Student;
 use Illuminate\Http\Request;
 
@@ -18,15 +20,8 @@ class StudentController extends Controller
         return view("students.create");
     }
 
-    public function store(Request $request)
+    public function store(CreateStudentRequest $request)
     {
-//        $request->validate([
-//            'name' => 'required',
-//            'student_code' => 'required',
-//            'email' => 'required|email',
-//            'address' => 'required',
-//            'birthday' => 'required|date',
-//        ]);
         $student = new Student();
         $student->name = $request->name;
         $student->student_code = $request->student_code;
@@ -52,15 +47,8 @@ class StudentController extends Controller
         return view("students.update",compact("student"));
     }
 
-    public function update(Request $request,$id)
+    public function update(UpdateStudentRequest $request,$id)
     {
-//        $request->validate([
-//            'name' => 'required',
-//            'email' => 'required|email',
-//            'password' => 'required|min:3',
-//            'birthday' => 'required|date',
-//            'phone' => 'required|Numeric',
-//        ]);
         $student = Student::findOrFail($id);
         $student->name = $request->name;
         $student->student_code = $request->student_code;

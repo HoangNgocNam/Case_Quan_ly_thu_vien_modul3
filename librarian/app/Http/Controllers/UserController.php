@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\CreateUserRequest;
+use App\Http\Requests\UpdateUserRequest;
 use App\Models\Role;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -30,15 +32,8 @@ class UserController extends Controller
             return view('users.create', compact('roles'));
         }
 
-    public function store(Request $request)
+    public function store(CreateUserRequest $request)
     {
-//        $validated = $request->validate([
-//            "name"=>"required",
-//            "email"=>"required|email",
-//            "password"=>"required|min:6",
-//            "birthday"=>"required|date",
-//            "phone"=>"required|Numeric",
-//        ]);
         $user = new User();
         $user->name = $request->name;
         $user->email = $request->email;
@@ -63,15 +58,8 @@ class UserController extends Controller
         return view('users.update',compact('user','roles'));
     }
 
-    public function update(Request $request , $id)
+    public function update(UpdateUserRequest $request , $id)
     {
-//        $request->validate([
-//            "name"=>"required",
-//            "email"=>"required|email",
-//            "password"=>"required|min:6",
-//            "birthday"=>"required|date",
-//            "phone"=>"required|Numeric",
-//        ]);
         $user = User::findOrFail($id);
         $user->name = $request->name;
         $user->email = $request->email;

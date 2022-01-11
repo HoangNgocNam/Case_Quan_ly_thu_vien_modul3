@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\CreateBookRequest;
+use App\Http\Requests\UpdateBookRequest;
 use App\Models\Book;
 use App\Models\Category;
 use App\Models\Publisher;
@@ -22,14 +24,8 @@ class BookController extends Controller
         return view('books.create', compact('categories', 'publishers'));
     }
 
-    public function store(Request $request)
+    public function store(CreateBookRequest $request)
     {
-//        $request->validate([
-//            'name' => 'required',
-//            'desc' => 'required',
-//            'category_id' => 'required',
-//            'publisher_id' => 'required',
-//        ]);
         $book = new Book();
         if ($request->hasFile('imag')) {
             $imag = $request->file('imag');
@@ -55,14 +51,8 @@ class BookController extends Controller
         return view('books.update',compact('book','categories','publishers'));
     }
 
-    public function update(Request $request,$id)
+    public function update(UpdateBookRequest $request,$id)
     {
-//        $request->validate([
-//            'name' => 'required',
-//            'desc' => 'required',
-//            'category_id' => 'required',
-//            'publisher_id' => 'required',
-//        ]);
         $book = Book::findOrFail($id);
         if ($request->hasFile('imag')) {
             $imag = $request->file('imag');

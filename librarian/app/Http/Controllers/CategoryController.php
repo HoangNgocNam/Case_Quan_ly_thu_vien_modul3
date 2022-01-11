@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\UpdateCategoryRequest;
 use App\Models\Catalog;
 use App\Models\Category;
 use Illuminate\Http\Request;
@@ -40,12 +41,8 @@ class CategoryController extends Controller
         return view('categories.update', compact('category'));
     }
 
-    public function update(Request $request,$id)
+    public function update(UpdateCategoryRequest $request,$id)
     {
-//        $request->validate([
-//            'code' => 'required',
-//            'name' => 'required',
-//        ]);
         $category = Category::findOrFail($id);
         $category->code = $request->code;
         $category->name = $request->name;

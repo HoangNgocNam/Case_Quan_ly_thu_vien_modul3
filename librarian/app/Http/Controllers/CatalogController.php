@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\UpdateCatalogRequest;
 use App\Models\Catalog;
 use Illuminate\Http\Request;
 
@@ -39,12 +40,8 @@ class CatalogController extends Controller
         return view('catalogs.update', compact('catalog'));
     }
 
-    public function update(Request $request,$id)
+    public function update(UpdateCatalogRequest $request,$id)
     {
-//        $request->validate([
-//            'code' => 'required',
-//            'name' => 'required',
-//        ]);
         $catalog = Catalog::findOrFail($id);
         $catalog->code = $request->code;
         $catalog->name = $request->name;
