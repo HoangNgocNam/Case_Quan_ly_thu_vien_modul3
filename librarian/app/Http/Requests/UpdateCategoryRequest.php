@@ -28,4 +28,12 @@ class UpdateCategoryRequest extends FormRequest
             'name' => 'required',
         ];
     }
+
+    public function messages()
+    {
+        return [
+            'code.required' => 'Mã không được để trống',
+            'name.required' => 'Tên không được để trống'
+        ];
+    }
 }

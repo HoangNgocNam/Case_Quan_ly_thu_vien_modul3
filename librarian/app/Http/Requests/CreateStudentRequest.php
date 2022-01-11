@@ -31,4 +31,15 @@ class CreateStudentRequest extends FormRequest
             'birthday' => 'required|date',
         ];
     }
+
+    public function messages()
+    {
+        return [
+            'name.required' => 'Tên không được để trống!',
+            'student_code.required' => 'Mã học sinh không được để trống',
+            'email.required' => 'Email không được để trống',
+            'address.required' => 'Địa chỉ không được để trống',
+            'birthday.required'=> 'Ngày sinh không được để trống'
+        ];
+    }
 }

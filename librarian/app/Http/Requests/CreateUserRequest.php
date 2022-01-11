@@ -31,4 +31,17 @@ class CreateUserRequest extends FormRequest
             "phone"=>"required|Numeric",
         ];
     }
+
+    public function messages()
+    {
+        return [
+            'name.required' => 'Tên không được để trống',
+            'email.required' => 'Tên không được để trống',
+            'password.min' => 'password phải có ít nhất 6 ký tự',
+            'password.required' => 'password không được để trống',
+            'birthday.required' => 'birthday không được để trống',
+            'phone.required' => 'phone không được để trống',
+
+        ];
+    }
 }

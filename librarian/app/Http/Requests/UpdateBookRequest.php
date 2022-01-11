@@ -30,4 +30,14 @@ class UpdateBookRequest extends FormRequest
             'publisher_id' => 'required',
         ];
     }
+
+    public function messages()
+    {
+        return [
+            'name.required' => 'Tên không được để trống',
+            'desc.required' => 'Mô tả không được để trống',
+            'category_id.required' => 'Thể loại không được để trống',
+            'publisher_id.required' => 'Nhà sản xuất không được để trống',
+        ];
+    }
 }

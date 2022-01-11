@@ -28,4 +28,12 @@ class CreateCategoryRequest extends FormRequest
             "name"=>"required"
         ];
     }
+
+    public function messages()
+    {
+        return [
+            'code.required' => 'Tối thiểu phải có 5 ký tự',
+            'name.required' => 'Tên không được để trống'
+        ];
+    }
 }

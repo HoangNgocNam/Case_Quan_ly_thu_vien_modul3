@@ -24,10 +24,20 @@ class CreateBookRequest extends FormRequest
     public function rules()
     {
         return [
-            'name' => 'Không được để trống tên!',
-            'desc' => 'Không được để trống mô tả!',
-            'category_id' => 'Không được để trống id thể loại!',
-            'publisher_id' => 'Không được để trống nhà xuất bản!',
+            'name' => 'required',
+            'desc' => 'required',
+            'category_id' => 'required',
+            'publisher_id' => 'required',
+        ];
+    }
+
+    public function messages()
+    {
+        return [
+            'name.required' => 'Tên sách không được để trống!',
+            'desc.required' => 'Mô tả không được để trống!',
+            'category_id.required' => 'Thể loại không được để trống!',
+            'publisher_id.required' => 'Nhà xuất bản không được để trống!'
         ];
     }
 }

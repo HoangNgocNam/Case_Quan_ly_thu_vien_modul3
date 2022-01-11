@@ -24,9 +24,18 @@ class ChangePasswordRequest extends FormRequest
     public function rules()
     {
         return [
-            'currentPassword' => 'Mật khẩu không khớp!',
-            'newPassword' => 'Độ dài mật khẩu tối thiểu phải có 3 ký tự!|min:3',
-            'confirmPassword' => 'Xác nhận lại mật khẩu!|same:newPassword',
+            'currentPassword' => 'required',
+            'newPassword' => 'required|min:5',
+            'confirmPassword' => 'required',
+        ];
+    }
+
+    public function messages()
+    {
+        return [
+            'currentPassword.required' => 'Mật khẩu hiện tại sai',
+            'newPassword.required' => 'Mật khẩu tối thiểu phải có 5 ký tự',
+            'confirmPassword.required' => 'Mật khẩu không khớp'
         ];
     }
 }

@@ -28,10 +28,6 @@
         Danh sách sách
     </div>
 
-
-
-
-
 {{--    <div class="col-12 col-md-4">--}}
 {{--        <input type="text" name="keyword" class="form-control" id="searchBook">--}}
 {{--    </div>--}}
@@ -103,4 +99,4 @@
 @endsection
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="js/my.js"></script>
+<script src="{{asset('assets/my.js')}}"></script>

@@ -31,4 +31,16 @@ class UpdateStudentRequest extends FormRequest
             'phone' => 'required|Numeric',
         ];
     }
+
+    public function messages()
+    {
+        return [
+            'name.required' => 'Tên không được để trống!',
+            'email.required' => 'Email không được để trống',
+            'password.required' => 'Địa chỉ không được để trống',
+            'password.min' => 'Địa chỉ phải có tối thiểu 3 ký tự',
+            'birthday.required'=> 'Ngày sinh không được để trống',
+            'phone.required'=> 'Số điện thoại không được để trống'
+        ];
+    }
 }

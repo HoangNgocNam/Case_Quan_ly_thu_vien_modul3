@@ -29,4 +29,14 @@ class RegisterRequest extends FormRequest
             'password' => 'required|min:6',
         ];
     }
+
+    public function messages()
+    {
+        return [
+            'name.required' => 'Tên không được để trống',
+            'email.required' => 'Email không được để trống',
+            'password.required' => 'password không được để trống',
+            'password.min' => 'Password tối thiểu phải có 6 ký tự'
+        ];
+    }
 }
