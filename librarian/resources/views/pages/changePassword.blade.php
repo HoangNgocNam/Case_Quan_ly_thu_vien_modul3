@@ -29,6 +29,9 @@
                                     <div class="input-group-text"><i id="eye-password" class="fas fa-eye-slash"></i></div>
                                 </div>
                                 <input type="password" id="currentPassword" name="currentPassword" class="form-control" placeholder="Nhập mật khẩu cũ">
+                                @error('currentPassword')
+                                <p style="color: red" >{{$message}}</p>
+                                @enderror
                             </div>
                         </div>
 
@@ -39,6 +42,9 @@
                                     <div class="input-group-text"><i id="eye-password" class="fas fa-eye-slash"></i></div>
                                 </div>
                                 <input type="password" id="newPassword" name="newPassword" class="form-control" placeholder="Nhập mật khẩu mới">
+                                @error('newPassword')
+                                <p style="color: red" >{{$message}}</p>
+                                @enderror
                             </div>
                         </div>
 
@@ -49,6 +55,9 @@
                                     <div class="input-group-text"><i id="eye-password" class="fas fa-eye-slash"></i></div>
                                 </div>
                                 <input type="password" id="confirmPassword" name="confirmPassword" class="form-control" placeholder="Nhập lại mật khẩu mới">
+                                @error('confirmPassword')
+                                <p style="color: red" >{{$message}}</p>
+                                @enderror
                             </div>
                         </div>
 

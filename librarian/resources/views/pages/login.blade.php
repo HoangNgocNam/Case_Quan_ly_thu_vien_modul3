@@ -30,6 +30,9 @@
                                     <div class="input-group-text"><i class="fas fa-envelope"></i></div>
                                 </div>
                                 <input type="text" id="email" name="email" value="{{old('email')}}" class="form-control" id="inlineFormInputGroup" placeholder="Nhập email">
+                                @error('email')
+                                <p style="color: red" >{{$message}}</p>
+                                @enderror
                             </div>
                         </div>
 
@@ -41,6 +44,9 @@
                                     <div class="input-group-text"><i id="eye-password" class="fas fa-eye-slash"></i></div>
                                 </div>
                                 <input type="password" id="password" name="password" class="form-control" id="inlineFormInputGroup" placeholder="Nhập mật khẩu">
+                                @error('password')
+                                <p style="color: red" >{{$message}}</p>
+                                @enderror
                             </div>
                         </div>
 
